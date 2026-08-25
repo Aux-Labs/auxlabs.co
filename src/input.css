@@ -8,9 +8,21 @@ html[data-theme="dark"] { --paper-rgb: 17 18 17; --ink-rgb: 229 228 222; --surfa
 
 body { font-family: 'Inter', sans-serif; background-color: rgb(var(--paper-rgb)); color: rgb(var(--ink-rgb)); }
 
+/* Type system per S.B. 8/25: display = Arimo 700; mono = Cutive Mono, captions/labels only. */
+h1, h2, h3, h4, h5, .font-black { font-family: 'Arimo', 'Inter', sans-serif; font-weight: 700; }
+h1, h2, h3, h4 { text-wrap: balance; }   /* widows/orphans */
+p { text-wrap: pretty; }
+
 .theoretical-margin { writing-mode: vertical-rl; transform: rotate(180deg); }
-.stroke-ink { -webkit-text-stroke: 1.5px rgb(var(--ink-rgb)); color: transparent; }
 .archival-duotone { filter: grayscale(100%) contrast(1.2) brightness(0.85) sepia(10%); }
 .paper-card:hover .paper-id { background-color: #00FF41; color: black; }
 details.axl-door > summary { cursor: pointer; list-style: none; }
 details.axl-door > summary::-webkit-details-marker { display: none; }
+
+/* Final CTA (commercial) — S.B. 8/25: light = black bg / green text / white button; dark = green bg as before. */
+.cta-final { background: #000; color: #00FF41; }
+.cta-final .cta-btn { background: #fff; color: #000; }
+.cta-final .cta-btn:hover { background: #00FF41; color: #000; }
+html[data-theme="dark"] .cta-final { background: #00FF41; color: #000; }
+html[data-theme="dark"] .cta-final .cta-btn { background: #000; color: #00FF41; }
+html[data-theme="dark"] .cta-final .cta-btn:hover { background: #fff; color: #000; }

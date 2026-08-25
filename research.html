@@ -11,7 +11,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Cutive+Mono&family=Inter:wght@300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/tailwind.css">
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
@@ -29,7 +29,7 @@
             <a href="cultural.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">03_CULTURAL</a>
         </div>
         <div class="hidden xl:flex items-center px-8 text-archival-ink/40">
-            [ CLASSIFICATION: UNRESTRICTED // VER: 4.1.0 ]
+            [ CLASSIFICATION: UNRESTRICTED // VER: 5.0.0 ]
         </div>
         <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">
             [ ◐ ]
@@ -52,14 +52,14 @@
                     <span class="bg-panel text-white px-2 py-0.5">RSCH_02</span>
                     <span class="text-archival-ink/60">[ THE_RESEARCH_AGENDA ]</span>
                 </div>
-                <h1 class="text-5xl lg:text-8xl font-black leading-[0.85] tracking-tighter mb-12 uppercase">
-                    The diagnosis <br> is <span class="stroke-ink">free.</span>
+                <h1 class="text-4xl lg:text-[3.25rem] font-black leading-[0.98] tracking-tighter mb-10 uppercase">
+                    The diagnosis is free.
                 </h1>
                 <p class="text-xl lg:text-3xl font-light leading-snug italic border-l-4 border-brand-green pl-8 py-2 mb-8">
                     The structure is a university hospital. The commercial lab earns at market rates. The nonprofit side runs the public-good research that keeps the instruments honest.
                 </p>
-                <p class="font-mono text-[10px] leading-relaxed text-archival-ink/70 uppercase max-w-3xl mb-16">
-                    [ FIELD_NOTE ] THE FIELD IS BEHAVIORAL INFRASTRUCTURE. THE METHOD IS APPLIED MECHANISM DESIGN — THE ECONOMICS DISCIPLINE OF HURWICZ, MASKIN AND MYERSON. THEY ARE NOT THE SAME THING, AND WE DO NOT COLLAPSE THEM.
+                <p class="text-sm leading-relaxed text-archival-ink/70 max-w-3xl mb-16">
+                    <span class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/50">[ FIELD_NOTE ]&nbsp;</span>The field is behavioral infrastructure. The method is applied mechanism design — the economics discipline of Hurwicz, Maskin and Myerson. They are not the same thing, and we do not collapse them.
                 </p>
                 <div class="flex flex-wrap gap-4 font-mono text-[10px] uppercase tracking-widest">
                     <span class="border border-archival-ink px-4 py-2">Behavioral Infrastructure</span>
@@ -67,6 +67,17 @@
                     <span class="border border-archival-ink px-4 py-2">Causal Inference</span>
                     <span class="border border-archival-ink px-4 py-2">Computational Social Science</span>
                 </div>
+            </div>
+        </section>
+
+        <!-- Flagship Program -->
+        <section class="px-8 lg:px-20 py-10 border-b border-archival-ink bg-brand-green/5">
+            <div class="max-w-4xl">
+                <div class="font-mono text-[9px] mb-6 text-black bg-brand-green inline-block px-2 py-1 uppercase font-bold">FLAGSHIP_PROGRAM</div>
+                <h2 class="text-2xl lg:text-3xl font-black uppercase tracking-tighter leading-tight mb-6">The Pretend Era™</h2>
+                <p class="text-sm lg:text-base leading-relaxed text-archival-ink/80">
+                    The lab's flagship research program is a falsifiable framework diagnosing institutional trust collapse as a pluralistic-ignorance equilibrium: a condition in which most people privately reject the official story but comply with it, believing everyone else accepts it. The framework specifies measurable signatures and the conditions under which it would be wrong. Everything else the lab builds is downstream of this diagnosis.
+                </p>
             </div>
         </section>
 
@@ -82,7 +93,7 @@
                         <li class="flex justify-between border-b border-white/10 pb-2"><span>Next To Publish</span><span class="text-brand-green">AXL-WP-02</span></li>
                     </ul>
                     <div class="mt-20 p-4 border border-white/20 bg-white/5 text-[9px] leading-relaxed uppercase">
-                        [ NOTICE ] PAPERS ARE NAMED BEFORE THEY ARE LINKED. EACH ONE CLEARS ITS SOURCING PASS, THEN PUBLISHES — ONE AT A TIME, NOT IN A BATCH. A WALL OF PDFS ON DAY ONE READS LIKE A DUMP. A PAGE WHERE PAPERS APPEAR AS THEY'RE FINISHED READS LIKE A LAB THAT'S RUNNING.
+                        [ NOTICE ] PAPERS ARE NAMED BEFORE THEY ARE LINKED. EACH PUBLISHES AS IT CLEARS ITS SOURCING PASS — ONE AT A TIME.
                     </div>
                 </div>
             </div>
@@ -129,8 +140,9 @@
                         <div class="flex-grow">
                             <div class="flex flex-wrap items-center gap-4 mb-4">
                                 <span class="font-mono text-[9px] bg-archival-ink/10 text-archival-ink px-2 py-0.5 uppercase">In Preparation</span>
+                                <span class="font-mono text-[9px] bg-brand-green text-black px-2 py-0.5 uppercase font-bold">Flagship</span>
                             </div>
-                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight">The Pretend Era</h4>
+                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight">The Pretend Era™</h4>
                         </div>
                     </div>
                     <!-- AXL-WP-05 -->
@@ -164,11 +176,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-8 lg:p-12 bg-panel text-white text-center">
-                    <h5 class="font-mono text-xs tracking-[0.4em] uppercase mb-4 opacity-40">Records end here for now.</h5>
-                    <p class="font-mono text-[10px] uppercase tracking-widest text-white/60 max-w-xl mx-auto">
-                        Papers appear as they're finished — that is the point. The Merge Gap publishes first.
-                    </p>
+                <div class="p-8 bg-panel text-white text-center">
+                    <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/50">INDEX CURRENT · AXL-WP-02 PUBLISHES FIRST</p>
                 </div>
             </div>
         </section>

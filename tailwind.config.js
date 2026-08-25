@@ -13,7 +13,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         serif: ['"Libre Baskerville"', 'serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        mono: ['"Cutive Mono"', 'monospace'],
       },
     },
   },
