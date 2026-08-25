@@ -1,0 +1,37 @@
+/* Aux Labs paper typography — Neu Brutalism reading layer, token-aware (light/dark). */
+.paper-prose { background: rgb(var(--paper-rgb)); }
+.paper-prose h1, .paper-prose h2, .paper-prose h3, .paper-prose h4 {
+  font-family: 'Arimo','Inter',sans-serif; font-weight: 700; text-transform: uppercase;
+  letter-spacing: -0.02em; line-height: 1.05; margin: 2.5em 0 0.9em;
+  color: rgb(var(--ink-rgb));
+}
+.paper-prose h1 { font-size: 1.7rem; }
+.paper-prose h2 { font-size: 1.45rem; border-top: 1px solid rgb(var(--ink-rgb) / 0.9); padding-top: 1.2em; }
+.paper-prose h3 { font-size: 1.15rem; }
+.paper-prose h4 { font-size: 1rem; }
+.paper-prose p { font-family: 'Inter',sans-serif; font-size: 1.02rem; line-height: 1.75;
+  margin: 0 0 1.15em; color: rgb(var(--ink-rgb) / 0.85); text-wrap: pretty; }
+.paper-prose strong { color: rgb(var(--ink-rgb)); }
+.paper-prose em { font-style: italic; }
+.paper-prose a { color: rgb(var(--ink-rgb)); text-decoration: underline; text-underline-offset: 2px; }
+.paper-prose a:hover { color: #00FF41; }
+.paper-prose blockquote { border-left: 4px solid #00FF41; margin: 1.5em 0; padding: 0.4em 0 0.4em 1.4em;
+  font-style: italic; color: rgb(var(--ink-rgb) / 0.75); }
+.paper-prose ul, .paper-prose ol { margin: 0 0 1.15em 1.4em; line-height: 1.7; color: rgb(var(--ink-rgb) / 0.85); }
+.paper-prose ul { list-style: square; }
+.paper-prose li { margin-bottom: 0.4em; }
+.paper-prose hr { border: 0; border-top: 1px solid rgb(var(--ink-rgb) / 0.25); margin: 3em 0; }
+.paper-prose table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 1.5em 0;
+  font-family: 'Inter',sans-serif; }
+.paper-prose th { font-family: 'Cutive Mono',monospace; text-transform: uppercase; font-size: 0.7rem;
+  letter-spacing: 0.08em; text-align: left; border-bottom: 2px solid rgb(var(--ink-rgb));
+  padding: 0.6em 0.8em; color: rgb(var(--ink-rgb)); }
+.paper-prose td { border-bottom: 1px solid rgb(var(--ink-rgb) / 0.2); padding: 0.6em 0.8em;
+  vertical-align: top; color: rgb(var(--ink-rgb) / 0.85); }
+.paper-prose .table-wrap, .paper-prose pre { overflow-x: auto; }
+.paper-prose pre, .paper-prose code { font-family: 'Cutive Mono',monospace; font-size: 0.85em;
+  background: rgb(var(--surface-rgb) / 0.5); }
+.paper-prose pre { padding: 1em; border: 1px solid rgb(var(--ink-rgb) / 0.25); margin: 1.5em 0; }
+.paper-prose sup { font-size: 0.7em; }
+.paper-prose .footnote { border-top: 2px solid rgb(var(--ink-rgb)); margin-top: 3em; padding-top: 1.5em;
+  font-size: 0.85rem; }

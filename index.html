@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUX LABS — Behavioral Infrastructure</title>
-    <meta name="description" content="Nothing is working. Everyone is pretending it is. Aux Labs builds behavioral infrastructure — the mechanisms that make trust rational again.">
+    <meta name="description" content="Nothing is working. Everyone is pretending it is. Aux Labs builds behavioral infrastructure: the mechanisms that make trust rational again.">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
     <script>
         // Light-first (ratified 8/25). Dark only by stored visitor choice.
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/tailwind.css">
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <!-- Global Technical Overlay -->
     <div class="fixed inset-0 pointer-events-none border-[12px] border-archival-ink/5 z-[100]"></div>
@@ -30,7 +31,7 @@
             <a href="research.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">02_RESEARCH</a>
             <a href="cultural.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">03_CULTURAL</a>
         </div>
-        <div class="hidden xl:flex items-center px-8 text-archival-ink/40">
+        <div class="hidden xl:flex items-center px-8 text-archival-ink/60">
             [ CLASSIFICATION: UNRESTRICTED // VER: 5.0.0 ]
         </div>
         <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">
@@ -38,7 +39,7 @@
         </button>
     </nav>
 
-    <main class="relative">
+    <main id="main" class="relative">
 
         <!-- Top Status Ticker -->
         <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
@@ -67,7 +68,7 @@
         <!-- Hero -->
         <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-archival-ink">
             <div class="lg:col-span-7 p-8 lg:p-16 lg:border-r border-archival-ink relative overflow-hidden bg-surface/20">
-                <div class="absolute top-0 right-0 p-4 font-mono text-[8px] text-archival-ink/20 theoretical-margin h-full border-l border-archival-ink/10 hidden lg:block">
+                <div class="absolute top-0 right-0 p-4 font-mono text-[8px] text-archival-ink/20 theoretical-margin h-full border-l border-archival-ink/10 hidden lg:block" aria-hidden="true">
                     PLURALISTIC_IGNORANCE // TRUST_EQUILIBRIA // BEHAVIORAL_INFRASTRUCTURE
                 </div>
 
@@ -82,7 +83,7 @@
 
                 <div class="max-w-xl space-y-8">
                     <p class="text-lg lg:text-xl font-light leading-snug tracking-tight border-l-4 border-brand-green pl-8 py-2">
-                        Institutions aren't failing for lack of money, talent, or ideas. They're failing because nobody believes them anymore — and everybody's acting like they still do. Aux Labs builds the mechanisms that make trust rational again.
+                        Institutions aren't failing for lack of money, talent, or ideas. They're failing because nobody believes them anymore, and everybody's acting like they still do. Aux Labs builds the mechanisms that make trust rational again.
                     </p>
 
                     <p class="font-mono text-[10px] uppercase tracking-widest text-archival-ink/60">
@@ -98,22 +99,46 @@
                 </div>
             </div>
 
-            <!-- Hero visual -->
-            <div class="lg:col-span-5 relative bg-panel overflow-hidden min-h-[320px] lg:min-h-0">
-                <!-- PHOTO SLOT 01 — replace this composition with an owned photograph:
-                     <img class="w-full h-full object-cover archival-duotone" src="..." alt="...">
-                     Register per pack §02.E: textures, structures, type-led. No AI photography. -->
-                <div class="absolute inset-0 z-10" aria-hidden="true" style="background:
-                    repeating-linear-gradient(0deg, rgba(0,255,65,0.04) 0 1px, transparent 1px 64px),
-                    repeating-linear-gradient(90deg, rgba(0,255,65,0.04) 0 1px, transparent 1px 64px),
-                    linear-gradient(160deg,#0b0c0b 0%,#181a18 55%,#0a0b0a 100%);">
-                </div>
-                <div class="absolute inset-0 z-10 flex items-center justify-center" aria-hidden="true">
-                    <span class="font-black uppercase leading-none tracking-tighter" style="font-size:clamp(7rem,20vw,15rem);color:rgba(255,255,255,0.05)">AXL</span>
-                </div>
-                <div class="absolute inset-0 z-20 pointer-events-none opacity-40" style="background-image: radial-gradient(circle, #00FF41 0.7px, transparent 0.7px); background-size: 24px 24px;"></div>
-                <div class="absolute top-6 right-6 z-30 font-mono text-[8px] text-brand-green tracking-[0.5em] uppercase" style="writing-mode: vertical-rl;">
-                    AXL_RECORD_01
+            <!-- Hero visual: FIG.01, sourced trust chart (Pew 1958-2025) -->
+            <div class="lg:col-span-5 relative bg-panel overflow-hidden min-h-[380px] p-6 lg:p-8 flex flex-col justify-between">
+                <div class="font-mono text-[9px] text-brand-green tracking-widest uppercase mb-4">FIG. 01 // THE PROBLEM, MEASURED</div>
+                <svg viewBox="0 0 560 340" role="img" class="w-full h-auto"
+                     aria-label="Line chart of selected Pew Research readings of American trust in the federal government, falling from a 77 percent peak in 1964 to 17 percent in 2025.">
+                    <!-- grid -->
+                    <g stroke="rgba(255,255,255,0.10)" stroke-width="1">
+                        <line x1="40" y1="40" x2="520" y2="40"/><line x1="40" y1="110" x2="520" y2="110"/>
+                        <line x1="40" y1="180" x2="520" y2="180"/><line x1="40" y1="250" x2="520" y2="250"/>
+                        <line x1="40" y1="320" x2="520" y2="320"/>
+                    </g>
+                    <g font-family="'Cutive Mono',monospace" font-size="11" fill="rgba(255,255,255,0.55)">
+                        <text x="34" y="44" text-anchor="end">80</text><text x="34" y="184" text-anchor="end">40</text>
+                        <text x="34" y="324" text-anchor="end">0</text>
+                        <text x="40" y="338">1958</text><text x="198" y="338" text-anchor="middle">1980</text>
+                        <text x="348" y="338" text-anchor="middle">2001</text><text x="520" y="338" text-anchor="end">2025</text>
+                    </g>
+                    <!-- series: verified Pew readings only -->
+                    <polyline points="40,64.5 83,50.5 197.6,232.5 297.9,243 348.1,127.5 441.2,271 520,260.5"
+                              fill="none" stroke="#00FF41" stroke-width="2"/>
+                    <g fill="#00FF41">
+                        <rect x="38" y="62.5" width="4" height="4"/><rect x="81" y="48.5" width="4" height="4"/>
+                        <rect x="195.6" y="230.5" width="4" height="4"/><rect x="295.9" y="241" width="4" height="4"/>
+                        <rect x="346.1" y="125.5" width="4" height="4"/><rect x="439.2" y="269" width="4" height="4"/>
+                        <rect x="518" y="258.5" width="4" height="4"/>
+                    </g>
+                    <g font-family="'Cutive Mono',monospace" font-size="11" fill="rgba(255,255,255,0.85)">
+                        <text x="90" y="46">77% · 1964</text>
+                        <text x="356" y="122">55% · 2001</text>
+                        <text x="438" y="290">14% · 2014</text>
+                        <text x="520" y="248" text-anchor="end" fill="#00FF41" font-weight="bold">17% · 2025</text>
+                    </g>
+                </svg>
+                <div class="mt-4 space-y-2">
+                    <p class="font-mono text-[9px] uppercase tracking-widest text-white/60 leading-relaxed">
+                        % OF AMERICANS WHO TRUST THE GOVERNMENT IN WASHINGTON TO DO WHAT IS RIGHT "JUST ABOUT ALWAYS" OR "MOST OF THE TIME." SELECTED READINGS. SINCE 2007 IT HAS NEVER EXCEEDED 30%.
+                    </p>
+                    <p class="font-mono text-[9px] uppercase tracking-widest text-white/60">
+                        SOURCE: <a href="https://www.pewresearch.org/politics/2025/12/04/public-trust-in-government-1958-2025/" class="text-brand-green underline hover:text-white transition-colors">PEW RESEARCH CENTER, PUBLIC TRUST IN GOVERNMENT: 1958–2025</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -127,13 +152,13 @@
                 </div>
                 <div class="lg:col-span-8 space-y-6 max-w-3xl">
                     <p class="text-base leading-relaxed text-archival-ink/80">
-                        Most people privately stopped believing the official story years ago — about the media, the market, the mission statement, the meeting they just sat through. But each of them assumes everyone else still believes, so everyone keeps performing. Social scientists call this <strong>pluralistic ignorance</strong>: a norm nobody holds, enforced by everybody.
+                        Most people privately stopped believing the official story years ago: about the media, the market, the mission statement, the meeting they just sat through. But each of them assumes everyone else still believes, so everyone keeps performing. Social scientists call this <strong>pluralistic ignorance</strong>: a norm nobody holds, enforced by everybody.
                     </p>
                     <p class="text-base leading-relaxed text-archival-ink/80">
-                        That is the actual crisis underneath the crises. Trust didn't collapse because people got cynical. It collapsed because honesty became individually irrational — the first person to say "this isn't working" pays the price, so nobody goes first.
+                        That is the actual crisis underneath the crises. Trust didn't collapse because people got cynical. It collapsed because honesty became individually irrational. The first person to say "this isn't working" pays the price, so nobody goes first.
                     </p>
                     <p class="text-base leading-relaxed text-archival-ink/80">
-                        And the diagnosis tells you something no strategy deck will: <strong>you cannot message your way out of a pretend equilibrium.</strong> No campaign makes honesty rational. Only mechanisms do — rules, defaults, sequences, and incentives that make the honest move the easy move, and the trustworthy institution the cheap one to believe.
+                        And the diagnosis tells you something no strategy deck will: <strong>you cannot message your way out of a pretend equilibrium.</strong> No campaign makes honesty rational. Only mechanisms do: rules, defaults, sequences, and incentives that make the honest move the easy move, and the trustworthy institution the cheap one to believe.
                     </p>
                     <p class="text-lg font-bold leading-snug">
                         That's what we build. We call it behavioral infrastructure.
@@ -154,7 +179,7 @@
                         In 2020, the junior strategists at brand agencies had a more accurate working model of how information moves through a networked population than the institutions whose literal job was moving life-saving information through a networked population. Not because they were smarter. Because they'd spent a decade operating inside the actual information environment, while the institutions transmitted press releases into a world that had stopped existing.
                     </p>
                     <p class="text-base leading-relaxed text-white/70">
-                        Aux Labs runs that arbitrage on purpose. Fifteen years of commercial persuasion craft — the discipline that can make you crave a shoe — pointed at the problems that actually matter. Same instruments. Different target.
+                        Aux Labs runs that arbitrage on purpose. Fifteen years of commercial persuasion craft, the discipline that can make you crave a shoe, pointed at the problems that actually matter. Same instruments. Different target.
                     </p>
                     <p class="text-lg font-bold text-white">
                         We do not sell attention. Attention is not behaviour.
@@ -225,7 +250,7 @@
                     We do all four in one team, because the handoffs between them are where this work usually dies.
                 </p>
                 <p class="text-sm leading-relaxed text-archival-ink/70">
-                    The method has an academic name — applied mechanism design, from the Nobel-line economics of Hurwicz, Maskin, and Myerson. You don't need the name. You need the result: <strong class="text-archival-ink">systems where the better behavior is the easier behavior.</strong>
+                    The method has an academic name: applied mechanism design, from the Nobel-line economics of Hurwicz, Maskin, and Myerson. You don't need the name. You need the result: <strong class="text-archival-ink">systems where the better behavior is the easier behavior.</strong>
                 </p>
             </div>
         </section>
@@ -241,30 +266,30 @@
                 </div>
                 <div class="lg:col-span-8 space-y-10">
                     <p class="text-lg lg:text-xl font-light italic leading-snug">
-                        Every failed institutional reboot you've watched — the rebrand, the listening tour, the "restoring trust" initiative — skipped a step. Trust repair runs in one order, and money enters late.
+                        Every failed institutional reboot you've watched (the rebrand, the listening tour, the "restoring trust" initiative) skipped a step. Trust repair runs in one order, and money enters late.
                     </p>
                     <div id="cascade" class="flex flex-wrap items-center gap-y-3 gap-x-2 font-mono text-[10px] tracking-widest uppercase">
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="listening" aria-expanded="false">Listening</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="listening" aria-expanded="false">Listening</button>
                         <span class="text-brand-green px-1" aria-hidden="true">→</span>
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="legitimacy" aria-expanded="false">Legitimacy</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="legitimacy" aria-expanded="false">Legitimacy</button>
                         <span class="text-brand-green px-1" aria-hidden="true">→</span>
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="trust" aria-expanded="false">Trust</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="trust" aria-expanded="false">Trust</button>
                         <span class="text-brand-green px-1" aria-hidden="true">→</span>
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="sources" aria-expanded="false">Sources</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="sources" aria-expanded="false">Sources</button>
                         <span class="text-brand-green px-1" aria-hidden="true">→</span>
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="truth" aria-expanded="false">Truth</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="truth" aria-expanded="false">Truth</button>
                         <span class="text-brand-green px-1" aria-hidden="true">→</span>
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="art" aria-expanded="false">Art</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="art" aria-expanded="false">Art</button>
                         <span class="text-brand-green px-1" aria-hidden="true">→</span>
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="gravity" aria-expanded="false">Gravity</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="gravity" aria-expanded="false">Gravity</button>
                         <span class="text-brand-green px-1" aria-hidden="true">→</span>
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="funding" aria-expanded="false">Funding</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="funding" aria-expanded="false">Funding</button>
                         <span class="text-brand-green px-1" aria-hidden="true">→</span>
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="institutions" aria-expanded="false">Institutions</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="institutions" aria-expanded="false">Institutions</button>
                         <span class="text-brand-green px-1" aria-hidden="true">→</span>
-                        <button type="button" class="cascade-step border border-archival-ink px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="policy" aria-expanded="false">Policy change</button>
+                        <button type="button" class="cascade-step border-2 border-archival-ink bg-surface/70 font-bold px-3 py-2 hover:bg-brand-green hover:text-black hover:border-brand-green transition-all" data-step="policy" aria-expanded="false">Policy change</button>
                     </div>
-                    <div id="cascade-drawer" class="hidden border border-archival-ink bg-archival-paper p-6 lg:p-8">
+                    <div id="cascade-drawer" role="region" aria-live="polite" class="hidden border border-archival-ink bg-archival-paper p-6 lg:p-8">
                         <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
                             <span id="cascade-drawer-title" class="font-mono text-[10px] uppercase tracking-widest bg-panel text-white px-2 py-1"></span>
                             <span class="font-mono text-[9px] uppercase text-archival-ink/40">FROM AXL-WP-04 · THE PRETEND ERA</span>
@@ -272,7 +297,7 @@
                         <p id="cascade-drawer-body" class="text-sm leading-relaxed text-archival-ink/80 max-w-3xl"></p>
                     </div>
                     <p class="text-base leading-relaxed text-archival-ink/80 max-w-3xl">
-                        We call the sequence <strong>The Switchboard™</strong>. Skip a stage and everything downstream is theater — which your audience can smell, which is how you got here.
+                        The sequence is <strong>the Trust-Repair Cascade</strong>. Skip a stage and everything downstream is theater. Your audience can smell it, which is how you got here.
                     </p>
                 </div>
             </div>
@@ -297,10 +322,10 @@
                 <div class="font-mono text-[9px] mb-8 text-white bg-panel inline-block px-2 py-1 uppercase">§ 05.00 // PROOF</div>
                 <h2 class="text-3xl lg:text-4xl font-black uppercase tracking-tighter leading-none mb-8">A mechanism, not a message.</h2>
                 <div class="font-mono text-[10px] uppercase tracking-widest text-archival-ink/60 mb-6">
-                    MICHELIN × GRAND CENTRAL FOOD PROGRAM — STATUS: <span class="bg-black text-brand-green px-1">DELIVERED · STILL RUNNING</span>
+                    MICHELIN × GRAND CENTRAL FOOD PROGRAM // STATUS: <span class="bg-black text-brand-green px-2 py-1">DELIVERED · STILL RUNNING</span>
                 </div>
                 <p class="text-sm leading-relaxed text-archival-ink/80 max-w-2xl mb-4">
-                    Built by our principal at VIRTUE Worldwide: a campaign where Michelin's own interest bought the Grand Central Food Program a new van, and free tires for as long as it runs. It was not charity and it was not a report. It was a mechanism — and it is still feeding hundreds of people nightly. (Figures last verified 2017; current numbers requested.)
+                    Built by our principal at VIRTUE Worldwide: a campaign where Michelin's own interest bought the Grand Central Food Program a new van, and free tires for as long as it runs. It was not charity and it was not a report. It was a mechanism, and it is still feeding hundreds of people nightly. (Figures last verified 2017; current numbers requested.)
                 </p>
                 <p class="text-lg font-bold leading-snug max-w-2xl">
                     That is the test every engagement has to pass: does it keep working after we leave?
@@ -316,7 +341,7 @@
             </div>
             <div class="px-8 py-6 border-b border-archival-ink">
                 <p class="text-sm leading-relaxed text-archival-ink/70 max-w-3xl">
-                    The commercial lab bills at market rates. The research side publishes the public-good work that keeps the instruments honest. Each keeps the other credible: clients get methods that survive peer review; funders get research that survives contact with reality.
+                    Aux Labs is the commercial lab: it bills at market rates, sells licensable frameworks, and consults clients through the Trust-Repair Cascade. The Switchboard™ is the associated nonprofit: grant-funded, it does the public-interest labor of actually running the cascade, and publishes the research that keeps the instruments honest. Each keeps the other credible: clients get methods that survive peer review; funders get research that survives contact with reality.
                 </p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2">
@@ -327,7 +352,7 @@
                     </div>
                     <div class="p-8">
                         <h4 class="text-sm font-bold uppercase mb-4">There is value sitting inside a system you already pay for. We find it, and you keep it.</h4>
-                        <p class="text-sm leading-relaxed text-archival-ink/70 mb-8">Our standing prediction — published in advance, with its falsification conditions: brand-funded public goods outperform the equivalent CSR spend on brand equity, and leave a durable social outcome behind.</p>
+                        <p class="text-sm leading-relaxed text-archival-ink/70 mb-8">Our standing prediction, published in advance with its falsification conditions: brand-funded public goods outperform the equivalent CSR spend on brand equity, and leave a durable social outcome behind.</p>
                         <a href="commercial.html" class="inline-block bg-panel text-white px-6 py-3 font-mono text-[10px] tracking-widest uppercase hover:bg-brand-green hover:text-black transition-all">
                             [ 01_COMMERCIAL -&gt; ]
                         </a>
@@ -340,8 +365,8 @@
                     </div>
                     <div class="p-8">
                         <h4 class="text-sm font-bold uppercase mb-4">A boutique that owns instruments rather than headcount.</h4>
-                        <p class="text-sm leading-relaxed text-archival-ink/70 mb-8">Your grant doesn't buy overhead; it buys deployment of an existing measurement and mechanism-design capability against a public problem — with open methodology and disclosed conflicts.</p>
-                        <a href="research.html" class="inline-block border border-archival-ink px-6 py-3 font-mono text-[10px] tracking-widest uppercase hover:bg-panel hover:text-white transition-all">
+                        <p class="text-sm leading-relaxed text-archival-ink/70 mb-8">Your grant doesn't buy overhead; it buys deployment of an existing measurement and mechanism-design capability against a public problem, with open methodology and disclosed conflicts.</p>
+                        <a href="research.html" class="inline-block bg-panel text-white px-6 py-3 font-mono text-[10px] tracking-widest uppercase hover:bg-brand-green hover:text-black transition-all">
                             [ 02_RESEARCH -&gt; ]
                         </a>
                     </div>
@@ -371,10 +396,10 @@
                 </div>
                 <div class="lg:col-span-9 space-y-6 max-w-3xl">
                     <p class="text-sm lg:text-base leading-relaxed text-white/80">
-                        Imran Hafiz spent fifteen years inside the machine that convinces people to want things — VICE, then VIRTUE, where as Publisher of VIRTUE Intelligence he built work for Johnnie Walker, Michelin, Lululemon, Budweiser, and Google Chrome. In 2020 he watched the crisis institutions fail at a job his junior strategists could have done in their sleep, and concluded the problem wasn't a talent shortage. It was an allocation error.
+                        Imran Hafiz spent fifteen years inside the machine that convinces people to want things: VICE, then VIRTUE, where as Publisher of VIRTUE Intelligence he built work for Johnnie Walker, Michelin, Lululemon, Budweiser, and Google Chrome. In 2020 he watched the crisis institutions fail at a job his junior strategists could have done in their sleep, and concluded the problem wasn't a talent shortage. It was an allocation error.
                     </p>
                     <p class="text-sm lg:text-base leading-relaxed text-white/80">
-                        Duke, public policy. Co-author of a peer-reviewed disinformation index (Jin-Hafiz, Cureus 2021). Aspen Award for teaching people to spot disinformation by playing it — live.
+                        Duke, public policy. Co-author of a peer-reviewed disinformation index (Jin-Hafiz, Cureus 2021). Aspen Award for teaching people to spot disinformation by playing it, live.
                     </p>
                     <!-- BUILD NOTE (Version B only, after Rory confirms in writing): append
                          "He was mentored by Rory Sutherland, whose challenge this company exists to answer." -->
@@ -392,7 +417,7 @@
                 The diagnosis is free.
             </h2>
             <p class="text-sm lg:text-base leading-relaxed max-w-2xl mb-12 opacity-80">
-                Thirty minutes. Bring the system that's bleeding — a queue, a policy, a schedule, a public that's stopped believing you. We'll tell you where the trust is leaking, what it's costing you, and whether a mechanism can fix it. If we can't help, we'll say so in the first call.
+                Thirty minutes. Bring the system that's bleeding: a queue, a policy, a schedule, a public that's stopped believing you. We'll tell you where the trust is leaking, what it's costing you, and whether a mechanism can fix it. If we can't help, we'll say so in the first call.
             </p>
             <a href="mailto:imran@auxlabs.co?subject=Diagnosis%20call" class="cta-btn px-8 lg:px-12 py-6 font-mono text-sm tracking-[0.2em] uppercase transition-all">
                 [ BOOK_THE_DIAGNOSIS_CALL ]
@@ -449,16 +474,16 @@
 
     <script>
         const AXL_CASCADE = {
-            listening: ["01 · LISTENING", "Signal intake must be consensual, qualitative, and human — not surveillance, not behavioral data extraction, not polling. Actual listening, conducted by journalists, educators, organizers, artists and community participants who are already embedded in real life."],
-            legitimacy: ["02 · LEGITIMACY", "When people experience being heard without extraction, the entity that listened gains legitimacy. This is not a feeling — it is a structural asset that compounds. Ostrom's work on common-pool governance showed the institutions that survive are those that embed the voices of the governed."],
-            trust: ["03 · TRUST", "Legitimacy converts into trust only if it is maintained through costly signals — actions expensive enough that they cannot be faked. Cheap talk does not produce trust. Who you stand up for when it costs you something reveals what you actually believe."],
+            listening: ["01 · LISTENING", "Signal intake must be consensual, qualitative, and human. Not surveillance, not behavioral data extraction, not polling. Actual listening, conducted by journalists, educators, organizers, artists and community participants who are already embedded in real life."],
+            legitimacy: ["02 · LEGITIMACY", "When people experience being heard without extraction, the entity that listened gains legitimacy. This is not a feeling; it is a structural asset that compounds. Ostrom's work on common-pool governance showed the institutions that survive are those that embed the voices of the governed."],
+            trust: ["03 · TRUST", "Legitimacy converts into trust only if it is maintained through costly signals: actions expensive enough that they cannot be faked. Cheap talk does not produce trust. Who you stand up for when it costs you something reveals what you actually believe."],
             sources: ["04 · SOURCES", "When trust is established, people share information they would not otherwise share. Whistleblowers emerge. Documents surface. Patterns become visible. Without trust, sources do not come forward; without sources, truth remains hidden."],
-            truth: ["05 · TRUTH", "Verified information — documents, receipts, case numbers, timelines — transforms private suffering into public fact. The shift from anecdote to evidence is where power becomes legible."],
-            art: ["06 · ART", "Facts alone do not move people. They never have. Truth must be translated into forms that move hearts — narrative, image, rhythm, emotion. This is not decoration; it is the critical conversion layer. Truth, reframed through art, becomes contagious."],
+            truth: ["05 · TRUTH", "Verified information (documents, receipts, case numbers, timelines) transforms private suffering into public fact. The shift from anecdote to evidence is where power becomes legible."],
+            art: ["06 · ART", "Facts alone do not move people. They never have. Truth must be translated into forms that move hearts: narrative, image, rhythm, emotion. This is not decoration; it is the critical conversion layer. Truth, reframed through art, becomes contagious."],
             gravity: ["07 · GRAVITY", "When truth is made emotionally resonant and culturally shareable, it creates narrative gravity: a pull toward participation that does not require coercion. The environment is reshaped so that pro-social behaviour becomes easier than harmful behaviour."],
-            funding: ["08 · FUNDING", "Narrative gravity attracts resources — not out of charity, but out of strategic self-interest. Brand spend redirected toward genuine public good generates both social outcomes and brand equity."],
-            institutions: ["09 · INSTITUTIONS", "Sustained funding allows the construction of durable parallel institutions — community desks, mutual aid structures, independent media — that do not merely protest failing systems but functionally replace them. The parallel polis does not argue with the state; it demonstrates the alternative."],
-            policy: ["10 · POLICY CHANGE", "When parallel institutions are visibly outperforming the systems they shadow, policy change becomes not a demand but an inevitability. The incumbent must adopt the demonstrated solutions or visibly refuse to — and refusal, once the alternative is legible, carries escalating cost."]
+            funding: ["08 · FUNDING", "Narrative gravity attracts resources, not out of charity but out of strategic self-interest. Brand spend redirected toward genuine public good generates both social outcomes and brand equity."],
+            institutions: ["09 · INSTITUTIONS", "Sustained funding allows the construction of durable parallel institutions (community desks, mutual aid structures, independent media) that do not merely protest failing systems but functionally replace them. The parallel polis does not argue with the state; it demonstrates the alternative."],
+            policy: ["10 · POLICY CHANGE", "When parallel institutions are visibly outperforming the systems they shadow, policy change becomes not a demand but an inevitability. The incumbent must adopt the demonstrated solutions or visibly refuse to, and refusal, once the alternative is legible, carries escalating cost."]
         };
         (function(){
             var drawer = document.getElementById('cascade-drawer');
