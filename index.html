@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUX LABS — Behavioral Infrastructure</title>
+    <meta name="description" content="Aux Labs finds the value hiding inside systems you already pay for, and builds the mechanism that releases it.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
+    <script>
+        // Light-first (ratified 8/25). Dark only by stored visitor choice.
+        (function(){try{if(localStorage.getItem('axl-theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/tailwind.css">
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
+
+    <!-- Global Technical Overlay -->
+    <div class="fixed inset-0 pointer-events-none border-[12px] border-archival-ink/5 z-[100]"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-[90] bg-archival-paper/80 backdrop-blur-md border-b border-archival-ink flex flex-wrap items-stretch uppercase font-mono text-[10px] tracking-[0.15em] lg:tracking-[0.25em]">
+        <a href="index.html" class="flex items-center px-4 lg:px-8 py-4 border-r border-archival-ink font-black text-base lg:text-lg tracking-tighter">
+            AUX LABS LLC
+        </a>
+        <div class="flex-grow flex flex-wrap">
+            <a href="commercial.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">01_COMMERCIAL</a>
+            <a href="research.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">02_RESEARCH</a>
+            <a href="cultural.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">03_CULTURAL</a>
+        </div>
+        <div class="hidden xl:flex items-center px-8 text-archival-ink/40">
+            [ CLASSIFICATION: UNRESTRICTED // VER: 4.1.0 ]
+        </div>
+        <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">
+            [ ◐ ]
+        </button>
+    </nav>
+
+    <main class="relative">
+
+        <!-- Top Status Ticker -->
+        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
+            <span>FILE_ID: 882-AUX-2026</span>
+            <span class="hidden sm:inline animate-pulse">● RECORDS_OPEN</span>
+            <span>BEHAVIORAL_INFRASTRUCTURE</span>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-archival-ink">
+
+            <!-- Left Header -->
+            <div class="lg:col-span-7 p-8 lg:p-20 lg:border-r border-archival-ink relative overflow-hidden bg-surface/20">
+                <div class="absolute top-0 right-0 p-4 font-mono text-[8px] text-archival-ink/20 theoretical-margin h-full border-l border-archival-ink/10 hidden lg:block">
+                    ADAPTIVE_INCENTIVE_STRUCTURES // CAUSAL_INFERENCE // BEHAVIORAL_INFRASTRUCTURE
+                </div>
+
+                <div class="mb-16 font-mono text-[11px] tracking-tighter flex items-center gap-4">
+                    <span class="bg-panel text-white px-2 py-0.5">RECORD_01</span>
+                    <span class="text-archival-ink/60">[ IDENTITY_FIRST ]</span>
+                </div>
+
+                <h1 class="text-5xl lg:text-[4.5rem] font-black leading-[0.95] tracking-tighter mb-12 uppercase">
+                    Aux Labs finds the value hiding inside systems you already pay for, <span class="stroke-ink">and builds the mechanism that releases it.</span>
+                </h1>
+
+                <div class="max-w-xl space-y-8">
+                    <p class="text-xl lg:text-2xl font-light leading-snug tracking-tight italic border-l-4 border-brand-green pl-8 py-2">
+                        A consultancy, a think tank, a nudge unit, a design studio and a production studio, in one team.
+                    </p>
+
+                    <div class="font-mono text-[10px] leading-relaxed text-archival-ink/70">
+                        [ DECK ] WE DO THE WHOLE LINE — FIND IT, PROVE IT, BUILD IT, MEASURE IT — BECAUSE THE HANDOFFS BETWEEN THOSE ARE WHERE THIS WORK USUALLY DIES.
+                    </div>
+
+                    <div class="flex flex-wrap gap-1 pt-4">
+                        <a href="commercial.html" class="bg-panel text-white px-8 lg:px-10 py-5 font-mono text-xs tracking-widest uppercase hover:bg-brand-green hover:text-black transition-all">
+                            [ HOW_YOU_USE_US ]
+                        </a>
+                        <a href="research.html" class="border border-archival-ink px-8 lg:px-10 py-5 font-mono text-xs tracking-widest uppercase hover:bg-panel hover:text-white transition-all">
+                            [ THE_ARCHIVE ]
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: The Proof (Michelin) -->
+            <div class="lg:col-span-5 flex flex-col">
+                <div class="flex-grow relative bg-panel overflow-hidden min-h-[400px] lg:min-h-[500px]">
+                    <!-- PHOTO SLOT 01 — replace this composition with an owned photograph:
+                         <img class="w-full h-full object-cover archival-duotone" src="..." alt="...">
+                         Register per pack §02.E: textures, structures, type-led. No AI photography. -->
+                    <div class="absolute inset-0 z-10" aria-hidden="true" style="background:
+                        repeating-linear-gradient(0deg, rgba(0,255,65,0.04) 0 1px, transparent 1px 64px),
+                        repeating-linear-gradient(90deg, rgba(0,255,65,0.04) 0 1px, transparent 1px 64px),
+                        linear-gradient(160deg,#0b0c0b 0%,#181a18 55%,#0a0b0a 100%);">
+                    </div>
+                    <div class="absolute inset-0 z-10 flex items-center justify-center" aria-hidden="true">
+                        <span class="font-black uppercase leading-none tracking-tighter" style="font-size:clamp(7rem,24vw,18rem);color:rgba(255,255,255,0.05)">AXL</span>
+                    </div>
+                    <div class="absolute inset-0 z-20 pointer-events-none opacity-40" style="background-image: radial-gradient(circle, #00FF41 0.7px, transparent 0.7px); background-size: 24px 24px;"></div>
+
+                    <div class="absolute top-6 right-6 z-30 font-mono text-[8px] text-brand-green tracking-[0.5em] uppercase" style="writing-mode: vertical-rl;">
+                        AXL_PROOF_01
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 right-0 z-30 p-6 bg-gradient-to-t from-black to-transparent">
+                        <div class="bg-brand-green text-black font-mono text-[9px] px-2 py-1 inline-block mb-2 uppercase font-bold">
+                            Delivered at VIRTUE Worldwide · Still running
+                        </div>
+                        <h2 class="text-white text-xl font-black uppercase leading-tight mb-2">A tire company's marketing budget is still feeding the Bronx.</h2>
+                    </div>
+                </div>
+                <div class="p-8 border-t border-archival-ink bg-surface/50 font-mono text-[10px] space-y-4">
+                    <div class="flex justify-between border-b border-archival-ink pb-2">
+                        <span class="font-bold">STATUS:</span>
+                        <span class="bg-black text-brand-green px-1">DELIVERED · STILL RUNNING</span>
+                    </div>
+                    <p class="text-archival-ink/80 leading-relaxed">
+                        Our principal built this at VIRTUE Worldwide: a campaign where Michelin's own interest bought the Grand Central Food Program a new van, and free tires for as long as it runs. That was not charity and it was not a report. It was a mechanism, and by the figures we were given it is still feeding hundreds of people nightly.
+                    </p>
+                    <p class="text-archival-ink/60 leading-relaxed">
+                        Those figures were last verified in 2017. We have asked the program for current ones, and this record updates when they answer.
+                    </p>
+                    <div class="flex justify-between items-center pt-2">
+                        <span class="font-bold uppercase">We do not sell attention. Attention is not behaviour.</span>
+                        <span class="font-bold uppercase text-brand-green shrink-0">Proof-First -&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Strip — names as text, never logos (legally load-bearing) -->
+        <section class="border-b border-archival-ink py-4 px-4 lg:px-8 bg-surface/40 overflow-hidden">
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 lg:gap-12 text-[10px] font-mono uppercase tracking-widest text-archival-ink/60">
+                <span class="text-archival-ink font-bold shrink-0">PAST_CLIENTS:</span>
+                <span>Johnnie Walker</span>
+                <span class="text-brand-green">/</span>
+                <span>Michelin</span>
+                <span class="text-brand-green">/</span>
+                <span>Lululemon</span>
+                <span class="text-brand-green">/</span>
+                <span>Budweiser</span>
+                <span class="text-brand-green">/</span>
+                <span>Google Chrome</span>
+                <span class="text-brand-green">/</span>
+                <span>VICE</span>
+            </div>
+            <div class="mt-2 text-[9px] font-mono uppercase tracking-widest text-archival-ink/50">
+                Previous clients of our principal, at VICE and VIRTUE Worldwide.
+            </div>
+        </section>
+
+        <!-- Methodology Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-4 border-b border-archival-ink">
+            <div class="p-8 md:border-r border-archival-ink bg-brand-green/5">
+                <div class="font-mono text-[9px] mb-8 text-brand-green bg-black inline-block px-2 py-1 uppercase">Methodology_01</div>
+                <h3 class="text-3xl font-black mb-6 uppercase tracking-tighter leading-none">Find <br> It.</h3>
+                <p class="text-xs font-mono leading-relaxed mb-8">
+                    YOU ALREADY RUN A SYSTEM — A SCHEDULE, A ROUTE, A POLICY, A QUEUE. WE FIND WHAT IT IS COSTING YOU THAT NOBODY HAS COUNTED.
+                </p>
+            </div>
+            <div class="p-8 md:border-r border-archival-ink">
+                <div class="font-mono text-[9px] mb-8 text-white bg-panel inline-block px-2 py-1 uppercase">Methodology_02</div>
+                <h3 class="text-3xl font-black mb-6 uppercase tracking-tighter leading-none">Design <br> The Mechanism.</h3>
+                <p class="text-xs font-mono leading-relaxed mb-8">
+                    NOT A CAMPAIGN. THE RULE, THE SEQUENCE OR THE DEFAULT THAT MAKES THE BETTER BEHAVIOUR THE EASY ONE.
+                </p>
+            </div>
+            <div class="p-8 md:border-r border-archival-ink">
+                <div class="font-mono text-[9px] mb-8 text-white bg-panel inline-block px-2 py-1 uppercase">Methodology_03</div>
+                <h3 class="text-3xl font-black mb-6 uppercase tracking-tighter leading-none">Build <br> It.</h3>
+                <p class="text-xs font-mono leading-relaxed mb-8">
+                    WE ARE MEDIUM-AGNOSTIC. RESEARCH, PRODUCT, FILM, PRINT, SOFTWARE — WHATEVER THE MECHANISM ACTUALLY NEEDS. ONE TEAM, THE WHOLE LINE.
+                </p>
+            </div>
+            <div class="p-8 bg-panel text-white">
+                <div class="font-mono text-[9px] mb-8 text-brand-green border border-brand-green inline-block px-2 py-1 uppercase">Access_Portal</div>
+                <h3 class="text-3xl font-black mb-6 uppercase tracking-tighter leading-none">The <br> Archive.</h3>
+                <p class="text-xs font-mono leading-relaxed mb-8 text-white/60 uppercase">
+                    Working papers AXL-WP-01 through AXL-WP-08, publishing one at a time as each clears its sourcing pass.
+                </p>
+                <a href="research.html" class="text-[9px] font-mono text-brand-green uppercase hover:underline">[ ROLLING_PUBLICATION -&gt; 02_RESEARCH ]</a>
+            </div>
+        </section>
+
+        <!-- Trust Repair Cascade -->
+        <section class="p-8 lg:p-20 border-b border-archival-ink bg-surface/20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <div class="font-mono text-[9px] mb-8 text-white bg-panel inline-block px-2 py-1 uppercase">§ 02.00 // WHY IT WORKS</div>
+                    <h2 class="text-4xl font-black uppercase tracking-tighter leading-none mb-8">The Trust-Repair <br> Cascade.</h2>
+                    <p class="font-mono text-xs leading-relaxed text-archival-ink/60 uppercase mb-8">TEN STEPS, IN A REQUIRED ORDER, AND YOU CANNOT START IN THE MIDDLE.</p>
+                    <p class="font-mono text-[9px] leading-relaxed text-archival-ink/40 uppercase">CITE AS: THE TRUST-REPAIR CASCADE (HAFIZ, 2026)</p>
+                </div>
+                <div class="lg:col-span-8 space-y-12">
+                    <p class="text-xl lg:text-2xl font-light italic leading-snug">
+                        Almost every well-resourced intervention of the last twenty years entered somewhere near the end — funding step eight before step three existed. The failures were sequencing errors, not judgement errors.
+                    </p>
+                    <div class="overflow-x-auto pb-4">
+                        <div class="flex items-center gap-4 font-mono text-[10px] tracking-widest uppercase whitespace-nowrap">
+                            <span class="bg-panel text-white px-3 py-2">Listening</span>
+                            <span class="text-brand-green">→</span>
+                            <span class="border border-archival-ink px-3 py-2">Legitimacy</span>
+                            <span class="text-brand-green">→</span>
+                            <span class="border border-archival-ink px-3 py-2">Trust</span>
+                            <span class="text-brand-green">→</span>
+                            <span class="border border-archival-ink px-3 py-2">Sources</span>
+                            <span class="text-brand-green">→</span>
+                            <span class="border border-archival-ink px-3 py-2">Truth</span>
+                            <span class="text-brand-green">→</span>
+                            <span class="border border-archival-ink px-3 py-2">Art</span>
+                            <span class="text-brand-green">→</span>
+                            <span class="border border-archival-ink px-3 py-2">Gravity</span>
+                            <span class="text-brand-green">→</span>
+                            <span class="border border-archival-ink px-3 py-2">Funding</span>
+                            <span class="text-brand-green">→</span>
+                            <span class="border border-archival-ink px-3 py-2">Institutions</span>
+                            <span class="text-brand-green">→</span>
+                            <span class="border border-archival-ink px-3 py-2">Policy change</span>
+                        </div>
+                    </div>
+                    <p class="text-lg lg:text-xl font-bold leading-snug max-w-3xl">
+                        We call the field behavioral infrastructure. We publish the diagnosis free. We are paid to build the fix.
+                    </p>
+                    <p class="font-mono text-[10px] leading-relaxed text-archival-ink/60 uppercase max-w-3xl">
+                        THE PARTS ALREADY EXIST. JOURNALISM THAT VERIFIES. ART THAT MAKES TRUTH CONTAGIOUS. MUTUAL AID THAT OUTPERFORMS THE SYSTEMS IT REPLACES. ACCOUNTABILITY THAT MAKES PRETENDING EXPENSIVE. WHAT IS MISSING IS THE THING THAT MAKES ALL FOUR FIRE IN ORDER. THAT IS WHAT WE BUILD.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Structured Data: Two Audiences -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 border-b border-archival-ink">
+            <div class="lg:border-r border-archival-ink">
+                <div class="px-8 py-4 border-b border-archival-ink bg-surface/30 flex justify-between items-center">
+                    <span class="font-mono text-[10px] font-bold tracking-widest uppercase">TABLE_01: FOR CORPORATE BUYERS</span>
+                    <span class="w-2 h-2 bg-brand-green rounded-full"></span>
+                </div>
+                <div class="divide-y divide-archival-ink/10">
+                    <div class="p-8">
+                        <h4 class="text-sm font-bold uppercase mb-4">There is value sitting inside a system you already pay for. We find it, and you keep it.</h4>
+                        <p class="text-[11px] leading-relaxed text-archival-ink/60 uppercase font-mono mb-8">OUR PUBLISHED PREDICTION — STATED IN ADVANCE, WITH ITS FALSIFICATION CONDITIONS — IS THAT BRAND-FUNDED PUBLIC GOODS OUTPERFORM THE EQUIVALENT CSR SPEND ON BRAND EQUITY, AND LEAVE A DURABLE SOCIAL OUTCOME BEHIND INSTEAD OF A REPORT.</p>
+                        <a href="mailto:imran@auxlabs.co?subject=Diagnosis%20call" class="inline-block bg-panel text-white px-6 py-3 font-mono text-[10px] tracking-widest uppercase hover:bg-brand-green hover:text-black transition-all">
+                            [ ONE ASK: BOOK THE DIAGNOSIS CALL ]
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="px-8 py-4 border-b border-archival-ink bg-surface/30 flex justify-between items-center">
+                    <span class="font-mono text-[10px] font-bold tracking-widest uppercase">TABLE_02: FOR INVESTORS AND FUNDERS</span>
+                    <span class="w-2 h-2 border border-archival-ink rounded-full"></span>
+                </div>
+                <div class="divide-y divide-archival-ink/10">
+                    <div class="p-8">
+                        <h4 class="text-sm font-bold uppercase mb-4">A boutique that owns instruments rather than headcount.</h4>
+                        <p class="text-[11px] leading-relaxed text-archival-ink/60 uppercase font-mono mb-6">THE STRUCTURE IS A UNIVERSITY HOSPITAL. THE COMMERCIAL LAB EARNS AT MARKET RATES. THE NONPROFIT SIDE RUNS THE PUBLIC-GOOD RESEARCH THAT KEEPS THE INSTRUMENTS HONEST.</p>
+                        <p class="text-[11px] leading-relaxed font-bold uppercase font-mono mb-8">FUNDERS FUND THE MECHANISM, NEVER THE MESSAGE. THE MOMENT MONEY STEERS THE FINDING, THE CREDIBILITY IT CAME TO BUY EVAPORATES. DISTANCE IS THE PRODUCT.</p>
+                        <details class="axl-door border border-archival-ink/20 bg-archival-paper font-mono text-[9px] uppercase tracking-widest">
+                            <summary class="p-4 hover:bg-brand-green/10 transition-all">[ BEHIND THE DOOR ] WHAT DOES THIS COST, AND WHY? +</summary>
+                            <div class="p-4 border-t border-archival-ink/20 text-archival-ink/60 normal-case tracking-normal leading-relaxed">
+                                The operating budget and the staffing figure publish here, each with its reasoning attached. They are being finalized; this door opens when they are real rather than rounded.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- People Section -->
+        <section class="p-8 lg:p-20 border-b border-archival-ink bg-panel text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <div class="font-mono text-[9px] mb-8 text-brand-green border border-brand-green inline-block px-2 py-1 uppercase">§ 03.00 // PEOPLE</div>
+                    <!-- PHOTO SLOT 02 — replace with an owned portrait:
+                         <img class="w-full h-full object-cover" src="..." alt="Imran Hafiz"> -->
+                    <div class="aspect-square border border-white/20 mb-8 relative overflow-hidden" aria-hidden="true">
+                        <div class="absolute inset-0" style="background:
+                            repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 12px),
+                            linear-gradient(180deg, rgba(0,255,65,0.04), transparent);"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 font-mono text-[9px] uppercase tracking-[0.3em] text-white/40">
+                            <span class="text-4xl font-black tracking-tighter text-white/15">I.H.</span>
+                            <span>SUBJECT: HAFIZ, IMRAN</span>
+                            <span class="text-brand-green/60">PLATE FORTHCOMING</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-2">Imran Hafiz</h3>
+                    <p class="font-mono text-[10px] text-brand-green uppercase tracking-widest">Principal · Formerly Publisher, VIRTUE Intelligence</p>
+                </div>
+                <div class="lg:col-span-8 space-y-8 font-mono text-xs uppercase leading-relaxed text-white/60">
+                    <p class="text-white">Imran Hafiz. Duke, public policy. Fifteen years at VICE and VIRTUE Worldwide, ending as Publisher, VIRTUE Intelligence. Brand positioning work for Johnnie Walker, Michelin, Lululemon, Budweiser, Google Chrome and VICE. Co-author of a book written at sixteen and carried in ten thousand libraries. Co-author of a peer-reviewed disinformation index (Jin-Hafiz, Cureus 2021). Aspen Award for teaching disinformation recognition through live gameplay.</p>
+                    <p>I left a lucrative strategy career for this and built everything on this site at my own expense, before any funding existed. People who are performing do not mention the cost.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Routing Block — the scroll's exit -->
+        <section class="border-b border-archival-ink">
+            <div class="px-8 py-4 border-b border-archival-ink bg-surface/30 font-mono text-[10px] font-bold tracking-widest uppercase">
+                Where this goes next.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <a href="commercial.html" class="p-8 md:border-r border-b md:border-b-0 border-archival-ink font-mono text-xs uppercase tracking-wider hover:bg-brand-green hover:text-black transition-all">
+                    Buying for a brand -&gt; <span class="font-black">01_COMMERCIAL</span>
+                </a>
+                <a href="research.html" class="p-8 md:border-r border-b md:border-b-0 border-archival-ink font-mono text-xs uppercase tracking-wider hover:bg-brand-green hover:text-black transition-all">
+                    Evaluating the research -&gt; <span class="font-black">02_RESEARCH</span>
+                </a>
+                <a href="cultural.html" class="p-8 font-mono text-xs uppercase tracking-wider hover:bg-brand-green hover:text-black transition-all">
+                    Making culture with us -&gt; <span class="font-black">03_CULTURAL</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="p-8 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 bg-archival-paper">
+            <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/40">
+                <p>© 2026 AUX LABS LLC // ALL RIGHTS RESERVED</p>
+                <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
+                <p>auxlabs.co // Signal @nawab.12</p>
+            </div>
+
+            <div class="flex flex-col items-start lg:items-end">
+                <div class="flex gap-4 mb-4">
+                    <div class="w-12 h-16 border border-archival-ink flex flex-col items-center justify-center font-mono text-[8px] text-archival-ink/40">
+                        <span>CERT</span>
+                        <div class="w-6 h-[1px] bg-archival-ink/20 my-1"></div>
+                        <span>042</span>
+                    </div>
+                    <div class="w-12 h-16 border border-archival-ink bg-panel text-brand-green flex flex-col items-center justify-center font-mono text-[8px]">
+                        <span>AUX</span>
+                        <div class="w-6 h-[1px] bg-brand-green/20 my-1"></div>
+                        <span>R&amp;D</span>
+                    </div>
+                </div>
+                <div class="text-left lg:text-right">
+                    <h2 class="text-4xl font-black tracking-tighter uppercase leading-none mb-2">End of <br> Record.</h2>
+                    <p class="font-mono text-[9px] text-brand-green bg-black px-2 py-0.5 inline-block uppercase">imran@auxlabs.co</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        function axlToggleTheme(){
+            var h = document.documentElement;
+            var toDark = h.getAttribute('data-theme') !== 'dark';
+            if (toDark) { h.setAttribute('data-theme','dark'); } else { h.removeAttribute('data-theme'); }
+            try { localStorage.setItem('axl-theme', toDark ? 'dark' : 'light'); } catch(e) {}
+        }
+    </script>
+</body>
+</html>
