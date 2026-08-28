@@ -35,3 +35,8 @@
 .paper-prose sup { font-size: 0.7em; }
 .paper-prose .footnote { border-top: 2px solid rgb(var(--ink-rgb)); margin-top: 3em; padding-top: 1.5em;
   font-size: 0.85rem; }
+
+/* long unbroken runs (ASCII dividers, URLs) must wrap on small screens */
+.paper-prose p, .paper-prose li, .paper-prose td, .paper-prose h1, .paper-prose h2, .paper-prose h3 { overflow-wrap: anywhere; }
+.paper-prose pre { overflow-x: auto; max-width: 100%; }
+.paper-prose table { display: block; overflow-x: auto; max-width: 100%; }
