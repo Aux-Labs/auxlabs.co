@@ -8,8 +8,10 @@ html[data-theme="dark"] { --paper-rgb: 17 18 17; --ink-rgb: 229 228 222; --surfa
 
 body { font-family: 'Inter', sans-serif; background-color: rgb(var(--paper-rgb)); color: rgb(var(--ink-rgb)); }
 
-/* Type system per S.B. 8/25: display = Arimo 700; mono = Cutive Mono, captions/labels only. */
-h1, h2, h3, h4, h5, .font-black { font-family: 'Arimo', 'Inter', sans-serif; font-weight: 700; }
+/* Type system per Samantha's UX Pilot mockups (Imran ruling 8/28): display = Inter 900;
+   mono = JetBrains Mono; serif accents = Libre Baskerville italic. Arimo/Cutive retired. */
+h1, h2, h3, h4, h5 { font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+.pull-serif { font-family: 'Libre Baskerville', serif; font-style: italic; }
 h1, h2, h3, h4 { text-wrap: balance; }   /* widows/orphans */
 p { text-wrap: pretty; }
 
@@ -31,5 +33,57 @@ html[data-theme="dark"] .cta-final .cta-btn:hover { background: #fff; color: #00
 :focus-visible { outline: 3px solid #00FF41; outline-offset: 2px; }
 .cta-final .cta-btn:focus-visible, .cascade-step:focus-visible { outline: 3px solid currentColor; outline-offset: 2px; }
 .skip-link { position: absolute; left: -9999px; top: 0; z-index: 200; background: #00FF41; color: #000;
-  padding: 0.75rem 1.25rem; font-family: 'Cutive Mono', monospace; text-transform: uppercase; font-size: 12px; }
+  padding: 0.75rem 1.25rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-size: 12px; }
 .skip-link:focus { left: 0; }
+
+/* Samantha mockup device: outline display text (theme-aware) */
+.text-stroke { color: transparent; -webkit-text-stroke: 1.5px rgb(var(--ink-rgb)); }
+.bg-panel .text-stroke, .cta-final .text-stroke { -webkit-text-stroke: 1.5px currentColor; color: transparent; }
+
+/* ─── BOOT SEQUENCE ──────────────────────────────────────────────────────────
+   A curtain, not a gate. The page is fully parsed underneath; crawlers and
+   no-JS visitors never see this. It shows only when the inline head script
+   adds .axl-booting — first visit of the session, JS on, motion allowed.
+   The head script also carries a 2.6s failsafe that lifts the curtain even
+   if assets/axl.js never loads, so the site can never brick behind it. */
+#axl-boot { display: none; }
+html.axl-booting #axl-boot {
+  display: flex; position: fixed; inset: 0; z-index: 500;
+  flex-direction: column; justify-content: center; padding: 2rem;
+  background: #060706; color: #00FF41; font-family: 'JetBrains Mono', monospace;
+}
+html.axl-booting body { overflow: hidden; }
+#axl-boot.axl-boot-out { opacity: 0; pointer-events: none; transition: opacity 260ms ease-out; }
+.axl-boot-inner { width: 100%; max-width: 44rem; margin: 0 auto; }
+.axl-boot-line { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.35rem 0; opacity: 0; }
+.axl-boot-line.is-on { opacity: 1; }
+.axl-boot-line .ok { color: #fff; white-space: nowrap; }
+.axl-boot-rule { height: 1px; background: rgba(0,255,65,0.25); margin: 1.25rem 0; }
+.axl-boot-bar { height: 2px; background: rgba(0,255,65,0.15); overflow: hidden; }
+.axl-boot-bar span { display: block; height: 100%; width: 0; background: #00FF41; }
+.axl-boot-seal { font-size: clamp(1.5rem, 7vw, 2.75rem); font-family: 'Inter', sans-serif; font-weight: 900;
+  letter-spacing: -0.03em; line-height: 1; margin-top: 1.5rem; opacity: 0; }
+.axl-boot-seal.is-on { opacity: 1; transition: opacity 200ms ease-out; }
+.axl-boot-hint { margin-top: 1.5rem; font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(0,255,65,0.45); }
+.axl-boot-cursor { animation: axl-blink 900ms steps(1) infinite; }
+@keyframes axl-blink { 50% { opacity: 0; } }
+
+/* ─── RESEARCH GALLERY ───────────────────────────────────────────────────── */
+.axl-reveal { opacity: 0; transform: translateY(14px); }
+.axl-reveal.is-in { opacity: 1; transform: none;
+  transition: opacity 420ms ease-out, transform 420ms cubic-bezier(.2,.7,.3,1); }
+.axl-paper[hidden] { display: none; }
+.axl-paper-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 300ms ease; }
+.axl-paper[data-open="true"] .axl-paper-body { grid-template-rows: 1fr; }
+.axl-paper-body > .axl-paper-body-inner { overflow: hidden; }
+.axl-paper-toggle .axl-chev { transition: transform 220ms ease; }
+.axl-paper[data-open="true"] .axl-chev { transform: rotate(90deg); }
+.axl-filter[aria-pressed="true"] { background: #00FF41; color: #000; border-color: #00FF41; }
+
+@media (prefers-reduced-motion: reduce) {
+  .axl-reveal, .axl-reveal.is-in { opacity: 1; transform: none; transition: none; }
+  .axl-paper-body, .axl-paper-toggle .axl-chev { transition: none; }
+  .axl-boot-cursor { animation: none; }
+}

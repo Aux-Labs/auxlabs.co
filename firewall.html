@@ -5,26 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUX LABS | THE FIREWALL</title>
     <meta name="description" content="Aux Labs governance, published in advance: certification against public standards, reproducible scores, separation of instrument from engagement, and a permanent register of paying relationships.">
+    <link rel="canonical" href="https://auxlabs.co/firewall.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aux Labs">
+    <meta property="og:url" content="https://auxlabs.co/firewall.html">
+    <meta property="og:title" content="AUX LABS | THE FIREWALL">
+    <meta property="og:description" content="Aux Labs governance, published in advance: certification against public standards, reproducible scores, separation of instrument from engagement, and a permanent register of paying relationships.">
+    <meta property="og:image" content="https://auxlabs.co/assets/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Aux Labs. Behavioral infrastructure.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AUX LABS | THE FIREWALL">
+    <meta name="twitter:description" content="Aux Labs governance, published in advance: certification against public standards, reproducible scores, separation of instrument from engagement, and a permanent register of paying relationships.">
+    <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
-    <script>(function(){try{if(localStorage.getItem('axl-theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+    <script>
+        // Theme (light-first, ratified 8/25) + boot gate. Inline and first so neither
+        // can flash. The 2.6s failsafe lifts the curtain even if assets/axl.js never
+        // loads: the site can never brick behind the loader.
+        (function(){
+            try{ if(localStorage.getItem('axl-theme')==='dark'){ document.documentElement.setAttribute('data-theme','dark'); } }catch(e){}
+            try{
+                var seen = sessionStorage.getItem('axl-booted');
+                var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                if(!seen && !calm){
+                    document.documentElement.className += ' axl-booting';
+                    setTimeout(function(){ document.documentElement.classList.remove('axl-booting'); }, 2600);
+                }
+            }catch(e){}
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Cutive+Mono&family=Inter:wght@300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/tailwind.css">
+    <script src="assets/axl.js" defer></script>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
+    <!-- Boot sequence. Display:none by default; the head script rules it in only on
+         a first visit this session, with JS on and motion allowed. The record below
+         is already parsed and crawlable: a curtain, not a gate. -->
+    <div id="axl-boot" aria-hidden="true">
+        <div class="axl-boot-inner">
+            <div class="axl-boot-line"><span>&gt; ESTABLISHING SIGNAL</span><span class="ok">OK</span></div>
+            <div class="axl-boot-line"><span>&gt; CERT 042</span><span class="ok">VERIFIED</span></div>
+            <div class="axl-boot-line"><span>&gt; FILE_ID 882-AUX-2026</span><span class="ok">OPEN</span></div>
+            <div class="axl-boot-line"><span>&gt; CLASSIFICATION</span><span class="ok">UNRESTRICTED</span></div>
+            <div class="axl-boot-rule"></div>
+            <div class="axl-boot-bar"><span></span></div>
+            <div class="axl-boot-seal">RECORDS_OPEN<span class="axl-boot-cursor">_</span></div>
+            <p class="axl-boot-hint">Press any key to skip</p>
+        </div>
+    </div>
     <a href="#main" class="skip-link">Skip to content</a>
     <div class="fixed inset-0 pointer-events-none border-[12px] border-archival-ink/5 z-[100]"></div>
 
     <nav class="sticky top-0 z-[90] bg-archival-paper/80 backdrop-blur-md border-b border-archival-ink flex flex-wrap items-stretch uppercase font-mono text-[10px] tracking-[0.15em] lg:tracking-[0.25em]">
-        <a href="index.html" class="flex items-center px-4 lg:px-8 py-4 border-r border-archival-ink font-black text-base lg:text-lg tracking-tighter">AUX LABS LLC</a>
-        <div class="flex-grow flex flex-wrap">
-            <a href="commercial.html" class="flex items-center px-4 lg:px-8 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">01_COMMERCIAL</a>
-            <a href="research.html" class="flex items-center px-4 lg:px-8 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">02_RESEARCH</a>
-            <a href="cultural.html" class="flex items-center px-4 lg:px-8 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">03_CULTURAL</a>
-            <a href="dossier.html" class="flex items-center px-4 lg:px-8 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">04_DOSSIER</a>
+        <a href="index.html" class="order-1 flex-grow lg:flex-grow-0 flex items-center px-4 lg:px-8 py-4 lg:border-r border-archival-ink font-black text-base lg:text-lg tracking-tighter">AUX LABS LLC</a>
+        <div class="order-3 lg:order-2 w-full lg:w-auto flex-grow flex flex-wrap border-t lg:border-t-0 border-archival-ink">
+            <a href="commercial.html" class="basis-1/2 sm:basis-auto sm:flex-1 lg:flex-none flex items-center justify-center lg:justify-start px-1 sm:px-4 lg:px-8 py-3 lg:py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">01_COMMERCIAL</a>
+            <a href="research.html" class="basis-1/2 sm:basis-auto sm:flex-1 lg:flex-none flex items-center justify-center lg:justify-start px-1 sm:px-4 lg:px-8 py-3 lg:py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">02_RESEARCH</a>
+            <a href="cultural.html" class="basis-1/2 sm:basis-auto sm:flex-1 lg:flex-none flex items-center justify-center lg:justify-start px-1 sm:px-4 lg:px-8 py-3 lg:py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">03_CULTURAL</a>
+            <a href="record.html" class="basis-1/2 sm:basis-auto sm:flex-1 lg:flex-none flex items-center justify-center lg:justify-start px-1 sm:px-4 lg:px-8 py-3 lg:py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">04_RECORD</a>
         </div>
-        <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">[ ◐ ]</button>
+        <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="order-2 lg:order-4 ml-auto lg:ml-0 flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">[ ◐ ]</button>
     </nav>
 
     <main id="main" class="relative">
@@ -97,7 +142,7 @@
                         <h2 class="text-xl font-black uppercase tracking-tighter mt-4">Sequence.</h2>
                     </div>
                     <p class="lg:col-span-8 text-sm leading-relaxed text-archival-ink/80 max-w-2xl">
-                        In cultural work, capital enters the Trust-Repair Cascade™ after the art stage. Sponsors fund the program, not the finding. A finding adverse to one sponsor is a sponsorship opening for its competitors, which is what keeps it a competition problem rather than a moral one.
+                        In cultural work, capital enters the <a href="index.html#sequence" class="underline hover:text-brand-green transition-colors">Trust-Repair Cascade™</a> after the art stage. Sponsors fund the program, not the finding. A finding adverse to one sponsor is a sponsorship opening for its competitors, which is what keeps it a competition problem rather than a moral one.
                     </p>
                 </div>
             </div>

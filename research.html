@@ -5,34 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUX LABS | 02_RESEARCH</title>
     <meta name="description" content="We publish the diagnosis free. Seven working papers published, AXL-WP-01 through AXL-WP-08; one in preparation.">
+    <link rel="canonical" href="https://auxlabs.co/research.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aux Labs">
+    <meta property="og:url" content="https://auxlabs.co/research.html">
+    <meta property="og:title" content="AUX LABS | 02_RESEARCH">
+    <meta property="og:description" content="We publish the diagnosis free. Seven working papers published, AXL-WP-01 through AXL-WP-08; one in preparation.">
+    <meta property="og:image" content="https://auxlabs.co/assets/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Aux Labs. Behavioral infrastructure.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AUX LABS | 02_RESEARCH">
+    <meta name="twitter:description" content="We publish the diagnosis free. Seven working papers published, AXL-WP-01 through AXL-WP-08; one in preparation.">
+    <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
     <script>
-        (function(){try{if(localStorage.getItem('axl-theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();
+        // Theme (light-first, ratified 8/25) + boot gate. Inline and first so neither
+        // can flash. The 2.6s failsafe lifts the curtain even if assets/axl.js never
+        // loads: the site can never brick behind the loader.
+        (function(){
+            try{ if(localStorage.getItem('axl-theme')==='dark'){ document.documentElement.setAttribute('data-theme','dark'); } }catch(e){}
+            try{
+                var seen = sessionStorage.getItem('axl-booted');
+                var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                if(!seen && !calm){
+                    document.documentElement.className += ' axl-booting';
+                    setTimeout(function(){ document.documentElement.classList.remove('axl-booting'); }, 2600);
+                }
+            }catch(e){}
+        })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Cutive+Mono&family=Inter:wght@300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/tailwind.css">
+    <script src="assets/axl.js" defer></script>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
+    <!-- Boot sequence. Display:none by default; the head script rules it in only on
+         a first visit this session, with JS on and motion allowed. The record below
+         is already parsed and crawlable: a curtain, not a gate. -->
+    <div id="axl-boot" aria-hidden="true">
+        <div class="axl-boot-inner">
+            <div class="axl-boot-line"><span>&gt; ESTABLISHING SIGNAL</span><span class="ok">OK</span></div>
+            <div class="axl-boot-line"><span>&gt; CERT 042</span><span class="ok">VERIFIED</span></div>
+            <div class="axl-boot-line"><span>&gt; FILE_ID 882-AUX-2026</span><span class="ok">OPEN</span></div>
+            <div class="axl-boot-line"><span>&gt; CLASSIFICATION</span><span class="ok">UNRESTRICTED</span></div>
+            <div class="axl-boot-rule"></div>
+            <div class="axl-boot-bar"><span></span></div>
+            <div class="axl-boot-seal">RECORDS_OPEN<span class="axl-boot-cursor">_</span></div>
+            <p class="axl-boot-hint">Press any key to skip</p>
+        </div>
+    </div>
 
     <div class="fixed inset-0 pointer-events-none border-[12px] border-archival-ink/5 z-[100]"></div>
 
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-[90] bg-archival-paper/80 backdrop-blur-md border-b border-archival-ink flex flex-wrap items-stretch uppercase font-mono text-[10px] tracking-[0.15em] lg:tracking-[0.25em]">
-        <a href="index.html" class="flex items-center px-4 lg:px-8 py-4 border-r border-archival-ink font-black text-base lg:text-lg tracking-tighter">
+        <a href="index.html" class="order-1 flex-grow lg:flex-grow-0 flex items-center px-4 lg:px-8 py-4 lg:border-r border-archival-ink font-black text-base lg:text-lg tracking-tighter">
             AUX LABS LLC
         </a>
-        <div class="flex-grow flex flex-wrap">
+        <div class="order-3 lg:order-2 w-full lg:w-auto flex-grow flex flex-wrap border-t lg:border-t-0 border-archival-ink">
             <a href="commercial.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">01_COMMERCIAL</a>
             <a href="research.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink bg-brand-green text-black transition-all">02_RESEARCH</a>
             <a href="cultural.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">03_CULTURAL</a>
-            <a href="dossier.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">04_DOSSIER</a>
+            <a href="record.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">04_RECORD</a>
         </div>
         <div class="hidden xl:flex items-center px-8 text-archival-ink/60">
-            [ CLASSIFICATION: UNRESTRICTED // VER: 6.2.1 ]
+            [ CLASSIFICATION: UNRESTRICTED // VER: 6.6.0 ]
         </div>
-        <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">
+        <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="order-2 lg:order-4 ml-auto lg:ml-0 flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">
             [ ◐ ]
         </button>
     </nav>
@@ -56,7 +99,7 @@
                 <h1 class="text-4xl lg:text-[3.25rem] font-black leading-[0.98] tracking-tighter mb-10 uppercase">
                     The diagnosis is free.
                 </h1>
-                <p class="text-xl lg:text-3xl font-light leading-snug italic border-l-4 border-brand-green pl-8 py-2 mb-8">
+                <p class="text-xl lg:text-3xl font-light leading-snug italic pull-serif border-l-4 border-brand-green pl-8 py-2 mb-8">
                     The structure is a university hospital. The commercial lab earns at market rates. The nonprofit side runs the public-good research that keeps the instruments honest.
                 </p>
                 <p class="text-sm leading-relaxed text-archival-ink/70 max-w-3xl mb-16">

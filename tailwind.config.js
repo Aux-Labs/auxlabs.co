@@ -1,6 +1,6 @@
 /** Build-time only — the site ships the compiled assets/tailwind.css */
 module.exports = {
-  content: ["./*.html"],
+  content: ["./*.html", "./papers/*.html", "./scripts/build_papers.py"],
   theme: {
     extend: {
       colors: {
@@ -13,7 +13,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         serif: ['"Libre Baskerville"', 'serif'],
-        mono: ['"Cutive Mono"', 'monospace'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
     },
   },

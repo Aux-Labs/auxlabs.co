@@ -40,3 +40,16 @@
 .paper-prose p, .paper-prose li, .paper-prose td, .paper-prose h1, .paper-prose h2, .paper-prose h3 { overflow-wrap: anywhere; }
 .paper-prose pre { overflow-x: auto; max-width: 100%; }
 .paper-prose table { display: block; overflow-x: auto; max-width: 100%; }
+
+/* Pull quotes: Libre Baskerville italic, green rule — the paper's serif accent */
+.paper-prose blockquote {
+  font-family: 'Libre Baskerville', serif; font-style: italic;
+  font-size: 1.15rem; line-height: 1.7;
+  border-left: 4px solid #00FF41; padding: 0.4em 0 0.4em 1.4em;
+  margin: 2em 0; color: rgb(var(--ink-rgb));
+}
+.paper-prose blockquote p { font-family: inherit; font-size: inherit; }
+.paper-prose h2 { font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+.paper-prose h3, .paper-prose h4 { font-family: 'Inter', sans-serif; font-weight: 900; }
+.paper-prose strong { font-weight: 700; }
+.paper-prose hr { border: none; border-top: 1px solid rgb(var(--ink-rgb) / 0.25); margin: 2.5em 0; }

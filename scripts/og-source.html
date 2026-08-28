@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Cutive+Mono&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1200px; height:630px; background:#0b0c0b; color:#F2F1ED;
+         font-family:'Inter',sans-serif; overflow:hidden; position:relative; }
+  .grid { position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(0,255,65,0.055) 0 1px, transparent 1px 42px),
+      repeating-linear-gradient(90deg, rgba(0,255,65,0.055) 0 1px, transparent 1px 42px);
+  }
+  .frame { position:absolute; inset:28px; border:1px solid rgba(0,255,65,0.28); }
+  .wrap { position:relative; height:100%; padding:66px 76px; display:flex;
+          flex-direction:column; justify-content:space-between; }
+  .top { display:flex; justify-content:space-between; align-items:center;
+         font-family:'Cutive Mono',monospace; font-size:15px; letter-spacing:0.26em;
+         text-transform:uppercase; color:#00FF41; }
+  .top .muted { color:rgba(255,255,255,0.42); }
+  h1 { font-family:'Arimo',sans-serif; font-weight:700; font-size:66px; line-height:0.98;
+       letter-spacing:-0.035em; text-transform:uppercase; max-width:19ch; }
+  h1 em { font-style:normal; color:#00FF41; }
+  .rule { width:96px; height:6px; background:#00FF41; margin:30px 0 24px; }
+  .sub { font-size:23px; font-weight:300; line-height:1.4; color:rgba(255,255,255,0.72);
+         max-width:44ch; }
+  .bottom { display:flex; justify-content:space-between; align-items:flex-end;
+            font-family:'Cutive Mono',monospace; font-size:15px; letter-spacing:0.24em;
+            text-transform:uppercase; color:rgba(255,255,255,0.5); }
+  .mark { font-family:'Arimo',sans-serif; font-weight:700; font-size:27px;
+          letter-spacing:-0.02em; color:#fff; text-transform:uppercase; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="frame"></div>
+  <div class="wrap">
+    <div class="top">
+      <span>FILE_ID: 882-AUX-2026</span>
+      <span class="muted">CLASSIFICATION: UNRESTRICTED</span>
+    </div>
+    <div>
+      <h1>Nothing is working. <em>Everyone is pretending it is.</em></h1>
+      <div class="rule"></div>
+      <p class="sub">Aux Labs builds behavioral infrastructure: the mechanisms that make trust rational again.</p>
+    </div>
+    <div class="bottom">
+      <span class="mark">Aux Labs LLC</span>
+      <span>auxlabs.co // Austin, TX</span>
+    </div>
+  </div>
+</body>
+</html>

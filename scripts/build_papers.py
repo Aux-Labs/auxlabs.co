@@ -23,11 +23,22 @@ TEMPLATE = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{series} | {short_title} — AUX LABS</title>
     <meta name="description" content="{meta_abstract}">
+    <link rel="canonical" href="https://auxlabs.co/papers/{slug}.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Aux Labs">
+    <meta property="og:url" content="https://auxlabs.co/papers/{slug}.html">
+    <meta property="og:title" content="{series} | {short_title}">
+    <meta property="og:description" content="{meta_abstract}">
+    <meta property="og:image" content="https://auxlabs.co/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{series} | {short_title}">
+    <meta name="twitter:description" content="{meta_abstract}">
+    <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
     <script>(function(){{try{{if(localStorage.getItem('axl-theme')==='dark'){{document.documentElement.setAttribute('data-theme','dark');}}}}catch(e){{}}}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Cutive+Mono&family=Inter:wght@300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/tailwind.css">
     <link rel="stylesheet" href="../assets/paper.css">
 </head>
@@ -102,6 +113,37 @@ TEMPLATE = """<!DOCTYPE html>
 </html>
 """
 
+BLOCK_PREFIXES = ("#", "-", "*", "+", ">", "|", "```", "~~~", "    ", "\t")
+
+def _is_block_line(line):
+    ls = line.lstrip()
+    if not ls:
+        return True
+    if line.startswith(BLOCK_PREFIXES) or ls.startswith(("#", "-", "*", "+", ">", "|", "```", "~~~")):
+        return True
+    import re as _re
+    if _re.match(r"^\s*\d+[.)]\s", line):
+        return True
+    return False
+
+def unwrap_paragraphs(md):
+    """Join hard-wrapped lines inside plain paragraphs (conversion artifact) so
+    inline emphasis that was split across lines renders. Leaves headings, lists,
+    quotes, tables, and code fences untouched."""
+    out, in_code = [], False
+    for line in md.split("\n"):
+        if line.lstrip().startswith(("```", "~~~")):
+            in_code = not in_code
+            out.append(line); continue
+        if in_code or _is_block_line(line) or not out:
+            out.append(line); continue
+        prev = out[-1]
+        if prev and not _is_block_line(prev) and prev.strip() and not prev.rstrip().endswith(("  ", "\\")):
+            out[-1] = prev.rstrip() + " " + line.strip()
+        else:
+            out.append(line)
+    return "\n".join(out)
+
 def parse_fm_tolerant(block):
     """Line-wise fallback for frontmatter that isn't strict YAML
     (unquoted colons in values, pandoc habits). Handles `key: value`
@@ -141,12 +183,16 @@ def render(path, outdir):
     fm, body_md = split_frontmatter(raw)
     body_md = re.sub(r"<!--.*?-->", "", body_md, flags=re.S)          # strip editorial comments
     body_md = re.sub(r"^ (?=\S)", "", body_md, flags=re.M)            # pandoc single-space indent
+    body_md = unwrap_paragraphs(body_md)
+    body_md = re.sub(r"\\([$%&#_])", r"\1", body_md)  # pandoc-escaped symbols
+    # (unwrap above rejoins hard-wrapped lines so **emphasis** renders)
     md = markdown.Markdown(extensions=["tables", "footnotes", "sane_lists", "smarty"])
     body_html = md.convert(body_md)
     title = str(fm.get("title", path.stem))
     short = title.split(":")[0]
     abstract = " ".join(str(fm.get("abstract", "")).split())
     page = TEMPLATE.format(
+        slug=fm.get("series", path.stem).lower(),
         series=fm.get("series", "AXL-WP"),
         version=fm.get("version", "v1.0"),
         title=html.escape(title),
