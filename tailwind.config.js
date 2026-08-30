@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         'brand-green': '#00FF41',
+        'lab-green': '#1DB954',
         'archival-paper': 'rgb(var(--paper-rgb) / <alpha-value>)',
         'archival-ink': 'rgb(var(--ink-rgb) / <alpha-value>)',
         'surface': 'rgb(var(--surface-rgb) / <alpha-value>)',
