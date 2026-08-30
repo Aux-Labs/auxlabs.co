@@ -53,3 +53,11 @@
 .paper-prose h3, .paper-prose h4 { font-family: 'Inter', sans-serif; font-weight: 900; }
 .paper-prose strong { font-weight: 700; }
 .paper-prose hr { border: none; border-top: 1px solid rgb(var(--ink-rgb) / 0.25); margin: 2.5em 0; }
+
+/* Paper figures */
+.axl-figure { margin: 2.5em 0; border: 1px solid rgb(var(--ink-rgb)); background: rgb(var(--surface-rgb) / 0.4); }
+.axl-figure img { display: block; width: 100%; height: auto; }
+.axl-figure figcaption { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.08em; line-height: 1.6; padding: 0.75rem 1rem; border-top: 1px solid rgb(var(--ink-rgb));
+  color: rgb(var(--ink-rgb) / 0.75); }
+.axl-figure .fig-label { background: rgb(var(--ink-rgb)); color: rgb(var(--paper-rgb)); padding: 1px 6px; margin-right: 8px; }

@@ -184,6 +184,18 @@ def render(path, outdir):
     body_md = re.sub(r"<!--.*?-->", "", body_md, flags=re.S)          # strip editorial comments
     body_md = re.sub(r"^ (?=\S)", "", body_md, flags=re.M)            # pandoc single-space indent
     body_md = unwrap_paragraphs(body_md)
+    # figure placement markers: **[Figure N near here.** caption...] -> real <figure> if asset exists
+    def _fig(m):
+        n, cap = m.group(1), m.group(2).strip()
+        slug = fm.get("series", path.stem).lower()
+        asset = REPO / "papers" / "assets" / f"{slug}-figure{n}.png"
+        if asset.exists():
+            import html as _h
+            return (f'<figure class="axl-figure"><img src="assets/{slug}-figure{n}.png" '
+                    f'alt="Figure {n}. {_h.escape(cap[:200])}" loading="lazy">'
+                    f'<figcaption><span class="fig-label">FIG. {n:0>2}</span> {_h.escape(cap)}</figcaption></figure>')
+        return f"*Figure {n}. {cap}*"
+    body_md = re.sub(r"\*\*\[Figure (\d+) near here\.\*\*(.*?)\]", _fig, body_md, flags=re.S)
     body_md = re.sub(r"\\([$%&#_])", r"\1", body_md)  # pandoc-escaped symbols
     # (unwrap above rejoins hard-wrapped lines so **emphasis** renders)
     md = markdown.Markdown(extensions=["tables", "footnotes", "sane_lists", "smarty"])

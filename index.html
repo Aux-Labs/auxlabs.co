@@ -75,7 +75,7 @@
             <a href="record.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">04_RECORD</a>
         </div>
         <div class="hidden xl:flex items-center px-8 text-archival-ink/60">
-            [ CLASSIFICATION: UNRESTRICTED // VER: 6.7.0 ]
+            [ CLASSIFICATION: UNRESTRICTED // VER: 6.9.0 ]
         </div>
         <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="order-2 lg:order-4 ml-auto lg:ml-0 flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">
             [ ◐ ]
@@ -150,11 +150,13 @@
                         <line x1="40" y1="320" x2="470" y2="320"/>
                     </g>
                     <g font-family="'JetBrains Mono',monospace" font-size="11" fill="rgba(255,255,255,0.55)">
-                        <text x="34" y="44" text-anchor="end">80</text><text x="34" y="184" text-anchor="end">40</text>
-                        <text x="34" y="324" text-anchor="end">0</text>
-                        <text x="40" y="338">1958</text><text x="255" y="338" text-anchor="middle">1990</text>
+                        <text x="34" y="44" text-anchor="end">80%</text><text x="34" y="114" text-anchor="end">60%</text>
+                        <text x="34" y="184" text-anchor="end">40%</text><text x="34" y="254" text-anchor="end">20%</text>
+                        <text x="34" y="324" text-anchor="end">0%</text>
+                        <text x="40" y="338">1958</text><text x="255" y="338" text-anchor="middle">SURVEY YEAR</text>
                         <text x="470" y="338" text-anchor="end">2025</text>
                     </g>
+                    <text x="14" y="180" font-family="'JetBrains Mono',monospace" font-size="9" fill="rgba(255,255,255,0.45)" transform="rotate(-90 14 180)" text-anchor="middle">% OF U.S. ADULTS WHO TRUST</text>
                     <polyline points="40,64.5 78.5,50.5 181.3,232.5 271.2,243 316.2,127.5 399.6,271 470,260.5"
                               fill="none" stroke="#00FF41" stroke-width="2"/>
                     <polyline points="129.9,82 155.6,68 290.3,134.5 335.4,166 412.4,208 438.1,180 463.6,211.5 470,222"
@@ -174,7 +176,10 @@
                 </svg>
                 <div class="mt-4 space-y-2">
                     <p class="font-mono text-[9px] uppercase tracking-widest text-white/60 leading-relaxed">
-                        SHARE OF AMERICANS WHO TRUST THE GOVERNMENT TO DO WHAT IS RIGHT · THE MASS MEDIA · EACH OTHER. SELECTED VERIFIED READINGS, 1958–2025.
+                        Y: % OF U.S. ADULTS. X: SURVEY YEAR, 1958–2025. SELECTED VERIFIED READINGS.
+                        <span class="text-brand-green">GOVT</span> = TRUST WASHINGTON TO DO WHAT IS RIGHT "JUST ABOUT ALWAYS / MOST OF THE TIME" (PEW) ·
+                        <span class="text-white">PRESS</span> = "GREAT DEAL / FAIR AMOUNT" OF TRUST IN MASS MEDIA (GALLUP) ·
+                        <span style="color:#FFB000">US</span> = AGREE "MOST PEOPLE CAN BE TRUSTED" (GSS).
                     </p>
                     <p class="font-mono text-[9px] uppercase tracking-widest text-white/60 leading-relaxed">
                         SOURCES: <a href="https://www.pewresearch.org/politics/2025/12/04/public-trust-in-government-1958-2025/" class="text-brand-green underline hover:text-white transition-colors">PEW (GOVERNMENT)</a> · <a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (MEDIA)</a> · <a href="https://www.pewresearch.org/2025/05/08/americans-trust-in-one-another/" class="text-brand-green underline hover:text-white transition-colors">GSS VIA PEW (EACH OTHER)</a>
@@ -201,7 +206,7 @@
                         And the diagnosis tells you something no strategy deck will: <strong>you cannot message your way out of a pretend equilibrium.</strong> No campaign makes honesty rational. Only mechanisms do: rules, defaults, sequences, and incentives that make the honest move the easy move, and the trustworthy institution the cheap one to believe.
                     </p>
                     <p class="text-lg font-bold leading-snug">
-                        That's what we build. We call it behavioral infrastructure.
+                        That's what we build. We call it <a href="field.html" class="underline hover:text-brand-green">behavioral infrastructure</a>.
                     </p>
                 </div>
             </div>
@@ -503,7 +508,7 @@
             <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/40">
                 <p>© 2026 AUX LABS LLC // AUSTIN, TX // ALL RIGHTS RESERVED</p>
                 <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
-                <p>auxlabs.co // Signal @nawab.12 // <a href="firewall.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Firewall</a></p>
+                <p>auxlabs.co // Signal @nawab.12 // <a href="firewall.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Firewall</a> // <a href="field.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Field</a> // <a href="provenance.html" class="underline text-archival-ink hover:text-brand-green transition-colors">Provenance</a></p>
             </div>
 
             <div class="flex flex-col items-start lg:items-end">
