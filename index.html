@@ -75,7 +75,7 @@
             <a href="record.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">04_RECORD</a>
         </div>
         <div class="hidden xl:flex items-center px-8 text-archival-ink/60">
-            [ CLASSIFICATION: UNRESTRICTED // VER: 6.9.1 ]
+            [ CLASSIFICATION: UNRESTRICTED // VER: 7.0.0 ]
         </div>
         <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="order-2 lg:order-4 ml-auto lg:ml-0 flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">
             [ ◐ ]
@@ -104,8 +104,6 @@
                     AUX LABS IS OUR ANSWER.
                 </p>
             </div>
-            <!-- BUILD NOTE (Version B, after Rory confirms in writing): change attribution to
-                 "RORY SUTHERLAND, VICE CHAIRMAN, OGILVY UK · ADVISOR TO AUX LABS" -->
         </section>
 
         <!-- Hero -->
@@ -123,7 +121,7 @@
 
                 <div class="max-w-xl space-y-8">
                     <p class="text-lg lg:text-xl font-light leading-snug tracking-tight border-l-4 border-brand-green pl-8 py-2">
-                        Institutions aren't failing for lack of money, talent, or ideas. They're failing because nobody believes them anymore, and everybody's acting like they still do. Aux Labs builds the mechanisms that make trust rational again.
+                        Institutions still have money, talent, and ideas. What they've lost is belief. People stopped trusting the official story and kept acting as if they hadn't. Aux Labs builds mechanisms that make trust rational again.
                     </p>
 
                     <p class="font-mono text-[10px] uppercase tracking-widest text-archival-ink/60">
@@ -139,11 +137,11 @@
                 </div>
             </div>
 
-            <!-- Hero visual: FIG.01 — three verified trust series (Pew / Gallup / GSS) -->
+            <!-- Hero visual: FIG.01 — five verified trust series (Pew / Gallup / GSS) + 2023 loneliness marker -->
             <div class="lg:col-span-5 relative bg-panel overflow-hidden min-h-[380px] p-6 lg:p-8 flex flex-col justify-between">
                 <div class="font-mono text-[9px] text-brand-green tracking-widest uppercase mb-4">FIG. 01 // THE PRETEND ERA, MEASURED</div>
                 <svg viewBox="0 0 560 352" role="img" class="w-full h-auto"
-                     aria-label="Three line series, 1958 to 2025: American trust in the federal government falls from 77 percent to 17, trust in mass media from 72 percent to 28, and trust in each other from 46 percent to 34.">
+                     aria-label="Five line series, 1958 to 2026: American trust in the federal government falls from 77 percent to 17, trust in mass media from 72 percent to 28, trust in each other from 46 percent to 34, confidence in big business from 34 percent to 17, and belief in advertisers' honesty holds near the floor, 11 to 10 percent. A marker at 2023 notes the Surgeon General declaring an epidemic of loneliness.">
                     <g stroke="rgba(255,255,255,0.10)" stroke-width="1">
                         <line x1="40" y1="40" x2="470" y2="40"/><line x1="40" y1="110" x2="470" y2="110"/>
                         <line x1="40" y1="180" x2="470" y2="180"/><line x1="40" y1="250" x2="470" y2="250"/>
@@ -153,36 +151,55 @@
                         <text x="34" y="44" text-anchor="end">80%</text><text x="34" y="114" text-anchor="end">60%</text>
                         <text x="34" y="184" text-anchor="end">40%</text><text x="34" y="254" text-anchor="end">20%</text>
                         <text x="34" y="324" text-anchor="end">0%</text>
-                        <text x="40" y="338">1958</text><text x="255" y="338" text-anchor="middle">SURVEY YEAR</text>
-                        <text x="470" y="338" text-anchor="end">2025</text>
+                        <text x="40" y="338">1958</text><text x="240" y="338" text-anchor="middle">SURVEY YEAR</text>
+                        <text x="470" y="338" text-anchor="end">2026</text>
                     </g>
                     <text x="14" y="180" font-family="'JetBrains Mono',monospace" font-size="9" fill="rgba(255,255,255,0.45)" transform="rotate(-90 14 180)" text-anchor="middle">% OF U.S. ADULTS WHO TRUST</text>
+                    <!-- 2023: Surgeon General declares an epidemic of loneliness -->
+                    <line x1="451" y1="40" x2="451" y2="320" stroke="rgba(255,255,255,0.22)" stroke-width="1" stroke-dasharray="2 4"/>
+                    <text x="446" y="86" font-family="'JetBrains Mono',monospace" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="end">2023 · LONELINESS</text>
+                    <text x="446" y="97" font-family="'JetBrains Mono',monospace" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="end">DECLARED AN EPIDEMIC</text>
+                    <!-- GOVT (Pew) -->
                     <polyline points="40,64.5 78.5,50.5 181.3,232.5 271.2,243 316.2,127.5 399.6,271 470,260.5"
                               fill="none" stroke="#00FF41" stroke-width="2"/>
+                    <!-- PRESS (Gallup) -->
                     <polyline points="129.9,82 155.6,68 290.3,134.5 335.4,166 412.4,208 438.1,180 463.6,211.5 470,222"
                               fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-dasharray="1 3" stroke-linecap="round"/>
+                    <!-- EACH OTHER (GSS) -->
                     <polyline points="129.9,159 425.3,201 470,201"
                               fill="none" stroke="#FFB000" stroke-width="2" stroke-dasharray="6 4"/>
+                    <!-- BIG BUSINESS (Gallup) -->
+                    <polyline points="134.9,229 147.5,201 457.4,264 470,260.5"
+                              fill="none" stroke="#4DA6FF" stroke-width="2" stroke-dasharray="9 3"/>
+                    <!-- ADVERTISING (Gallup honesty/ethics) — never left the floor -->
+                    <polyline points="153.8,281.5 463.7,285"
+                              fill="none" stroke="#9BA19B" stroke-width="2" stroke-dasharray="3 3"/>
                     <g font-family="'JetBrains Mono',monospace" font-size="10" font-weight="bold">
-                        <text x="478" y="264" fill="#00FF41">GOVT 17%</text>
-                        <text x="478" y="226" fill="rgba(255,255,255,0.85)">PRESS 28%</text>
-                        <text x="478" y="203" fill="#FFB000">US 34%</text>
+                        <text x="478" y="204" fill="#FFB000">US 34%</text>
+                        <text x="478" y="225" fill="rgba(255,255,255,0.85)">PRESS 28%</text>
+                        <text x="478" y="256" fill="#00FF41">GOVT 17%</text>
+                        <text x="478" y="270" fill="#4DA6FF">BIZ 17%</text>
+                        <text x="478" y="291" fill="#9BA19B">ADS 10%</text>
                     </g>
                     <g font-family="'JetBrains Mono',monospace" font-size="10" fill="rgba(255,255,255,0.6)">
                         <text x="84" y="46">77% · 1964</text>
                         <text x="160" y="62">72% · 1976</text>
                         <text x="134" y="152">46% · 1972</text>
+                        <text x="96" y="240" fill="#4DA6FF" fill-opacity="0.8">26% · 1973</text>
+                        <text x="120" y="296" fill="#9BA19B" fill-opacity="0.9">11% · 1976</text>
                     </g>
                 </svg>
                 <div class="mt-4 space-y-2">
                     <p class="font-mono text-[9px] uppercase tracking-widest text-white/60 leading-relaxed">
-                        Y: % OF U.S. ADULTS. X: SURVEY YEAR, 1958–2025. SELECTED VERIFIED READINGS.
+                        Y: % OF U.S. ADULTS. X: SURVEY YEAR, 1958–2026. SELECTED VERIFIED READINGS.
                         <span class="text-brand-green">GOVT</span> = TRUST WASHINGTON TO DO WHAT IS RIGHT "JUST ABOUT ALWAYS / MOST OF THE TIME" (PEW) ·
                         <span class="text-white">PRESS</span> = "GREAT DEAL / FAIR AMOUNT" OF TRUST IN MASS MEDIA (GALLUP) ·
-                        <span style="color:#FFB000">US</span> = AGREE "MOST PEOPLE CAN BE TRUSTED" (GSS).
+                        <span style="color:#FFB000">US</span> = AGREE "MOST PEOPLE CAN BE TRUSTED" (GSS) ·
+                        <span style="color:#4DA6FF">BIZ</span> = "GREAT DEAL / QUITE A LOT" OF CONFIDENCE IN BIG BUSINESS (GALLUP) ·
+                        <span style="color:#9BA19B">ADS</span> = RATE ADVERTISING PRACTITIONERS' HONESTY "HIGH / VERY HIGH" (GALLUP).
                     </p>
                     <p class="font-mono text-[9px] uppercase tracking-widest text-white/60 leading-relaxed">
-                        SOURCES: <a href="https://www.pewresearch.org/politics/2025/12/04/public-trust-in-government-1958-2025/" class="text-brand-green underline hover:text-white transition-colors">PEW (GOVERNMENT)</a> · <a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (MEDIA)</a> · <a href="https://www.pewresearch.org/2025/05/08/americans-trust-in-one-another/" class="text-brand-green underline hover:text-white transition-colors">GSS VIA PEW (EACH OTHER)</a>
+                        SOURCES: <a href="https://www.pewresearch.org/politics/2025/12/04/public-trust-in-government-1958-2025/" class="text-brand-green underline hover:text-white transition-colors">PEW (GOVERNMENT)</a> · <a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (MEDIA)</a> · <a href="https://www.pewresearch.org/2025/05/08/americans-trust-in-one-another/" class="text-brand-green underline hover:text-white transition-colors">GSS VIA PEW (EACH OTHER)</a> · <a href="https://news.gallup.com/poll/270296/americans-dislike-big-business.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (BIG BUSINESS)</a> · <a href="https://news.gallup.com/poll/1654/honesty-ethics-professions.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (ADVERTISING)</a> · <a href="https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf" class="text-brand-green underline hover:text-white transition-colors">U.S. SURGEON GENERAL (LONELINESS, 2023)</a>
                     </p>
                 </div>
             </div>
@@ -200,10 +217,7 @@
                         Most people privately stopped believing the official story years ago: about the media, the market, the mission statement, the meeting they just sat through. But each of them assumes everyone else still believes, so everyone keeps performing. Social scientists call this <strong>pluralistic ignorance</strong>: a norm nobody holds, enforced by everybody.
                     </p>
                     <p class="text-base leading-relaxed text-archival-ink/80">
-                        That is the actual crisis underneath the crises. Trust didn't collapse because people got cynical. It collapsed because honesty became individually irrational. The first person to say "this isn't working" pays the price, so nobody goes first.
-                    </p>
-                    <p class="text-base leading-relaxed text-archival-ink/80">
-                        And the diagnosis tells you something no strategy deck will: <strong>you cannot message your way out of a pretend equilibrium.</strong> No campaign makes honesty rational. Only mechanisms do: rules, defaults, sequences, and incentives that make the honest move the easy move, and the trustworthy institution the cheap one to believe.
+                        Trust collapsed because honesty became individually irrational. The first person to say "this isn't working" pays the price, so nobody goes first. <strong>And you cannot message your way out of a pretend equilibrium.</strong> No campaign makes honesty rational. Mechanisms do: rules, defaults, sequences, and incentives that make the honest move the easy move.
                     </p>
                     <p class="text-lg font-bold leading-snug">
                         That's what we build. We call it <a href="field.html" class="underline hover:text-brand-green">behavioral infrastructure</a>.
@@ -221,16 +235,16 @@
                 </div>
                 <div class="lg:col-span-7 space-y-6 max-w-2xl">
                     <p class="text-base leading-relaxed text-white/70">
-                        In 2020, junior strategists at brand agencies carried a more accurate working model of how information actually moves through a networked population than the public institutions whose job that was. They had spent the previous decade inside the live information environment; the institutions were still writing press releases for a world that had ended.
+                        In 2020, junior strategists at brand agencies had a better working model of how information moves through a networked population than the institutions responsible for public trust. They had spent a decade inside the live information environment. The institutions were still writing press releases for a world that had ended.
                     </p>
                     <p class="text-base leading-relaxed text-white/70">
-                        The craft is real, and it is concentrated in strange places. Some of the best behavioral scientists of our generation work for sneaker brands. Many more work at Facebook and Google, tuning the feeds our research program studies as machinery of the collapse. The craft was never the villain. The assignment was.
+                        Some of the best behavioral scientists of our generation work for sneaker brands. Many more work at Facebook and Google, tuning the feeds our research program studies as machinery of the collapse. The craft is real. The assignments have been the problem.
                     </p>
                     <p class="text-base leading-relaxed text-white/70">
-                        Aux Labs runs the arbitrage deliberately: fifteen years of that craft, pointed at the problems underneath the problems. Same training. Different assignment.
+                        Aux Labs runs that arbitrage on purpose: fifteen years of the craft, pointed at the problems underneath the problems.
                     </p>
                     <p class="text-lg font-bold text-white">
-                        We do not sell attention. Attention is not behaviour.
+                        We do not sell attention. Attention is not behavior.
                     </p>
                 </div>
             </div>
@@ -305,13 +319,10 @@
             </div>
             <div class="px-8 py-8 border-t border-archival-ink space-y-4 max-w-4xl">
                 <p class="text-sm leading-relaxed text-archival-ink/70">
-                    We do all five in one team, because the handoffs between them are where this work usually dies.
-                </p>
-                <p class="text-sm leading-relaxed font-bold text-archival-ink">
-                    And if your question can be answered from a desk, we'll say so in the first call and point you at someone cheaper. Going is not a premium we charge for. It's the condition of taking the work.
+                    We do all five in one team, because the handoffs between them are where this work usually dies. <span class="font-bold text-archival-ink">If your question can be answered from a desk, we'll say so in the first call and point you at someone cheaper.</span>
                 </p>
                 <p class="text-sm leading-relaxed text-archival-ink/70">
-                    The method has an academic name: applied mechanism design, from the Nobel-line economics of Hurwicz, Maskin, and Myerson. You don't need the name. You need the result: <strong class="text-archival-ink">systems where the better behavior is the easier behavior.</strong>
+                    The method has an academic name: applied mechanism design, the Nobel-line economics of Hurwicz, Maskin, and Myerson. What it buys you is simpler to say: <strong class="text-archival-ink">systems where the better behavior is the easier behavior.</strong>
                 </p>
             </div>
         </section>
@@ -386,7 +397,7 @@
                     MICHELIN × GRAND CENTRAL FOOD PROGRAM // STATUS: <span class="bg-black text-brand-green px-2 py-1">DELIVERED · CONFIRMED BY THE PROGRAM, 2026</span>
                 </div>
                 <p class="text-sm leading-relaxed text-archival-ink/80 max-w-2xl mb-4">
-                    Built by our principal at VIRTUE Worldwide: a campaign where Michelin's own interest bought the Grand Central Food Program a new vehicle. It was not charity and it was not a report. It was a mechanism: the brand's spend produced a public good that outlived the campaign that paid for it. The program confirmed the vehicle in 2026, years after the last invoice. (Service figures last confirmed 2017; follow-up under way.)
+                    Built by our principal at VIRTUE Worldwide: a campaign designed so that Michelin's own interest would buy the Grand Central Food Program a new vehicle. The spend produced a public good that outlived the campaign that paid for it. The program confirmed the vehicle in 2026, years after the last invoice. (Service figures last confirmed 2017; follow-up under way.)
                 </p>
                 <p class="text-lg font-bold leading-snug max-w-2xl">
                     That is the test every engagement has to pass: does it keep working after we leave?
@@ -402,7 +413,7 @@
             </div>
             <div class="px-8 py-6 border-b border-archival-ink">
                 <p class="text-sm leading-relaxed text-archival-ink/70 max-w-3xl">
-                    Aux Labs is the commercial lab: it bills at market rates, sells licensable frameworks, and consults clients through the Trust-Repair Cascade. The Switchboard™ is its associated nonprofit: grant-funded, built to do the public-interest labor of running the cascade in the world. It is being stood up now; this page will link it when it exists. Each keeps the other credible: clients get methods that survive peer review; funders get research that survives contact with reality. <a href="firewall.html" class="font-mono text-[10px] uppercase tracking-widest underline text-archival-ink hover:text-brand-green">The governance is published in advance: the Firewall -&gt;</a>
+                    Aux Labs is the commercial lab: it bills at market rates and consults clients through the Trust-Repair Cascade. The Switchboard™ is the associated nonprofit, grant-funded to run the cascade as public-interest work. It is being stood up now; this page will link it when it exists. Each keeps the other honest. <a href="firewall.html" class="font-mono text-[10px] uppercase tracking-widest underline text-archival-ink hover:text-brand-green">The governance is published in advance: the Firewall -&gt;</a>
                 </p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2">
@@ -426,7 +437,7 @@
                     </div>
                     <div class="p-8">
                         <h4 class="text-sm font-bold uppercase mb-4">A boutique that owns instruments rather than headcount.</h4>
-                        <p class="text-sm leading-relaxed text-archival-ink/70 mb-8">Your grant doesn't buy overhead; it buys deployment of an existing measurement and mechanism-design capability against a public problem, with open methodology and disclosed conflicts.</p>
+                        <p class="text-sm leading-relaxed text-archival-ink/70 mb-8">Your grant buys deployment of an existing measurement and mechanism-design capability against a public problem, with open methodology and disclosed conflicts.</p>
                         <a href="research.html" class="inline-block bg-panel text-white px-6 py-3 font-mono text-[10px] tracking-widest uppercase hover:bg-brand-green hover:text-black transition-all">
                             [ 02_RESEARCH -&gt; ]
                         </a>
@@ -457,16 +468,11 @@
                 </div>
                 <div class="lg:col-span-9 space-y-6 max-w-3xl">
                     <p class="text-sm lg:text-base leading-relaxed text-white/80">
-                        Imran Hafiz spent fifteen years inside the machine that convinces people to want things: VICE, then VIRTUE, where as Publisher of VIRTUE Intelligence he built work for Johnnie Walker, Michelin, Lululemon, Budweiser, and Google Chrome. In 2020 he watched the crisis institutions fail at a job his junior strategists could have done in their sleep, and concluded the problem wasn't a talent shortage. It was an allocation error.
+                        Imran Hafiz spent fifteen years inside the machine that convinces people to want things: VICE, then VIRTUE, where as Publisher of VIRTUE Intelligence he built work for Johnnie Walker, Michelin, Lululemon, Budweiser, and Google Chrome. In 2020 he watched the crisis institutions fail at a job his junior strategists could have done in their sleep, and concluded the problem was an allocation error.
                     </p>
                     <p class="text-sm lg:text-base leading-relaxed text-white/80">
                         Duke, public policy. Co-author of a peer-reviewed disinformation index (Jin-Hafiz, Cureus 2021). Creator of live gameplay that teaches people to spot disinformation in the room, in real time.
                     </p>
-                    <!-- BUILD NOTE (Version B only, after Rory confirms in writing): append
-                         "He was mentored by Rory Sutherland, whose challenge this company exists to answer." -->
-                    <!-- COSTLY-SIGNAL PARAGRAPH held 2026-08-25 per Imran's review pass. Restore if ruled back:
-                         "I left a lucrative strategy career for this and built everything on this site at my
-                          own expense, before any funding existed. People who are performing do not mention the cost." -->
                 </div>
             </div>
         </section>
@@ -536,15 +542,15 @@
     <script>
         const AXL_CASCADE = {
             listening: ["01 · LISTENING", "Signal intake must be consensual, qualitative, and human. Not surveillance, not behavioral data extraction, not polling. Actual listening, conducted by journalists, educators, organizers, artists and community participants who are already embedded in real life."],
-            legitimacy: ["02 · LEGITIMACY", "When people experience being heard without extraction, the entity that listened gains legitimacy. This is not a feeling; it is a structural asset that compounds. Ostrom's work on common-pool governance showed the institutions that survive are those that embed the voices of the governed."],
+            legitimacy: ["02 · LEGITIMACY", "When people experience being heard without extraction, the entity that listened gains legitimacy: a structural asset that compounds. Ostrom's work on common-pool governance showed the institutions that survive are those that embed the voices of the governed."],
             trust: ["03 · TRUST", "Legitimacy converts into trust only if it is maintained through costly signals: actions expensive enough that they cannot be faked. Cheap talk does not produce trust. Who you stand up for when it costs you something reveals what you actually believe."],
             sources: ["04 · SOURCES", "When trust is established, people share information they would not otherwise share. Whistleblowers emerge. Documents surface. Patterns become visible. Without trust, sources do not come forward; without sources, truth remains hidden."],
             truth: ["05 · TRUTH", "Verified information (documents, receipts, case numbers, timelines) transforms private suffering into public fact. The shift from anecdote to evidence is where power becomes legible."],
-            art: ["06 · ART", "Facts alone do not move people. They never have. Truth must be translated into forms that move hearts: narrative, image, rhythm, emotion. This is not decoration; it is the critical conversion layer. Truth, reframed through art, becomes contagious."],
-            gravity: ["07 · GRAVITY", "When truth is made emotionally resonant and culturally shareable, it creates narrative gravity: a pull toward participation that does not require coercion. The environment is reshaped so that pro-social behaviour becomes easier than harmful behaviour."],
+            art: ["06 · ART", "Facts alone do not move people. They never have. Truth must be translated into forms that move hearts: narrative, image, rhythm, emotion. This is the conversion layer, and it is load-bearing. Truth, reframed through art, becomes contagious."],
+            gravity: ["07 · GRAVITY", "When truth is made emotionally resonant and culturally shareable, it creates narrative gravity: a pull toward participation that does not require coercion. The environment is reshaped so that pro-social behavior becomes easier than harmful behavior."],
             funding: ["08 · FUNDING", "Narrative gravity attracts resources, not out of charity but out of strategic self-interest. Brand spend redirected toward genuine public good generates both social outcomes and brand equity."],
             institutions: ["09 · INSTITUTIONS", "Sustained funding allows the construction of durable parallel institutions (community desks, mutual aid structures, independent media) that do not merely protest failing systems but functionally replace them. The parallel polis does not argue with the state; it demonstrates the alternative."],
-            policy: ["10 · POLICY CHANGE", "When parallel institutions are visibly outperforming the systems they shadow, policy change becomes not a demand but an inevitability. The incumbent must adopt the demonstrated solutions or visibly refuse to, and refusal, once the alternative is legible, carries escalating cost."]
+            policy: ["10 · POLICY CHANGE", "When parallel institutions are visibly outperforming the systems they shadow, policy change becomes an inevitability rather than a demand. The incumbent must adopt the demonstrated solutions or visibly refuse to, and refusal, once the alternative is legible, carries escalating cost."]
         };
         (function(){
             var drawer = document.getElementById('cascade-drawer');
