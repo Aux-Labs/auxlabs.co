@@ -1,7 +1,7 @@
 {
-  "_readme": "SINGLE SOURCE OF TRUTH for the 02_RESEARCH index. Edit here, then run: python3 scripts/build_research_index.py — it rewrites the card grid and the counters inside research.html between the AXL:PAPERS markers. Counts are derived, never typed, so the index can never contradict itself again.",
+  "_readme": "SINGLE SOURCE OF TRUTH for the 02_RESEARCH index. Edit here, then run: python3 scripts/build_research_index.py \u2014 it rewrites the card grid and the counters inside research.html between the AXL:PAPERS markers. Counts are derived, never typed, so the index can never contradict itself again.",
   "_rules": {
-    "abstract": "Leave null until the paper clears its sourcing pass. Never write a placeholder abstract — the card renders an honest withheld state instead.",
+    "abstract": "Leave null until the paper clears its sourcing pass. Never write a placeholder abstract \u2014 the card renders an honest withheld state instead.",
     "domains": "Empty by design. Imran to assign from the four stated fields; the domain filter row auto-appears the moment any paper carries a tag.",
     "url": "Null until scripts/build_papers.py has rendered the paper with publish:true. A non-null url is what turns a card into a link."
   },
@@ -26,11 +26,11 @@
   "papers": [
     {
       "series": "AXL-WP-01",
-      "title": "\"Algorithmic Enclosure: The Rise and Collapse of a Cultural Commons (VICE Media, 1994–2023)\"",
+      "title": "\"Algorithmic Enclosure: The Rise and Collapse of a Cultural Commons (VICE Media, 1994\u20132023)\"",
       "status": "published",
       "flagship": false,
       "domains": [],
-      "abstract": "VICE Media's rise and collapse constitutes a natural experiment in cultural commons governance. The paper applies Ostrom's eight design principles and a cascade failure model to the publicly documented record of VICE's rise (1994–2014), capture (2014–2018), and collapse (2018–2023); identifies ownership divergence as the general mechanism of cultural commons capture; reframes the McInnes trajectory as value-neutral mechanism transfer; and shows the industry-wide collapse of 2022–2024 as a second-order commons governance failure. Three falsifiable predictions follow.",
+      "abstract": "VICE Media's rise and collapse constitutes a natural experiment in cultural commons governance. The paper applies Ostrom's eight design principles and a cascade failure model to the publicly documented record of VICE's rise (1994\u20132014), capture (2014\u20132018), and collapse (2018\u20132023); identifies ownership divergence as the general mechanism of cultural commons capture; reframes the McInnes trajectory as value-neutral mechanism transfer; and shows the industry-wide collapse of 2022\u20132024 as a second-order commons governance failure. Three falsifiable predictions follow.",
       "url": "papers/axl-wp-01.html"
     },
     {
@@ -48,17 +48,17 @@
       "status": "published",
       "flagship": false,
       "domains": [],
-      "abstract": "Public-interest institutions are failing at measurable rates; the shared cause proposed is preference falsification at institutional scale. The paper specifies a coordinated mechanism — the Switchboard — for dissolving that equilibrium: a ten-stage cascade (the Trust-Repair Cascade), four productive cylinders in offset combustion (the Crankshaft), a sponsor firewall, and a four-dimensional open-standard index (HSRI) — grounded in Kuran, Bail, Ostrom, and Thaler, with a falsifiable Downstream Clinical Efficiency argument at a discounted floor of 6:1 to 24:1 and six pre-committed retraction conditions.\n",
+      "abstract": "Public-interest institutions are failing at measurable rates; the shared cause proposed is preference falsification at institutional scale. The paper specifies a coordinated mechanism \u2014 the Switchboard \u2014 for dissolving that equilibrium: a ten-stage cascade (the Trust-Repair Cascade), four productive cylinders in offset combustion (the Crankshaft), a sponsor firewall, and a four-dimensional open-standard index (HSRI) \u2014 grounded in Kuran, Bail, Ostrom, and Thaler, with a falsifiable Downstream Clinical Efficiency argument at a discounted floor of 6:1 to 24:1 and six pre-committed retraction conditions.\n",
       "url": "papers/axl-wp-03.html"
     },
     {
       "series": "AXL-WP-04",
       "title": "The Pretend Era: A Grand Unified Theory of Collapse, Narrative Power, and the Machinery of Repair",
-      "status": "published",
+      "status": "in_revision",
       "flagship": true,
       "domains": [],
-      "abstract": "The binding constraint on political, social, and institutional progress is intangible psychological infrastructure: trust, legitimacy, belonging, shared reality. The paper names the current period the Pretend Era — pluralistic ignorance at civilizational scale — and proposes a ten-step cascade (the Trust-Repair Cascade) and four-cylinder engine — together, the Switchboard — for manufacturing intangible infrastructure. Evidence: fragmentary proof from applied projects, a documented negative result from a congressional campaign, the Arab Spring as a misattributed permission-mechanism case, and the scarcity dividend. Four falsifiable predictions with affordable test protocols.\n",
-      "url": "papers/axl-wp-04.html"
+      "abstract": null,
+      "url": null
     },
     {
       "series": "AXL-WP-05",
@@ -66,7 +66,7 @@
       "status": "published",
       "flagship": false,
       "domains": [],
-      "abstract": "The paper traces the origin of the Pretend Era to the California self-esteem movement: Esalen (1962), Branden's Randian self-esteem theory (1969), the California Task Force (1986) and its knowing decoupling of policy from evidence (1989), the Human Potential Movement's absorption into Silicon Valley, and the attention economy's optimization for self-regard over reality-testing. It introduces the Self-Esteem Operating System (SEOS), connects it downstream to deaths of despair and the perfectionism–suicide literature, draws clinical implications (the validation trap), and analyzes AI as the most powerful self-esteem engine yet built — and the potential antidote.\n",
+      "abstract": "The paper traces the origin of the Pretend Era to the California self-esteem movement: Esalen (1962), Branden's Randian self-esteem theory (1969), the California Task Force (1986) and its knowing decoupling of policy from evidence (1989), the Human Potential Movement's absorption into Silicon Valley, and the attention economy's optimization for self-regard over reality-testing. It introduces the Self-Esteem Operating System (SEOS), connects it downstream to deaths of despair and the perfectionism\u2013suicide literature, draws clinical implications (the validation trap), and analyzes AI as the most powerful self-esteem engine yet built \u2014 and the potential antidote.\n",
       "url": "papers/axl-wp-05.html"
     },
     {
@@ -75,7 +75,7 @@
       "status": "published",
       "flagship": false,
       "domains": [],
-      "abstract": "Following Sutherland's proposition that the next revolution in human development is psychological rather than technological, the paper argues the conditions preventing that revolution are architecturally produced by the California self-esteem pipeline; that AI is simultaneously the most powerful accelerant of those conditions and the most powerful instrument for reversing them; and that the Switchboard protocol — four cylinders, a cascade, graduated sovereignty, and a behavioral-proxy measurement method — is the operational architecture for building the missing intangible infrastructure.\n",
+      "abstract": "Following Sutherland's proposition that the next revolution in human development is psychological rather than technological, the paper argues the conditions preventing that revolution are architecturally produced by the California self-esteem pipeline; that AI is simultaneously the most powerful accelerant of those conditions and the most powerful instrument for reversing them; and that the Switchboard protocol \u2014 four cylinders, a cascade, graduated sovereignty, and a behavioral-proxy measurement method \u2014 is the operational architecture for building the missing intangible infrastructure.\n",
       "url": "papers/axl-wp-06.html"
     },
     {
@@ -93,11 +93,11 @@
       "status": "published",
       "flagship": false,
       "domains": [],
-      "abstract": "AI is the first dual-lineage technology — natively revolutionizing both automation and communication — and the institutions built for the previous paradigm are already failing to metabolize it. The paper maps the post-Kantian tradition onto current alignment positions, argues that technical alignment without social alignment is engineering in a vacuum, specifies the intangible-infrastructure gap across AI stakeholders, and offers three falsifiable predictions for the AI context, closing with the Ghazali precedent: reason without trust infrastructure becomes a weapon.\n",
+      "abstract": "AI is the first dual-lineage technology \u2014 natively revolutionizing both automation and communication \u2014 and the institutions built for the previous paradigm are already failing to metabolize it. The paper maps the post-Kantian tradition onto current alignment positions, argues that technical alignment without social alignment is engineering in a vacuum, specifies the intangible-infrastructure gap across AI stakeholders, and offers three falsifiable predictions for the AI context, closing with the Ghazali precedent: reason without trust infrastructure becomes a weapon.\n",
       "url": "papers/axl-wp-08.html"
     }
   ],
-  "_open_question": "AXL-WP-07 is absent from the series. Either it exists and was dropped from the index, or the series numbering skips it. Ruling needed before push — a gap in a numbered archive reads as a redaction, which is a claim we have not made.",
+  "_open_question": "AXL-WP-07 is absent from the series. Either it exists and was dropped from the index, or the series numbering skips it. Ruling needed before push \u2014 a gap in a numbered archive reads as a redaction, which is a claim we have not made.",
   "prior_publications": [
     {
       "citation": "Jin, M.X., Rajan, S., Gary Bicas, C.E., Hao, M., Dong, L., Mufson, B., & Hafiz, I. (2021). Novel Validated Index for the Measurement of Disinformation Susceptibility at the County Level. Cureus, 13(5).",
