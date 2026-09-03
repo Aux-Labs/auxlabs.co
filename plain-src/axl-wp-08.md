@@ -21,7 +21,7 @@ What I want you to take from the plain version is just the reframe: the next tim
 
 ## Why this matters
 
-If the paper is right, the AI transition is won or lost in the trust layer, not the model weights. That would mean the most important AI work of the decade looks nothing like AI work, and almost nobody is funded to do it. It would also mean the repair skills already exist, because humans have rebuilt trust before: slowly, in order, on purpose.
+If the paper is right, the AI transition is won or lost in the trust layer, not the model weights. That would mean the most important AI work of the decade looks nothing like AI work, and almost nobody is funded to do it. Aux Labs is built on the bet that this gap is the opportunity.
 
 ## The predictions
 
