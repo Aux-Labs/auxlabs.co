@@ -9,7 +9,7 @@ readtime: 5
 
 The plain version: in 1989, California's official task force on self-esteem got back research showing self-esteem doesn't cause the good outcomes everyone hoped it did. They shipped the program anyway. This paper traces what happened when that decision scaled to a civilization.
 
-I should say up front where I sit in this story. I spent fifteen years in the industry that monetized the result. Brand marketing, at its core, is the business of telling people how the purchase will make them feel about themselves. I was good at it. That's not an accusation of anyone; it's a disclosure, and this paper had to survive my own discomfort to get written.
+I should say up front where I sit in this story. I spent six years, at VICE and then VIRTUE, inside the industry that monetized the result. Brand marketing, at its core, is the business of telling people how the purchase will make them feel about themselves. I was good at it. That's not an accusation of anyone; it's a disclosure, and this paper had to survive my own discomfort to get written.
 
 The history is stranger than you'd expect. It starts at the Esalen Institute in 1962, on the cliffs of Big Sur, where a genuinely interesting idea took root: that people contain more potential than their circumstances let them express. Somewhere along the way, that idea picked up a dangerous passenger: the belief that how you feel about something matters more than whether it's true. Your inner experience became sacred. Reality-testing became optional, then impolite, then a kind of assault.
 
