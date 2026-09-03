@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""Aux Labs plain-English companion builder.
+
+Renders plain-src/*.md into /plain/*.html: the no-jargon, written-from-the-heart
+companion to each working paper. [TODO: ...] blocks render as visible amber
+boxes so Imran can see exactly where his personal story goes — pages carrying
+a TODO are drafts by definition and must not merge to main until he fills them.
+
+Usage: python3 scripts/build_plain.py
+"""
+import pathlib, re, html
+
+REPO = pathlib.Path(__file__).resolve().parent.parent
+SRC = REPO / "plain-src"
+OUT = REPO / "plain"
+
+TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} — AUX LABS, IN PLAIN ENGLISH</title>
+    <meta name="description" content="{dek}">
+    <link rel="canonical" href="https://auxlabs.co/plain/{slug}.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Aux Labs">
+    <meta property="og:title" content="{title}">
+    <meta property="og:description" content="{dek}">
+    <meta property="og:image" content="https://auxlabs.co/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
+    <script>(function(){{try{{if(localStorage.getItem('axl-theme')==='dark'){{document.documentElement.setAttribute('data-theme','dark');}}}}catch(e){{}}}})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/tailwind.css">
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="fixed inset-0 pointer-events-none border-[12px] border-archival-ink/5 z-[100]"></div>
+
+    <nav class="sticky top-0 z-[90] bg-archival-paper/80 backdrop-blur-md border-b border-archival-ink flex flex-wrap items-stretch uppercase font-mono text-[10px] tracking-[0.15em] lg:tracking-[0.25em]">
+        <a href="../index.html" class="flex items-center px-4 lg:px-8 py-4 border-r border-archival-ink font-black text-base lg:text-lg tracking-tighter">AUX LABS LLC</a>
+        <div class="flex-grow flex flex-wrap">
+            <a href="../research.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">&lt;- 02_RESEARCH</a>
+            <a href="{paper}" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">READ_THE_FULL_PAPER: {series}</a>
+        </div>
+        <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">[ ◐ ]</button>
+    </nav>
+
+    <main id="main" class="relative">
+        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
+            <span>{series} · COMPANION</span>
+            <span class="hidden sm:inline">NO JARGON PAST THIS POINT</span>
+            <span>WRITTEN FOR HUMANS</span>
+        </div>
+        <div class="axl-stripe axl-stripe--thin" aria-hidden="true"></div>
+
+        <header class="p-8 lg:p-16 border-b border-archival-ink bg-surface/20 relative overflow-hidden">
+            <span class="axl-wm" style="font-size:clamp(5rem,14vw,11rem); right:-1rem; top:-1.5rem;" aria-hidden="true">PLAIN ENGLISH</span>
+            <div class="max-w-3xl mx-auto relative">
+                <div class="flex flex-wrap items-center gap-3 mb-8 font-mono text-[10px] uppercase tracking-widest">
+                    <span class="bg-panel text-white px-3 py-1.5 font-bold">{series}</span>
+                    <span class="border border-archival-ink px-3 py-1.5">THE PLAIN VERSION</span>
+                    <span class="border border-archival-ink px-3 py-1.5">~{readtime} MIN</span>
+                </div>
+                <h1 class="text-3xl lg:text-[2.75rem] font-black leading-[1.02] tracking-tighter uppercase mb-6">{title}</h1>
+                <p class="text-base lg:text-lg font-light leading-snug text-archival-ink/80 mb-6">{dek}</p>
+                <p class="axl-co text-archival-ink/50">c/o IMRAN HAFIZ · "WRITTEN FOR HUMANS, NOT REVIEWERS" · AUSTIN, TX</p>
+            </div>
+        </header>
+
+        <article class="px-6 lg:px-8 py-12 lg:py-16">
+            <div class="max-w-2xl mx-auto axl-plain">
+{body}
+                <p class="mt-10">
+                    <a href="{paper}" class="inline-block bg-panel text-white px-6 py-3 font-mono text-[10px] tracking-widest uppercase hover:bg-brand-green hover:text-black transition-all no-underline" style="text-decoration:none">[ READ_THE_FULL_PAPER: {series} -&gt; ]</a>
+                </p>
+            </div>
+        </article>
+
+        <div class="axl-stripe" aria-hidden="true"></div>
+        <footer class="p-8 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 bg-archival-paper">
+            <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/40">
+                <p>© 2026 AUX LABS LLC // AUSTIN, TX // ALL RIGHTS RESERVED</p>
+                <p class="axl-co">c/o AUX LABS LLC · "AUSTIN, TEXAS" · 30.2672° N, 97.7431° W</p>
+                <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
+            </div>
+            <div class="text-left lg:text-right">
+                <h2 class="text-3xl font-black tracking-tighter uppercase leading-none mb-2">Plain <br> English.</h2>
+                <p class="font-mono text-[9px] text-brand-green bg-black px-2 py-0.5 inline-block uppercase">{series}_PLAIN_FIN</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        function axlToggleTheme(){{
+            var h = document.documentElement;
+            var toDark = h.getAttribute('data-theme') !== 'dark';
+            if (toDark) {{ h.setAttribute('data-theme','dark'); }} else {{ h.removeAttribute('data-theme'); }}
+            try {{ localStorage.setItem('axl-theme', toDark ? 'dark' : 'light'); }} catch(e) {{}}
+        }}
+    </script>
+</body>
+</html>
+"""
+
+def parse(path):
+    raw = path.read_text(encoding="utf-8")
+    m = re.match(r"^---\n(.*?)\n---\n", raw, re.S)
+    fm = dict(re.findall(r"^(\w+):\s*(.+)$", m.group(1), re.M))
+    body_md = raw[m.end():].strip()
+    paras = []
+    first = True
+    for block in re.split(r"\n\s*\n", body_md):
+        block = block.strip()
+        if not block:
+            continue
+        todo = re.match(r"^\[TODO:\s*(.+?)\]$", block, re.S)
+        if todo:
+            paras.append(f'<div class="axl-todo">{html.escape(todo.group(1).strip())}</div>')
+            continue
+        if block.startswith("## "):
+            label = html.escape(block[3:].strip()).upper().replace(" ", "_")
+            paras.append(f'<div class="font-mono text-[10px] uppercase tracking-widest bg-panel text-white px-2 py-1 inline-block" style="margin:2.2em 0 0.4em">[ {label} ]</div>')
+            continue
+        if all(l.lstrip().startswith("- ") for l in block.split("\n")):
+            items = "".join(f"<li>{html.escape(l.lstrip()[2:]).strip()}</li>" for l in block.split("\n"))
+            paras.append(f'<ul class="axl-plain-list">{items}</ul>')
+            continue
+        text = html.escape(block).replace("\n", " ")
+        if first:
+            paras.append(f'<p class="lede">{text}</p>')
+            first = False
+        else:
+            paras.append(f"<p>{text}</p>")
+    return fm, "\n".join("                " + p for p in paras)
+
+def main():
+    OUT.mkdir(exist_ok=True)
+    built = []
+    for f in sorted(SRC.glob("axl-wp-*.md")):
+        fm, body = parse(f)
+        page = TEMPLATE.format(body=body, **fm)
+        out = OUT / f"{fm['slug']}.html"
+        out.write_text(page, encoding="utf-8")
+        built.append(fm["series"])
+    print("PLAIN BUILT:", built)
+
+if __name__ == "__main__":
+    main()
