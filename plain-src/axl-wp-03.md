@@ -23,4 +23,16 @@ And because I believe measurement is the price of being taken seriously, the pap
 
 The part I'd underline, because it's the part I'm proudest of and the part most likely to get me in trouble: the paper ends with six pre-committed retraction conditions. Six ways I could be wrong, in writing, in advance. I'm told this is not how consulting is usually sold. That's the idea.
 
-The mechanism, the evidence base, and the six conditions are in the paper.
+## Why this matters
+
+This is the blueprint the rest of Aux Labs runs on. Every project we take, from courtrooms to brands, is a piece of this architecture meeting reality. Publishing it means a funder or client can hold us to our own spec, which is the point of publishing it.
+
+## The predictions
+
+The six commitments, with the three I consider most exposed put plainly:
+
+- The repair sequence must actually be order-dependent. Interventions that enter it in the middle should keep failing, measurably, the way they have for twenty years.
+- The clinical-economics claim must hold at its floor: upstream trust repair offsetting six to twenty-four times its cost in downstream clinical burden, after conservative discounting. If the floor breaks, the argument breaks.
+- The index's four dimensions must measure genuinely different things. If they collapse into one number, the instrument is redundant and gets retired.
+
+The mechanism, the evidence base, and all six conditions are in the paper.

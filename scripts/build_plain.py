@@ -120,6 +120,14 @@ def parse(path):
         if todo:
             paras.append(f'<div class="axl-todo">{html.escape(todo.group(1).strip())}</div>')
             continue
+        if block.startswith("## "):
+            label = html.escape(block[3:].strip()).upper().replace(" ", "_")
+            paras.append(f'<div class="font-mono text-[10px] uppercase tracking-widest bg-panel text-white px-2 py-1 inline-block" style="margin:2.2em 0 0.4em">[ {label} ]</div>')
+            continue
+        if all(l.lstrip().startswith("- ") for l in block.split("\n")):
+            items = "".join(f"<li>{html.escape(l.lstrip()[2:]).strip()}</li>" for l in block.split("\n"))
+            paras.append(f'<ul class="axl-plain-list">{items}</ul>')
+            continue
         text = html.escape(block).replace("\n", " ")
         if first:
             paras.append(f'<p class="lede">{text}</p>')

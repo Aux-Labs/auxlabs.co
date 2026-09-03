@@ -21,6 +21,16 @@ That's why the paper isn't a takedown, and honestly it's why I could finally wri
 
 The uncomfortable part of the analysis is that nothing in it is specific to VICE. The same drift, ownership separating from authorship, runs through most of the industry-wide media collapse that followed. If you've watched a company, a scene, a subreddit, or a church go from alive to hollow and struggled to say exactly when it happened, this framework will feel familiar in your hands.
 
-The paper ends with three predictions, stated so they can fail in public. That's on purpose. Anyone can explain the past; the test of an explanation is whether it commits to something before the fact.
+## Why this matters
+
+If you build, fund, or run anything that lives on shared culture — a media company, a studio, a creative community — this is a checklist for the failure that will come for it. The drift is preventable, but only before it starts, and only structurally. It is also the paper that explains why Aux Labs treats governance as a design material rather than paperwork.
+
+## The predictions
+
+The paper ends with three claims staked in advance, because anyone can explain the past; the test of an explanation is whether it commits to something before the fact. In plain terms:
+
+- Well-funded "counter-establishment" institutions get captured at the step where money becomes institutions, within one investment cycle of five to seven years. If they routinely avoid capture, the model is wrong.
+- Growing communities slide into founder-rule past roughly 150 people unless they have built real collective decision-making first. If informal governance keeps working at scale, the model is wrong.
+- The permission machinery that built VICE builds pro-social and anti-social successors with equal efficiency; governance, not talent, decides which. If ungoverned pipelines reliably lean good on their own, the model is wrong.
 
 If this landed, the receipts live in the full paper.

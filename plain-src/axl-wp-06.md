@@ -21,4 +21,13 @@ And then there's AI, which is the fork in the road. The same systems that could 
 
 I don't pretend to be neutral on which way it goes. I left neutral behind somewhere around 2020.
 
+## Why this matters
+
+This is the closest thing Aux Labs has to a founding document. If the paper is right, the largest returns of the next decade, financial and civilizational, sit in psychological infrastructure almost nobody is funded to build. We read that as an assignment.
+
+## The predictions
+
+- A psychological revolution can be tracked without mind-reading, through behavioral proxies: the gap between what people privately believe and publicly perform, participation in shared things, a community's capacity to make sense of events together.
+- If those proxies cannot be measured reliably, the program fails, and it fails honestly, in public.
+
 The full argument, measurements included, is in the paper.

@@ -21,4 +21,13 @@ I know how that sounds. A consultant telling you billions are lying on the groun
 
 One more thing, because it's my favorite part. To fund the study, we're sending the identical proposal to four different kinds of funders on the same day and timing the responses. The funding process is itself an experiment about how fast our institutions can move on a cheap, obvious, public-interest question. Either someone funds the measurement, or the silence becomes data. We win either way, which is how I prefer to design things.
 
+## Why this matters
+
+The merge is the cheapest possible test of a much bigger idea: that many "behavior problems" are really assurance problems, fixable by repairing what people believe about each other instead of lecturing them. If the fix works on a highway, the template travels to every queue, policy, and public that runs on mutual suspicion. That is why a $40,000 study is worth doing carefully in public.
+
+## The predictions
+
+- Drivers' private preference for the zipper merge exceeds what they believe other drivers approve of by more than fifteen points. That hidden gap is the mechanism.
+- If the gap comes in under fifteen points, the mechanism is wrong, and we publish the null result with the same prominence as we would have published the win.
+
 The full chain, the survey instrument, and the protocol are in the paper.

@@ -19,4 +19,17 @@ The paper's proposal borrows a trick from economic history that I find genuinely
 
 I'll be straight about the status: the instrument is a proposal, not a finding. It hasn't been fielded yet. But the problem is not hypothetical, it is compounding monthly, and whoever builds the credit score for machine-era court filings will shape how an entire branch of government meets this decade.
 
+## Why this matters
+
+When a case is resolved against someone who never got a hearing, the error does not stay in the courthouse. It follows people out the door, and it compounds into exactly the collapse of institutional trust this whole site is about, at the one institution meant to be the last resort.
+
+## The predictions
+
+The paper names four ways the instrument fails, in advance:
+
+- If courts score better on the index while fewer cases reach their merits, I have built a faster injustice machine, and it has failed on its own terms.
+- If hallucinated citations do not decline after deployment, the veracity check is not working.
+- If trained scorers cannot agree on the rubrics, this is not measurable in the field.
+- If the index moves while reality does not, it got gamed, and the gaming-resistance did not survive contact.
+
 The framework, the math, and the falsification conditions are in the paper.

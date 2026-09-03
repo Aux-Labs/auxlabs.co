@@ -19,6 +19,14 @@ The plainest sentence in the paper is the one I'd put on a billboard: policy wit
 
 What I want you to take from the plain version is just the reframe: the next time you read about AI risk, ask not "is the model safe?" but "which human institutions would we believe if they told us?" Sit with how short that list is. That shortness is the actual emergency, it predates AI, and unlike model weights, it's something we know how to repair, because humans have rebuilt trust before. Slowly. In order. On purpose.
 
-The paper ships with falsifiable predictions, including one about which AI companies outperform this decade. Check back and score me.
+## Why this matters
 
-The argument, start to finish, is in the paper.
+If the paper is right, the AI transition is won or lost in the trust layer, not the model weights. That would mean the most important AI work of the decade looks nothing like AI work, and almost nobody is funded to do it. It would also mean the repair skills already exist, because humans have rebuilt trust before: slowly, in order, on purpose.
+
+## The predictions
+
+- AI companies that invest in public trust outperform companies that invest only in technical safety, over a thirty-six-month comparison.
+- Narrative interventions reduce AI moral panic more than information-only campaigns, in a twelve-month matched-community test.
+- More than seventy percent of AI crises over three years will trace to trust deficits rather than technical failures.
+
+Check back and score me. The argument, start to finish, is in the paper.

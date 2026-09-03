@@ -19,4 +19,14 @@ The reason I wrote it isn't nostalgia for some era of honest hardship, which nev
 
 One more reason this matters right now: we are currently building machines that are better at flattery than anything Esalen ever dreamed of. The paper's last section is about AI as the most powerful self-esteem engine ever constructed, and what it would take to point it the other way.
 
+## Why this matters
+
+If you raise kids, manage people, treat patients, or design products, you are operating inside this architecture whether or not you chose it. Naming it is the first step to opting out of it, and the paper exists so the naming can survive being checked.
+
+## How to check me
+
+- The origin claim is checkable against California's own published record: the task force's research findings and its decision to ship anyway are both documented.
+- The clinical reframe rises or falls with the published perfectionism literature; the paper cites it so you can compare directly.
+- The AI-sycophancy claims are anchored to named studies, including Stanford work published at FAccT 2025. Read them and disagree with me in specifics, not vibes.
+
 The receipts, from the Task Force's own documents forward, are in the paper.

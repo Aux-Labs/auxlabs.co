@@ -28,3 +28,7 @@ html[data-theme="dark"] .axl-plain a:hover{color:#00FF41}
 html[data-theme="dark"] .axl-todo::before{color:#FFB000}
 .axl-ver{display:none}
 @media (min-width:1650px){.axl-ver{display:flex}}
+.axl-plain-list{list-style:none;margin:0 0 1.3em;padding:0}
+.axl-plain-list li{position:relative;padding-left:1.5em;margin-bottom:.9em;line-height:1.7}
+.axl-plain-list li::before{content:"■";position:absolute;left:0;top:.1em;color:#00A82D;font-size:.7em}
+html[data-theme="dark"] .axl-plain-list li::before{color:#00FF41}
