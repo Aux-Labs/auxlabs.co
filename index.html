@@ -74,7 +74,7 @@
             <a href="cultural.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">03_CULTURAL</a>
             <a href="record.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">04_RECORD</a>
         </div>
-        <div class="hidden xl:flex items-center px-8 text-archival-ink/60">
+        <div class="axl-ver items-center px-8 text-archival-ink/60">
             [ CLASSIFICATION: UNRESTRICTED // VER: 8.0.0-ATTUNE ]
         </div>
         <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="order-2 lg:order-4 ml-auto lg:ml-0 flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">
@@ -109,6 +109,7 @@
         <!-- Hero -->
         <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-archival-ink">
             <div class="lg:col-span-7 p-8 lg:p-16 lg:border-r border-archival-ink relative overflow-hidden bg-surface/20">
+            <span class="axl-wm" style="font-size:clamp(4.5rem,12vw,10rem); right:-1rem; bottom:-1.2rem;" aria-hidden="true">FRONT DOOR</span>
 
                 <div class="mb-10 font-mono text-[11px] tracking-tighter flex items-center gap-4">
                     <span class="bg-panel text-white px-2 py-0.5">RECORD_01</span>
@@ -143,7 +144,7 @@
 
             <!-- Hero visual: FIG.01 — five verified trust series (Pew / Gallup / GSS) + 2023 loneliness marker -->
             <div class="lg:col-span-5 relative bg-panel overflow-hidden min-h-[380px] p-6 lg:p-8 flex flex-col justify-between">
-                <div class="font-mono text-[9px] text-brand-green tracking-widest uppercase mb-4">FIG. 01 // THE PRETEND ERA, MEASURED</div>
+                <div class="font-mono text-[9px] text-brand-green tracking-widest uppercase mb-4 flex items-center justify-between gap-3"><span>FIG. 01 // THE PRETEND ERA, MEASURED</span><span class="axl-q" style="font-size:12px;color:rgba(255,255,255,.6);letter-spacing:0">EVIDENCE</span></div>
                 <svg viewBox="0 0 560 400" role="img" class="w-full h-auto"
                      aria-label="Five line series on a zero-to-one-hundred percent scale, 1958 to 2026: American trust in the federal government falls from 77 percent to 17, trust in mass media from 72 percent to 28, trust in each other from 46 percent to 34, confidence in big business from a 34 percent peak to 17, and belief in advertisers' honesty holds near the floor, 11 to 10 percent. A marker at 2023 notes the Surgeon General declaring an epidemic of loneliness.">
                     <g stroke="rgba(255,255,255,0.10)" stroke-width="1">
@@ -331,7 +332,7 @@
         <section class="p-8 lg:p-20 cta-final flex flex-col items-center text-center">
             <div class="font-mono text-[9px] mb-8 border border-current inline-block px-2 py-1 uppercase opacity-70">§ 05.00 // ONE ASK</div>
             <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter leading-none mb-8">
-                The diagnosis is free.
+                <span class="axl-q">The diagnosis is free.</span>
             </h2>
             <p class="text-sm lg:text-base leading-relaxed max-w-2xl mb-12 opacity-80">
                 Thirty minutes. Bring the system that's bleeding: a queue, a policy, a schedule, a public that's stopped believing you. We'll tell you where the trust is leaking, what it's costing you, and whether a mechanism can fix it. If we can't help, we'll say so in the first call.
@@ -340,9 +341,11 @@
                 [ BOOK_THE_DIAGNOSIS_CALL ]
             </a>
         </section>
+        <div class="axl-stripe" aria-hidden="true"></div>
         <footer class="p-8 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 bg-archival-paper">
             <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/40">
                 <p>© 2026 AUX LABS LLC // AUSTIN, TX // ALL RIGHTS RESERVED</p>
+                <p class="axl-co">c/o AUX LABS LLC · "AUSTIN, TEXAS" · 30.2672° N, 97.7431° W</p>
                 <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
                 <p>auxlabs.co // Signal @nawab.12 // <a href="firewall.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Firewall</a> // <a href="field.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Field</a> // <a href="provenance.html" class="underline text-archival-ink hover:text-brand-green transition-colors">Provenance</a></p>
             </div>
