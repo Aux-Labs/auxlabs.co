@@ -118,8 +118,13 @@ def parse(path):
             continue
         todo = re.match(r"^\[TODO:\s*(.+?)\]$", block, re.S)
         if todo:
-            paras.append(f'<div class="axl-todo">{html.escape(todo.group(1).strip())}</div>')
-            continue
+            # Author-facing placeholders must never reach a published page.
+            # Fail the build loudly instead of rendering an amber box in public.
+            raise SystemExit(
+                f"BUILD ABORTED - unresolved [TODO:] in {path.name}: "
+                f"{todo.group(1).strip()[:80]}... "
+                "Write the passage or delete the block, then rebuild."
+            )
         if block.startswith("## "):
             label = html.escape(block[3:].strip()).upper().replace(" ", "_")
             paras.append(f'<div class="font-mono text-[10px] uppercase tracking-widest bg-panel text-white px-2 py-1 inline-block" style="margin:2.2em 0 0.4em">[ {label} ]</div>')

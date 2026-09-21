@@ -11,8 +11,6 @@ The plain version: VICE didn't die because digital media is hard. It died becaus
 
 I spent seven years inside VICE and its agency, VIRTUE, from 2013 to 2020. My first project was the first season of VICE on HBO. I went on to run brand work for companies you've heard of: Johnnie Walker, Michelin, Lululemon, Budweiser, Google Chrome. And I got to watch, from the hallways, one of the strangest, most alive media companies on earth become a cautionary tale.
 
-[TODO: One specific memory. A room, a day, a meeting where you first felt the floor tilt. Two or three sentences, concrete, no analysis.]
-
 The paper this piece walks alongside is my attempt to be rigorous about what I saw, because "the vibes changed" is not an argument. It borrows a framework from Elinor Ostrom, an economist who won the Nobel for studying something wonderfully unglamorous: how communities manage shared things. Fisheries. Forests. Irrigation ditches. She found that the commons that survive follow a short list of rules. It's clear who belongs. The people affected by the rules get a say in the rules. The people doing the daily work can see the resource up close, so they notice when it's being drained.
 
 A culture is a shared thing too. VICE's real asset was never the offices or the shows. It was a commons: a sensibility built over decades by writers, editors, producers, and kids with cameras who trusted the place enough to put their weirdest, best work into it. Then the ownership of that commons drifted away from the people who had built it. Decision by decision. Valuation by valuation. Ostrom's rules got broken one at a time, and here's the part that took me years to accept: nobody broke them on purpose. Everyone in every room behaved reasonably. The structure did the rest.
