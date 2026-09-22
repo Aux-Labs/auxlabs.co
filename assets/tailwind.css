@@ -50,3 +50,17 @@ html[data-theme="dark"] .axl-plain-list li::before{color:#00FF41}
   .axl-tiers>div{border-right:0;border-bottom:1px solid rgb(var(--ink-rgb))}
   .axl-tiers>div:last-child{border-bottom:0}
 }
+
+/* ── Photo slots ─────────────────────────────────────────────
+   Drop a JPG at the filename named in each PHOTO SLOT comment.
+   If the file exists it covers the placeholder; if not, the slot
+   removes itself and the placeholder stays. Treatment is pure CSS,
+   so any ordinary photo comes out in the house register.        */
+.axl-photo{position:absolute;inset:0;z-index:10;display:block;overflow:hidden;background:#0b0c0b}
+.axl-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.18) brightness(.92)}
+.axl-photo-tint{position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
+.axl-photo--green .axl-photo-tint{background:
+  repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px),
+  linear-gradient(#00FF41,#00FF41);background-blend-mode:normal;mix-blend-mode:multiply;opacity:.72}
+.axl-photo--mono img{filter:grayscale(1) contrast(1.1) brightness(.95) sepia(.08)}
