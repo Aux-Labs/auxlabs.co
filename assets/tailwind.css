@@ -64,3 +64,8 @@ html[data-theme="dark"] .axl-plain-list li::before{color:#00FF41}
   repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px),
   linear-gradient(#00FF41,#00FF41);background-blend-mode:normal;mix-blend-mode:multiply;opacity:.72}
 .axl-photo--mono img{filter:grayscale(1) contrast(1.1) brightness(.95) sepia(.08)}
+/* Principal portrait: below desktop, a small plate beside the name, not a full-width face */
+@media (max-width:1023px){
+  .axl-principal{display:flex;align-items:center;gap:1.25rem}
+  .axl-principal>.aspect-square{width:clamp(104px,30vw,200px);flex:none;margin-bottom:0}
+}
