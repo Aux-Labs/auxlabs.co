@@ -69,3 +69,10 @@ html[data-theme="dark"] .axl-plain-list li::before{color:#00FF41}
   .axl-principal{display:flex;align-items:center;gap:1.25rem}
   .axl-principal>.aspect-square{width:clamp(104px,30vw,200px);flex:none;margin-bottom:0}
 }
+/* Art that arrives already treated (Samantha's plates): show as-is */
+.axl-photo--raw img{filter:none}
+.axl-photo--raw .axl-photo-tint{display:none}
+/* Image plates on the home page file cards */
+.axl-card-img{display:block;margin:-2rem -2rem 1.5rem;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid rgb(var(--ink-rgb))}
+.axl-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.group:hover .axl-card-img img{transform:scale(1.03)}
