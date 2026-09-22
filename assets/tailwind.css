@@ -32,3 +32,21 @@ html[data-theme="dark"] .axl-todo::before{color:#FFB000}
 .axl-plain-list li{position:relative;padding-left:1.5em;margin-bottom:.9em;line-height:1.7}
 .axl-plain-list li::before{content:"■";position:absolute;left:0;top:.1em;color:#00A82D;font-size:.7em}
 html[data-theme="dark"] .axl-plain-list li::before{color:#00FF41}
+
+/* ── Responsive fixes 2026-09-22 ─────────────────────────── */
+/* Phones: nav links as an even 2×2 grid instead of a ragged wrap */
+@media (max-width:639px){
+  .axl-navlinks{display:grid;grid-template-columns:1fr 1fr}
+  .axl-navlinks>a{justify-content:center;border-right:1px solid rgb(var(--ink-rgb))}
+  .axl-navlinks>a:nth-child(2n){border-right:0}
+  .axl-navlinks>a:nth-child(-n+2){border-bottom:1px solid rgb(var(--ink-rgb))}
+  .cta-btn{white-space:nowrap;letter-spacing:.06em;padding-left:1.25rem;padding-right:1.25rem;font-size:12px}
+}
+/* Watermark words collide with body copy below tablet width */
+@media (max-width:767px){ .axl-wm{display:none} }
+/* Tablet portrait: three service columns are too narrow for the headings */
+@media (min-width:768px) and (max-width:1023px){
+  .axl-tiers{grid-template-columns:1fr}
+  .axl-tiers>div{border-right:0;border-bottom:1px solid rgb(var(--ink-rgb))}
+  .axl-tiers>div:last-child{border-bottom:0}
+}
