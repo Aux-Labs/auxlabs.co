@@ -28,5 +28,6 @@ If you raise kids, manage people, treat patients, or design products, you are op
 - The origin claim is checkable against California's own published record: the task force's research findings and its decision to ship anyway are both documented.
 - The clinical reframe rises or falls with the published perfectionism literature; the paper cites it so you can compare directly.
 - The AI-sycophancy claims are anchored to named studies, including Stanford work published at FAccT 2025. Read them and disagree with me in specifics, not vibes.
+- The AI claim carries a registered prediction in Section VIII of the paper: a specific trial, and the result that would prove me wrong.
 
 The receipts, from the Task Force's own documents forward, are in the paper.
