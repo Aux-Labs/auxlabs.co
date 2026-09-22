@@ -144,8 +144,16 @@ def parse(path):
 def main():
     OUT.mkdir(exist_ok=True)
     built = []
+    import json
+    status = {p["series"]: p.get("status") for p in
+              json.loads((OUT.parent / "papers.json").read_text(encoding="utf-8"))["papers"]}
     for f in sorted(SRC.glob("axl-wp-*.md")):
         fm, body = parse(f)
+        if status.get(fm["series"]) != "published":
+            stale = OUT / f"{fm['slug']}.html"
+            if stale.exists():
+                stale.unlink()
+            continue   # withdrawn / in revision: no public companion
         page = TEMPLATE.format(body=body, **fm)
         out = OUT / f"{fm['slug']}.html"
         out.write_text(page, encoding="utf-8")
