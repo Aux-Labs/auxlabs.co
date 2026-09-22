@@ -76,3 +76,16 @@ html[data-theme="dark"] .axl-plain-list li::before{color:#00FF41}
 .axl-card-img{display:block;margin:-2rem -2rem 1.5rem;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid rgb(var(--ink-rgb))}
 .axl-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
 .group:hover .axl-card-img img{transform:scale(1.03)}
+/* Why Us: the whole line, as a numbered run */
+.axl-line{list-style:none;margin:0 0 2.25rem;padding:0;display:flex;flex-wrap:wrap;gap:.5rem .25rem;counter-reset:axl}
+.axl-line li{counter-increment:axl;display:flex;align-items:center;gap:.5rem;padding:.55rem .8rem;border:1px solid rgba(0,255,65,.35)}
+.axl-line li::before{content:counter(axl,decimal-leading-zero);color:#00FF41;font-weight:700}
+.axl-line li:not(:last-child)::after{content:"->";color:rgba(255,255,255,.35);margin-left:.4rem}
+/* Three top-nav items on phones: one row of three */
+@media (max-width:639px){
+  .axl-navlinks{grid-template-columns:1fr 1fr 1fr}
+  .axl-navlinks>a{padding-left:.25rem;padding-right:.25rem;letter-spacing:.04em;font-size:9px;border-bottom:0;border-right:1px solid rgb(var(--ink-rgb))}
+  .axl-navlinks>a:nth-child(-n+2){border-bottom:0}
+  .axl-navlinks>a:nth-child(2n){border-right:1px solid rgb(var(--ink-rgb))}
+  .axl-navlinks>a:last-child{border-right:0}
+}
