@@ -117,17 +117,75 @@
         <!-- The line, end to end -->
         <section class="p-8 lg:p-16 border-b border-archival-ink bg-panel text-white">
             <div class="font-mono text-[9px] mb-8 text-brand-green border border-brand-green inline-block px-2 py-1 uppercase">§ 01.00 // THE WHOLE LINE</div>
-            <ol class="axl-line font-mono text-[10px] lg:text-[11px] uppercase tracking-widest">
-                <li>Notice the problem</li>
-                <li>Listen to it</li>
-                <li>Understand it</li>
-                <li>Find the insight</li>
-                <li>Set the strategy</li>
-                <li>Write the brief</li>
-                <li>Make the artifact</li>
-                <li>Fund it bigger</li>
-                <li>Change the policy</li>
-            </ol>
+            <div class="axl-steps" role="tablist" aria-label="The whole line, step by step">
+                <button type="button" role="tab" id="step-01" aria-controls="step-panel-01" aria-selected="true" class="axl-step"><span class="axl-step-n">01</span><span class="axl-step-t">Listen</span></button>
+                <button type="button" role="tab" id="step-02" aria-controls="step-panel-02" aria-selected="false" class="axl-step"><span class="axl-step-n">02</span><span class="axl-step-t">Insight</span></button>
+                <button type="button" role="tab" id="step-03" aria-controls="step-panel-03" aria-selected="false" class="axl-step"><span class="axl-step-n">03</span><span class="axl-step-t">Measure</span></button>
+                <button type="button" role="tab" id="step-04" aria-controls="step-panel-04" aria-selected="false" class="axl-step"><span class="axl-step-n">04</span><span class="axl-step-t">Strategy</span></button>
+                <button type="button" role="tab" id="step-05" aria-controls="step-panel-05" aria-selected="false" class="axl-step"><span class="axl-step-n">05</span><span class="axl-step-t">Brief</span></button>
+                <button type="button" role="tab" id="step-06" aria-controls="step-panel-06" aria-selected="false" class="axl-step"><span class="axl-step-n">06</span><span class="axl-step-t">Make</span></button>
+                <button type="button" role="tab" id="step-07" aria-controls="step-panel-07" aria-selected="false" class="axl-step"><span class="axl-step-n">07</span><span class="axl-step-t">Press</span></button>
+                <button type="button" role="tab" id="step-08" aria-controls="step-panel-08" aria-selected="false" class="axl-step"><span class="axl-step-n">08</span><span class="axl-step-t">Fund</span></button>
+                <button type="button" role="tab" id="step-09" aria-controls="step-panel-09" aria-selected="false" class="axl-step"><span class="axl-step-n">09</span><span class="axl-step-t">Policy</span></button>
+            </div>
+            <div class="axl-step-panels">
+                <div role="tabpanel" id="step-panel-01" aria-labelledby="step-01" class="axl-step-panel">
+                    <span class="axl-step-who">01 · WE DO IT</span>
+                    <p>Noticing what a problem is, listening to the problem, understanding what we can about it.</p>
+                </div>
+                <div role="tabpanel" id="step-panel-02" aria-labelledby="step-02" class="axl-step-panel" hidden>
+                    <span class="axl-step-who">02 · WE DO IT</span>
+                    <p>Having insights that other people didn&#x27;t have about the problem.</p>
+                </div>
+                <div role="tabpanel" id="step-panel-03" aria-labelledby="step-03" class="axl-step-panel" hidden>
+                    <span class="axl-step-who">03 · WE LEAD, PARTNERS RUN IT</span>
+                    <p>We do the measurements and design the study, and hire the right partners to run it.</p>
+                </div>
+                <div role="tabpanel" id="step-panel-04" aria-labelledby="step-04" class="axl-step-panel" hidden>
+                    <span class="axl-step-who">04 · WE DO IT</span>
+                    <p>A proper strategy for how to address the problem. If we need help, we work with an established strategy firm.</p>
+                </div>
+                <div role="tabpanel" id="step-panel-05" aria-labelledby="step-05" class="axl-step-panel" hidden>
+                    <span class="axl-step-who">05 · WE DO IT</span>
+                    <p>Turning that strategy into creative briefs and design briefs, for the exact right partners.</p>
+                </div>
+                <div role="tabpanel" id="step-panel-06" aria-labelledby="step-06" class="axl-step-panel" hidden>
+                    <span class="axl-step-who">06 · WE DIRECT IT</span>
+                    <p>Some kind of artistic, cultural artifact, in any medium, that moves the needle. Ideally we sit on the team, hire the people and direct them.</p>
+                </div>
+                <div role="tabpanel" id="step-panel-07" aria-labelledby="step-07" class="axl-step-panel" hidden>
+                    <span class="axl-step-who">07 · WE DIRECT IT</span>
+                    <p>When it&#x27;s time to take it to the press, we&#x27;re happy to work with a PR firm, but we like to direct them.</p>
+                </div>
+                <div role="tabpanel" id="step-panel-08" aria-labelledby="step-08" class="axl-step-panel" hidden>
+                    <span class="axl-step-who">08 · WITH FUNDERS</span>
+                    <p>Grant makers and corporate partners, to take the work further without touching the creative magic.</p>
+                </div>
+                <div role="tabpanel" id="step-panel-09" aria-labelledby="step-09" class="axl-step-panel" hidden>
+                    <span class="axl-step-who">09 · WITH LEGISLATORS</span>
+                    <p>Writing legislation, or working with lobbying groups and legislators, so the change lasts.</p>
+                </div>
+            </div>
+            <script>
+            (function(){
+              var tabs=[].slice.call(document.querySelectorAll('.axl-step'));
+              function pick(t){
+                tabs.forEach(function(b){
+                  var on=b===t; b.setAttribute('aria-selected',on?'true':'false');
+                  document.getElementById(b.getAttribute('aria-controls')).hidden=!on;
+                });
+              }
+              tabs.forEach(function(b,i){
+                b.addEventListener('click',function(){pick(b);});
+                b.addEventListener('keydown',function(e){
+                  var k=e.key, j=null;
+                  if(k==='ArrowRight'||k==='ArrowDown') j=(i+1)%tabs.length;
+                  if(k==='ArrowLeft'||k==='ArrowUp') j=(i-1+tabs.length)%tabs.length;
+                  if(j!==null){e.preventDefault(); tabs[j].focus(); pick(tabs[j]);}
+                });
+              });
+            })();
+            </script>
             <p class="text-sm lg:text-base leading-relaxed text-white/75 max-w-3xl mt-10">
                 We work with whoever has the specific domain expertise. But we shepherd the whole project through this cycle, and we take ownership and accountability for it all the way through, until the policy changes.
             </p>
@@ -210,7 +268,7 @@
             <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter leading-none mb-8">
                 <span class="axl-q">The diagnosis is free.</span>
             </h2>
-            <a href="https://calendar.app.google/mmpH7SH3V9YKBgKB9" class="cta-btn px-8 lg:px-12 py-6 font-mono text-sm tracking-[0.2em] uppercase transition-all">
+            <a href="https://calendar.app.google/SdugNFkjtJqB4bpq8" class="cta-btn px-8 lg:px-12 py-6 font-mono text-sm tracking-[0.2em] uppercase transition-all">
                 [ BOOK_THE_DIAGNOSIS_CALL ]
             </a>
         </section>
