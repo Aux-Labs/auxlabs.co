@@ -32,3 +32,8 @@ Netlify, from this repo, publish directory `.` (see `netlify.toml`). Domain: aux
 - Michelin current figures: update the two "last verified 2017" blocks when GCFP responds.
 - Role detail for the brand-strip clients: Imran to supply one line each.
 - Before merge: pick homepage subhead A/B/C, then remove the PREVIEW ONLY script at the bottom of `index.html`.
+
+## Future (not in the current merge)
+
+- **Video testimonials**: short clips from former colleagues and collaborators, recorded as an interview series with a third-party host.
+- **Guestbook / public feedback**: moderated (Netlify Forms), with selected entries published; likely home is the foot of The Record.
