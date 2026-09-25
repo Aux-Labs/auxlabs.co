@@ -106,3 +106,11 @@ html[data-theme="dark"] .axl-plain-list li::before{color:#00FF41}
 .axl-fit li{position:relative;padding-left:1.6rem}
 .axl-fit li::before{content:"->";position:absolute;left:0;top:0;color:#00FF41;font-family:'JetBrains Mono',monospace;font-size:.85em;font-weight:700}
 .axl-fit li+li{margin-top:1.1rem}
+/* homepage client strip */
+.axl-roster-row{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:1.1rem;row-gap:.35rem;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;font-weight:900;font-size:.78rem;line-height:1.3;color:rgb(var(--ink-rgb))}
+.axl-roster-row+.axl-roster-row{margin-top:.9rem}
+.axl-roster-k{flex-basis:100%;font-size:9px;font-weight:700;letter-spacing:.2em;color:rgb(var(--ink-rgb)/.55)}
+@media (min-width:1024px){.axl-roster-row{font-size:1.15rem}.axl-roster-k{flex-basis:auto;margin-right:.5rem}}
+.axl-roster-i{white-space:nowrap}.axl-roster-i:not(:last-child)::after{content:"/";color:#00FF41;margin-left:1.1rem}
+.axl-roster-row .axl-roster-i{white-space:normal}
+.axl-roster-note{margin-top:1rem}
