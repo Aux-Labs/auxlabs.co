@@ -31,6 +31,8 @@ Netlify, from this repo, publish directory `.` (see `netlify.toml`). Domain: aux
 - Booking link: live (Google Calendar) on Home, Commercial, Why Us and Terms CTAs.
 - Michelin current figures: update the two "last verified 2017" blocks when GCFP responds.
 - Role detail for the brand-strip clients: Imran to supply one line each.
+- Before merge: pick homepage hero 1/2/3 (preview with `?hero=1|2|3`), then remove the PREVIEW ONLY script at the bottom of `index.html`.
+- Before merge: `papers/a-room-built-in-the-hallway.pdf` still carries a DRAFT banner and a visible `[VERIFY with GCFP director]` tag; replace with a final PDF.
 
 ## Future (not in the current merge)
 
