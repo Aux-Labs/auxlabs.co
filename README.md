@@ -6,14 +6,20 @@ Static site for Aux Labs LLC. Design system: Neu Brutalism (archival cyber-bruta
 
 - `index.html` — Home
 - `commercial.html` — 01_COMMERCIAL
-- `research.html` — 02_RESEARCH (papers named, not linked — rolling publication)
-- `cultural.html` — 03_CULTURAL
+- `research.html` — 02_RESEARCH (working-paper index; papers in `papers/`, plain-text editions in `plain/`)
+- `why-us.html` — 03_WHY_US (replaced `cultural.html`; `/cultural` redirects here)
+- `terms.html` — The Terms: how we price and make deals
+- `field.html` — The Field: the lexicon
+- `firewall.html` — The Firewall: conflicts governance
+- `record.html` — The Record: every checkable claim
+- `provenance.html` — AI Disclosure (also served at `/ai-disclosure`)
 
 ## Rules that live in the code
 
 - **The invention rule**: no invented statistics, clients, credentials, dates or case studies. Unverified numbers are labeled as such (see Michelin card — "last verified 2017").
 - **Client names as text, never logos.** Legally load-bearing.
 - **Dark toggle** is a real token swap (`--paper-rgb / --ink-rgb / --surface-rgb / --panel-rgb` in each page's `<style>`), light-first by ruling.
+- **Stylesheet**: `assets/tailwind.css` is compiled, and a fresh build from `src/input.css` does not reproduce it byte-for-byte. Use utilities that already exist in the compiled file; put anything new in a page-local `<style>` block (see `terms.html`).
 - **Photo slots**: AI-generated imagery was removed. Search `PHOTO SLOT` comments for where owned photography drops in (use class `archival-duotone` treatment where noted).
 
 ## Deploy
@@ -22,7 +28,7 @@ Netlify, from this repo, publish directory `.` (see `netlify.toml`). Domain: aux
 
 ## Pending swaps
 
-- Booking link: CTAs use `mailto:imran@auxlabs.co` until the booking link exists.
+- Booking link: live (Google Calendar) on Home, Commercial, Why Us and Terms CTAs.
 - Michelin current figures: update the two "last verified 2017" blocks when GCFP responds.
-- Role detail for the five brand-strip clients: Imran to supply one line each.
-- Behavioral-infrastructure field page: ruled binding 8/24, not yet built.
+- Role detail for the brand-strip clients: Imran to supply one line each.
+- Before merge: pick homepage subhead A/B/C, then remove the PREVIEW ONLY script at the bottom of `index.html`.
