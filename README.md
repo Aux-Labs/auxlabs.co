@@ -31,7 +31,6 @@ Netlify, from this repo, publish directory `.` (see `netlify.toml`). Domain: aux
 - Booking link: live (Google Calendar) on Home, Commercial, Why Us and Terms CTAs.
 - Michelin current figures: update the two "last verified 2017" blocks when GCFP responds.
 - Role detail for the brand-strip clients: Imran to supply one line each.
-- Before merge: pick homepage subhead A/B/C, then remove the PREVIEW ONLY script at the bottom of `index.html`.
 
 ## Future (not in the current merge)
 
