@@ -64,15 +64,15 @@ TEMPLATE = """<!DOCTYPE html>
         <div class="axl-stripe axl-stripe--thin" aria-hidden="true"></div>
 
         <header class="p-8 lg:p-16 border-b border-archival-ink bg-surface/20 relative overflow-hidden">
-            <span class="axl-wm" style="font-size:clamp(5rem,13vw,10rem); right:-1rem; top:-1.5rem;" aria-hidden="true">RESEARCH</span>
             <div class="max-w-4xl mx-auto relative">
                 <div class="flex flex-wrap items-center gap-3 mb-8 font-mono text-[10px] uppercase tracking-widest">
                     <span class="bg-panel text-white px-3 py-1.5 font-bold">{series}</span>
                     <span class="border border-archival-ink px-3 py-1.5">WORKING PAPER · {version}</span>
                     <span class="border border-archival-ink px-3 py-1.5">AUX LABS LLC</span>
+                    <span class="border border-archival-ink px-3 py-1.5">{words} WORDS · ~{minutes} MIN READ</span>
                     <a href="../plain/{slug}.html" class="border border-archival-ink px-3 py-1.5 font-bold hover:bg-brand-green hover:text-black hover:border-brand-green transition-all">"PLAIN ENGLISH" VERSION -&gt;</a>
                 </div>
-                <h1 class="text-3xl lg:text-[2.75rem] font-black leading-[1.02] tracking-tighter uppercase mb-8">{title}</h1>
+                <h1 class="text-3xl lg:text-[2.75rem] font-black leading-[1.02] tracking-tighter uppercase mb-8">{title_html}</h1>
                 <div class="border-l-4 border-brand-green pl-6 lg:pl-8 py-2 mb-8">
                     <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-3">ABSTRACT</div>
                     <p class="text-sm lg:text-base leading-relaxed text-archival-ink/80">{abstract}</p>
@@ -438,7 +438,14 @@ def render(path, outdir):
     title = str(fm.get("title", path.stem))
     short = title.split(":")[0]
     abstract = " ".join(str(fm.get("abstract", "")).split())
+    # Title before the colon keeps the heavy weight; the subtitle after it is lighter (.axl-sub).
+    head, _, sub = title.partition(":")
+    title_html = html.escape(head) + (f':<span class="axl-sub"> {html.escape(sub.strip())}</span>' if sub.strip() else "")
+    words = len(re.sub(r"<[^>]+>", " ", body_html).split())
     page = TEMPLATE.format(
+        title_html=title_html,
+        words=f"{words:,}",
+        minutes=max(1, round(words / 230)),
         slug=fm.get("series", path.stem).lower(),
         series=fm.get("series", "AXL-WP"),
         version=fm.get("version", "v1.0"),
