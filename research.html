@@ -40,6 +40,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="assets/site.css">
     <script src="assets/axl.js" defer></script>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
@@ -47,14 +48,13 @@
          a first visit this session, with JS on and motion allowed. The record below
          is already parsed and crawlable: a curtain, not a gate. -->
     <div id="axl-boot" aria-hidden="true">
-        <div class="axl-boot-inner">
-            <div class="axl-boot-line"><span>&gt; ESTABLISHING SIGNAL</span><span class="ok">OK</span></div>
-            <div class="axl-boot-line"><span>&gt; CERT 042</span><span class="ok">VERIFIED</span></div>
-            <div class="axl-boot-line"><span>&gt; FILE_ID 882-AUX-2026</span><span class="ok">OPEN</span></div>
-            <div class="axl-boot-line"><span>&gt; CLASSIFICATION</span><span class="ok">UNRESTRICTED</span></div>
-            <div class="axl-boot-rule"></div>
-            <div class="axl-boot-bar"><span></span></div>
-            <div class="axl-boot-seal">RECORDS_OPEN<span class="axl-boot-cursor">_</span></div>
+        <div class="axl-b-stage">
+            <div class="axl-b-grid">
+                <span class="axl-b-tile" style="--i:0"></span><span class="axl-b-tile" style="--i:1"></span><span class="axl-b-tile" style="--i:2"></span>
+                <span class="axl-b-tile" style="--i:3"></span><span class="axl-b-tile" style="--i:4"></span><span class="axl-b-tile" style="--i:5"></span>
+                <span class="axl-b-tile" style="--i:6"></span><span class="axl-b-tile" style="--i:7"></span><span class="axl-b-tile" style="--i:8"></span>
+            </div>
+            <div class="axl-b-mark">AUX <span>LABS</span></div>
             <p class="axl-boot-hint">Press any key to skip</p>
         </div>
     </div>
@@ -82,7 +82,7 @@
     <main class="relative">
 
         <!-- Header Status -->
-        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
+        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest uppercase axl-status">
             <span>REPOSITORY_ID: AXL-RSCH-DB</span>
             <span class="hidden sm:inline">STATUS: ROLLING_PUBLICATION</span>
             <span>02_RESEARCH</span>
@@ -90,7 +90,6 @@
 
         <!-- Research Title -->
         <section class="p-8 lg:p-20 border-b border-archival-ink bg-surface/10 relative overflow-hidden">
-            <span class="axl-wm" style="font-size:clamp(4.5rem,12vw,10rem); right:-1rem; top:-1rem;" aria-hidden="true">EVIDENCE</span>
             <div class="max-w-5xl">
                 <div class="mb-12 font-mono text-[11px] tracking-tighter flex items-center gap-4">
                     <span class="bg-panel text-white px-2 py-0.5">RSCH_02</span>
@@ -99,7 +98,7 @@
                 <h1 class="text-4xl lg:text-[3.25rem] font-black leading-[0.95] tracking-tighter mb-10 uppercase">
                     Built like a university hospital.
                 </h1>
-                <p class="text-xl lg:text-3xl font-light leading-snug italic pull-serif border-l-4 border-brand-green pl-8 py-2 mb-8">
+                <p class="axl-pull mb-8">
                     We're built like a university hospital: the commercial lab earns at market rates and funds the nonprofit side, which runs the public-good research.
                 </p>
                 <p class="text-sm leading-relaxed text-archival-ink/70 max-w-3xl mb-16">
@@ -115,7 +114,7 @@
         </section>
 
         <!-- Flagship Program -->
-        <section class="px-8 lg:px-20 py-10 border-b border-archival-ink bg-brand-green/5">
+        <section class="px-8 lg:px-20 py-10 border-b border-archival-ink bg-surface/20">
             <div class="max-w-4xl">
                 <div class="font-mono text-[9px] mb-6 text-black bg-brand-green inline-block px-2 py-1 uppercase font-bold">FLAGSHIP_PROGRAM</div>
                 <h2 class="text-2xl lg:text-3xl font-black uppercase tracking-tighter leading-tight mb-6">The Pretend Era™</h2>
@@ -148,7 +147,7 @@
                 <div class="px-8 py-4 border-b border-archival-ink bg-surface/30 font-mono text-[10px] tracking-widest uppercase text-archival-ink/60">
                     PRIOR_PUBLICATIONS
                 </div>
-                <div class="p-8 lg:p-10 border-b border-archival-ink flex flex-col md:flex-row gap-8 items-baseline bg-brand-green/5">
+                <div class="p-8 lg:p-10 border-b border-archival-ink flex flex-col md:flex-row gap-8 items-baseline bg-surface/20">
                     <div class="shrink-0 font-mono text-[9px] bg-archival-ink text-archival-paper px-2 py-1 uppercase font-bold">Peer-Reviewed</div>
                     <p class="text-sm leading-relaxed font-sans">
                         Jin, M.X., Rajan, S., Gary Bicas, C.E., Hao, M., Dong, L., Mufson, B., &amp; Hafiz, I. (2021). <em>Novel Validated Index for the Measurement of Disinformation Susceptibility at the County Level.</em> Cureus, 13(5). Known as the Jin-Hafiz Index.
@@ -158,97 +157,151 @@
                 <div class="px-8 py-4 border-b border-archival-ink bg-surface/30 font-mono text-[10px] tracking-widest uppercase text-archival-ink/60">
                     THE_WORKING_PAPER_INDEX // AXL-WP-01 … AXL-WP-08
                 </div>
-                <div class="divide-y divide-archival-ink">
-                    <!-- AXL-WP-01 -->
-                    <div class="p-8 lg:p-10 flex flex-col md:flex-row gap-8 paper-card group transition-colors hover:bg-surface/40">
-                        <div class="shrink-0 font-mono text-xs font-bold bg-panel text-white w-20 h-20 flex items-center justify-center paper-id transition-colors">AXL-WP-01</div>
-                        <div class="flex-grow">
-                            <div class="flex flex-wrap items-center gap-4 mb-4">
-                                <span class="font-mono text-[9px] bg-brand-green text-black px-2 py-0.5 uppercase font-bold">Published</span>
-                            </div>
-                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight"><a href="papers/axl-wp-01.html" class="hover:text-brand-green transition-colors">Algorithmic Enclosure: The Rise and Collapse of a Cultural Commons</a></h4>
-                            <p class="mt-3"><a href="plain/axl-wp-01.html" class="font-mono text-[9px] uppercase tracking-widest underline hover:text-brand-green transition-colors">"PLAIN ENGLISH" VERSION -&gt;</a></p>
+                <div class="axl-car" aria-roledescription="carousel" aria-label="Working papers">
+                    <div class="flex items-center justify-between px-8 pt-6">
+                        <p class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60" id="axl-car-status">Swipe or use the arrows</p>
+                        <div class="axl-car-nav">
+                            <button type="button" class="axl-car-btn" data-dir="-1" aria-label="Previous papers">&lt;-</button>
+                            <button type="button" class="axl-car-btn" data-dir="1" aria-label="Next papers">-&gt;</button>
                         </div>
                     </div>
-                    <!-- AXL-WP-02 -->
-                    <div class="p-8 lg:p-10 flex flex-col md:flex-row gap-8 paper-card group transition-colors hover:bg-surface/40">
-                        <div class="shrink-0 font-mono text-xs font-bold bg-panel text-white w-20 h-20 flex items-center justify-center paper-id transition-colors">AXL-WP-02</div>
-                        <div class="flex-grow">
-                            <div class="flex flex-wrap items-center gap-4 mb-4">
-                                <span class="font-mono text-[9px] bg-brand-green text-black px-2 py-0.5 uppercase font-bold">Published</span>
+                    <div class="axl-car-track" tabindex="0">
+                        <article class="axl-car-card">
+                            <div class="axl-car-art">
+                                <div class="axl-car-ph" aria-hidden="true"><i>Published</i><b>AXL<br>WP-01</b></div>
+                                <!-- IMAGE SLOT — portrait 5:7 at assets/img/papers/axl-wp-01.jpg replaces the plate. -->
+                                <img src="assets/img/papers/axl-wp-01.jpg" alt="" loading="lazy" onerror="this.remove()">
                             </div>
-                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight"><a href="papers/axl-wp-02.html" class="hover:text-brand-green transition-colors">The Merge Gap</a></h4>
-                            <p class="mt-3"><a href="plain/axl-wp-02.html" class="font-mono text-[9px] uppercase tracking-widest underline hover:text-brand-green transition-colors">"PLAIN ENGLISH" VERSION -&gt;</a></p>
-                        </div>
-                    </div>
-                    <!-- AXL-WP-03 -->
-                    <div class="p-8 lg:p-10 flex flex-col md:flex-row gap-8 paper-card group transition-colors hover:bg-surface/40">
-                        <div class="shrink-0 font-mono text-xs font-bold bg-panel text-white w-20 h-20 flex items-center justify-center paper-id transition-colors">AXL-WP-03</div>
-                        <div class="flex-grow">
-                            <div class="flex flex-wrap items-center gap-4 mb-4">
-                                <span class="font-mono text-[9px] bg-brand-green text-black px-2 py-0.5 uppercase font-bold">Published</span>
+                            <div class="axl-car-body">
+                                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">AXL-WP-01</div>
+                                <h4 class="text-base font-black uppercase tracking-tight leading-tight"><a href="papers/axl-wp-01.html" class="hover:underline">Algorithmic Enclosure: The Rise and Collapse of a Cultural Commons</a></h4>
+                                <div class="mt-auto flex flex-wrap gap-x-4 gap-y-1 font-mono text-[9px] uppercase tracking-widest">
+                                    <a href="papers/axl-wp-01.html" class="underline hover:text-brand-green">Read the paper -&gt;</a>
+                                    <a href="plain/axl-wp-01.html" class="underline hover:text-brand-green">Plain English -&gt;</a>
+                                </div>
                             </div>
-                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight"><a href="papers/axl-wp-03.html" class="hover:text-brand-green transition-colors">The Cognitive Value Protocol</a></h4>
-                            <p class="mt-3"><a href="plain/axl-wp-03.html" class="font-mono text-[9px] uppercase tracking-widest underline hover:text-brand-green transition-colors">"PLAIN ENGLISH" VERSION -&gt;</a></p>
-                        </div>
-                    </div>
-                    <!-- AXL-WP-04 -->
-                    <div class="p-8 lg:p-10 flex flex-col md:flex-row gap-8 paper-card group transition-colors hover:bg-surface/40">
-                        <div class="shrink-0 font-mono text-xs font-bold bg-panel text-white w-20 h-20 flex items-center justify-center paper-id transition-colors">AXL-WP-04</div>
-                        <div class="flex-grow">
-                            <div class="flex flex-wrap items-center gap-4 mb-4">
-                                <span class="font-mono text-[9px] bg-archival-ink/10 text-archival-ink px-2 py-0.5 uppercase">In Revision · v2.0 Forthcoming</span>
-                                <span class="font-mono text-[9px] bg-brand-green text-black px-2 py-0.5 uppercase font-bold">Flagship</span>
+                        </article>
+                        <article class="axl-car-card">
+                            <div class="axl-car-art">
+                                <div class="axl-car-ph" aria-hidden="true"><i>Published</i><b>AXL<br>WP-02</b></div>
+                                <!-- IMAGE SLOT — portrait 5:7 at assets/img/papers/axl-wp-02.jpg replaces the plate. -->
+                                <img src="assets/img/papers/axl-wp-02.jpg" alt="" loading="lazy" onerror="this.remove()">
                             </div>
-                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight">The Pretend Era™</h4>
-                            <p class="mt-3 text-sm leading-relaxed text-archival-ink/70 max-w-2xl">The v1.0 draft is withdrawn for revision; a v2.0 with additional case material supersedes it. <a href="mailto:imran@auxlabs.co?subject=Advance%20copy%3A%20AXL-WP-04" class="underline hover:text-brand-green">Request an advance copy.</a></p>
-                        </div>
-                    </div>
-                    <!-- AXL-WP-05 -->
-                    <div class="p-8 lg:p-10 flex flex-col md:flex-row gap-8 paper-card group transition-colors hover:bg-surface/40">
-                        <div class="shrink-0 font-mono text-xs font-bold bg-panel text-white w-20 h-20 flex items-center justify-center paper-id transition-colors">AXL-WP-05</div>
-                        <div class="flex-grow">
-                            <div class="flex flex-wrap items-center gap-4 mb-4">
-                                <span class="font-mono text-[9px] bg-brand-green text-black px-2 py-0.5 uppercase font-bold">Published</span>
+                            <div class="axl-car-body">
+                                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">AXL-WP-02</div>
+                                <h4 class="text-base font-black uppercase tracking-tight leading-tight"><a href="papers/axl-wp-02.html" class="hover:underline">The Merge Gap</a></h4>
+                                <div class="mt-auto flex flex-wrap gap-x-4 gap-y-1 font-mono text-[9px] uppercase tracking-widest">
+                                    <a href="papers/axl-wp-02.html" class="underline hover:text-brand-green">Read the paper -&gt;</a>
+                                    <a href="plain/axl-wp-02.html" class="underline hover:text-brand-green">Plain English -&gt;</a>
+                                </div>
                             </div>
-                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight"><a href="papers/axl-wp-05.html" class="hover:text-brand-green transition-colors">The Self-Esteem Operating System</a></h4>
-                            <p class="mt-3"><a href="plain/axl-wp-05.html" class="font-mono text-[9px] uppercase tracking-widest underline hover:text-brand-green transition-colors">"PLAIN ENGLISH" VERSION -&gt;</a></p>
-                        </div>
-                    </div>
-                    <!-- AXL-WP-06 -->
-                    <div class="p-8 lg:p-10 flex flex-col md:flex-row gap-8 paper-card group transition-colors hover:bg-surface/40">
-                        <div class="shrink-0 font-mono text-xs font-bold bg-panel text-white w-20 h-20 flex items-center justify-center paper-id transition-colors">AXL-WP-06</div>
-                        <div class="flex-grow">
-                            <div class="flex flex-wrap items-center gap-4 mb-4">
-                                <span class="font-mono text-[9px] bg-brand-green text-black px-2 py-0.5 uppercase font-bold">Published</span>
+                        </article>
+                        <article class="axl-car-card">
+                            <div class="axl-car-art">
+                                <div class="axl-car-ph" aria-hidden="true"><i>Published</i><b>AXL<br>WP-03</b></div>
+                                <!-- IMAGE SLOT — portrait 5:7 at assets/img/papers/axl-wp-03.jpg replaces the plate. -->
+                                <img src="assets/img/papers/axl-wp-03.jpg" alt="" loading="lazy" onerror="this.remove()">
                             </div>
-                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight"><a href="papers/axl-wp-06.html" class="hover:text-brand-green transition-colors">The Psychological Revolution</a></h4>
-                            <p class="mt-3"><a href="plain/axl-wp-06.html" class="font-mono text-[9px] uppercase tracking-widest underline hover:text-brand-green transition-colors">"PLAIN ENGLISH" VERSION -&gt;</a></p>
-                        </div>
-                    </div>
-                    <!-- AXL-WP-07 -->
-                    <div class="p-8 lg:p-10 flex flex-col md:flex-row gap-8 paper-card group transition-colors hover:bg-surface/40">
-                        <div class="shrink-0 font-mono text-xs font-bold bg-panel text-white w-20 h-20 flex items-center justify-center paper-id transition-colors">AXL-WP-07</div>
-                        <div class="flex-grow">
-                            <div class="flex flex-wrap items-center gap-4 mb-4">
-                                <span class="font-mono text-[9px] bg-brand-green text-black px-2 py-0.5 uppercase font-bold">Published</span>
+                            <div class="axl-car-body">
+                                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">AXL-WP-03</div>
+                                <h4 class="text-base font-black uppercase tracking-tight leading-tight"><a href="papers/axl-wp-03.html" class="hover:underline">The Cognitive Value Protocol</a></h4>
+                                <div class="mt-auto flex flex-wrap gap-x-4 gap-y-1 font-mono text-[9px] uppercase tracking-widest">
+                                    <a href="papers/axl-wp-03.html" class="underline hover:text-brand-green">Read the paper -&gt;</a>
+                                    <a href="plain/axl-wp-03.html" class="underline hover:text-brand-green">Plain English -&gt;</a>
+                                </div>
                             </div>
-                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight"><a href="papers/axl-wp-07.html" class="hover:text-brand-green transition-colors">Clearance Is Not Justice: An Anthropometric Turn for Court Performance Measurement in the Age of Algorithmic Congestion</a></h4>
-                            <p class="mt-3"><a href="plain/axl-wp-07.html" class="font-mono text-[9px] uppercase tracking-widest underline hover:text-brand-green transition-colors">"PLAIN ENGLISH" VERSION -&gt;</a></p>
-                        </div>
-                    </div>
-                    <!-- AXL-WP-08 -->
-                    <div class="p-8 lg:p-10 flex flex-col md:flex-row gap-8 paper-card group transition-colors hover:bg-surface/40">
-                        <div class="shrink-0 font-mono text-xs font-bold bg-panel text-white w-20 h-20 flex items-center justify-center paper-id transition-colors">AXL-WP-08</div>
-                        <div class="flex-grow">
-                            <div class="flex flex-wrap items-center gap-4 mb-4">
-                                <span class="font-mono text-[9px] bg-archival-ink/10 text-archival-ink px-2 py-0.5 uppercase">In Revision · v2.0 Forthcoming</span>
+                        </article>
+                        <article class="axl-car-card">
+                            <div class="axl-car-art">
+                                <div class="axl-car-ph" aria-hidden="true"><i class="is-rev">In revision · v2.0</i><b>AXL<br>WP-04</b></div>
+                                <!-- IMAGE SLOT — portrait 5:7 at assets/img/papers/axl-wp-04.jpg replaces the plate. -->
+                                <img src="assets/img/papers/axl-wp-04.jpg" alt="" loading="lazy" onerror="this.remove()">
                             </div>
-                            <h4 class="text-xl lg:text-2xl font-black uppercase tracking-tight">Cognitive Infrastructure for the AI Transition</h4>
-                            <p class="mt-3 text-sm leading-relaxed text-archival-ink/70 max-w-2xl">The v1.0 draft is withdrawn for revision pending a sourcing pass; a v2.0 supersedes it. <a href="mailto:imran@auxlabs.co?subject=Advance%20copy%3A%20AXL-WP-08" class="underline hover:text-brand-green">Request an advance copy.</a></p>
-                        </div>
+                            <div class="axl-car-body">
+                                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">AXL-WP-04 <span class="font-mono text-[9px] bg-brand-green text-black px-2 py-0.5 uppercase font-bold align-middle">Flagship</span></div>
+                                <h4 class="text-base font-black uppercase tracking-tight leading-tight">The Pretend Era™</h4>
+                                <div class="mt-auto font-mono text-[9px] uppercase tracking-widest">
+                                    <a href="mailto:imran@auxlabs.co?subject=Advance%20copy%3A%20AXL-WP-04" class="underline hover:text-brand-green">Request an advance copy -&gt;</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="axl-car-card">
+                            <div class="axl-car-art">
+                                <div class="axl-car-ph" aria-hidden="true"><i>Published</i><b>AXL<br>WP-05</b></div>
+                                <!-- IMAGE SLOT — portrait 5:7 at assets/img/papers/axl-wp-05.jpg replaces the plate. -->
+                                <img src="assets/img/papers/axl-wp-05.jpg" alt="" loading="lazy" onerror="this.remove()">
+                            </div>
+                            <div class="axl-car-body">
+                                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">AXL-WP-05</div>
+                                <h4 class="text-base font-black uppercase tracking-tight leading-tight"><a href="papers/axl-wp-05.html" class="hover:underline">The Self-Esteem Operating System</a></h4>
+                                <div class="mt-auto flex flex-wrap gap-x-4 gap-y-1 font-mono text-[9px] uppercase tracking-widest">
+                                    <a href="papers/axl-wp-05.html" class="underline hover:text-brand-green">Read the paper -&gt;</a>
+                                    <a href="plain/axl-wp-05.html" class="underline hover:text-brand-green">Plain English -&gt;</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="axl-car-card">
+                            <div class="axl-car-art">
+                                <div class="axl-car-ph" aria-hidden="true"><i>Published</i><b>AXL<br>WP-06</b></div>
+                                <!-- IMAGE SLOT — portrait 5:7 at assets/img/papers/axl-wp-06.jpg replaces the plate. -->
+                                <img src="assets/img/papers/axl-wp-06.jpg" alt="" loading="lazy" onerror="this.remove()">
+                            </div>
+                            <div class="axl-car-body">
+                                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">AXL-WP-06</div>
+                                <h4 class="text-base font-black uppercase tracking-tight leading-tight"><a href="papers/axl-wp-06.html" class="hover:underline">The Psychological Revolution</a></h4>
+                                <div class="mt-auto flex flex-wrap gap-x-4 gap-y-1 font-mono text-[9px] uppercase tracking-widest">
+                                    <a href="papers/axl-wp-06.html" class="underline hover:text-brand-green">Read the paper -&gt;</a>
+                                    <a href="plain/axl-wp-06.html" class="underline hover:text-brand-green">Plain English -&gt;</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="axl-car-card">
+                            <div class="axl-car-art">
+                                <div class="axl-car-ph" aria-hidden="true"><i>Published</i><b>AXL<br>WP-07</b></div>
+                                <!-- IMAGE SLOT — portrait 5:7 at assets/img/papers/axl-wp-07.jpg replaces the plate. -->
+                                <img src="assets/img/papers/axl-wp-07.jpg" alt="" loading="lazy" onerror="this.remove()">
+                            </div>
+                            <div class="axl-car-body">
+                                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">AXL-WP-07</div>
+                                <h4 class="text-base font-black uppercase tracking-tight leading-tight"><a href="papers/axl-wp-07.html" class="hover:underline">Clearance Is Not Justice: An Anthropometric Turn for Court Performance Measurement in the Age of Algorithmic Congestion</a></h4>
+                                <div class="mt-auto flex flex-wrap gap-x-4 gap-y-1 font-mono text-[9px] uppercase tracking-widest">
+                                    <a href="papers/axl-wp-07.html" class="underline hover:text-brand-green">Read the paper -&gt;</a>
+                                    <a href="plain/axl-wp-07.html" class="underline hover:text-brand-green">Plain English -&gt;</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="axl-car-card">
+                            <div class="axl-car-art">
+                                <div class="axl-car-ph" aria-hidden="true"><i class="is-rev">In revision · v2.0</i><b>AXL<br>WP-08</b></div>
+                                <!-- IMAGE SLOT — portrait 5:7 at assets/img/papers/axl-wp-08.jpg replaces the plate. -->
+                                <img src="assets/img/papers/axl-wp-08.jpg" alt="" loading="lazy" onerror="this.remove()">
+                            </div>
+                            <div class="axl-car-body">
+                                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">AXL-WP-08</div>
+                                <h4 class="text-base font-black uppercase tracking-tight leading-tight">Cognitive Infrastructure for the AI Transition</h4>
+                                <div class="mt-auto font-mono text-[9px] uppercase tracking-widest">
+                                    <a href="mailto:imran@auxlabs.co?subject=Advance%20copy%3A%20AXL-WP-08" class="underline hover:text-brand-green">Request an advance copy -&gt;</a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
+                <script>
+                (function(){
+                  var track=document.querySelector('.axl-car-track'); if(!track) return;
+                  var btns=[].slice.call(document.querySelectorAll('.axl-car-btn'));
+                  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                  function step(){ var c=track.querySelector('.axl-car-card'); return c? c.getBoundingClientRect().width+24 : 300; }
+                  function sync(){ var max=track.scrollWidth-track.clientWidth-2;
+                    btns[0].disabled=track.scrollLeft<=2; btns[1].disabled=track.scrollLeft>=max; }
+                  btns.forEach(function(b){ b.addEventListener('click',function(){
+                    track.scrollBy({left: step()*Number(b.dataset.dir), behavior: reduce?'auto':'smooth'}); }); });
+                  track.addEventListener('keydown',function(e){
+                    if(e.key==='ArrowRight'){e.preventDefault(); btns[1].click();}
+                    if(e.key==='ArrowLeft'){e.preventDefault(); btns[0].click();} });
+                  track.addEventListener('scroll',sync,{passive:true}); window.addEventListener('resize',sync); sync();
+                })();
+                </script>
                 <div class="p-8 bg-panel text-white text-center">
                     <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/50">INDEX CURRENT · SIX PUBLISHED · TWO IN REVISION · AXL-WP-01 … AXL-WP-08</p>
                 </div>
@@ -287,10 +340,10 @@
                 <p class="axl-co">c/o AUX LABS LLC · "AUSTIN, TEXAS" · 30.2672° N, 97.7431° W</p>
                 <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
                 <p>auxlabs.co // Signal @nawab.12 // <a href="firewall.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Firewall</a> // <a href="field.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Field</a> // <a href="provenance.html" class="underline text-archival-ink hover:text-brand-green transition-colors">AI Disclosure</a> // <a href="record.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Record</a> // <a href="terms.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Terms</a></p>
-                <p>Site design, neubrutalism system and image production: Samantha Byrd.</p>
+                <p>Site design, neubrutalism system and image production: <a href="http://samanthabyrd.com/" class="underline text-archival-ink hover:text-brand-green transition-colors" rel="noopener">Samantha Byrd</a>.</p>
             </div>
             <div class="text-left lg:text-right">
-                <h2 class="text-4xl font-black tracking-tighter uppercase leading-none mb-2">RECORD_02.</h2>
+                <h2 class="text-4xl font-black tracking-tighter uppercase leading-none mb-2">02_RESEARCH.</h2>
                 <p class="font-mono text-[9px] text-brand-green bg-black px-2 py-0.5 inline-block uppercase">02_RESEARCH_FIN</p>
             </div>
         </footer>

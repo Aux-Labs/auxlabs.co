@@ -40,6 +40,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="assets/site.css">
     <script src="assets/axl.js" defer></script>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
@@ -47,14 +48,13 @@
          a first visit this session, with JS on and motion allowed. The record below
          is already parsed and crawlable: a curtain, not a gate. -->
     <div id="axl-boot" aria-hidden="true">
-        <div class="axl-boot-inner">
-            <div class="axl-boot-line"><span>&gt; ESTABLISHING SIGNAL</span><span class="ok">OK</span></div>
-            <div class="axl-boot-line"><span>&gt; CERT 042</span><span class="ok">VERIFIED</span></div>
-            <div class="axl-boot-line"><span>&gt; FILE_ID 882-AUX-2026</span><span class="ok">OPEN</span></div>
-            <div class="axl-boot-line"><span>&gt; CLASSIFICATION</span><span class="ok">UNRESTRICTED</span></div>
-            <div class="axl-boot-rule"></div>
-            <div class="axl-boot-bar"><span></span></div>
-            <div class="axl-boot-seal">RECORDS_OPEN<span class="axl-boot-cursor">_</span></div>
+        <div class="axl-b-stage">
+            <div class="axl-b-grid">
+                <span class="axl-b-tile" style="--i:0"></span><span class="axl-b-tile" style="--i:1"></span><span class="axl-b-tile" style="--i:2"></span>
+                <span class="axl-b-tile" style="--i:3"></span><span class="axl-b-tile" style="--i:4"></span><span class="axl-b-tile" style="--i:5"></span>
+                <span class="axl-b-tile" style="--i:6"></span><span class="axl-b-tile" style="--i:7"></span><span class="axl-b-tile" style="--i:8"></span>
+            </div>
+            <div class="axl-b-mark">AUX <span>LABS</span></div>
             <p class="axl-boot-hint">Press any key to skip</p>
         </div>
     </div>
@@ -73,21 +73,20 @@
 
     
     <main id="main" class="relative">
-        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
+        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest uppercase axl-status">
             <span>FILE_REF: AXL-PRV-01</span>
             <span class="hidden sm:inline">STATUS: CURRENT</span>
             <span>00_AI_DISCLOSURE</span>
         </div>
 
         <section class="p-8 lg:p-16 border-b border-archival-ink bg-surface/20 relative overflow-hidden">
-            <span class="axl-wm" style="font-size:clamp(4.5rem,12vw,10rem); right:-1rem; top:-1rem;" aria-hidden="true">MINE</span>
             <div class="max-w-3xl">
                 <div class="mb-10 font-mono text-[11px] tracking-tighter flex items-center gap-4">
                     <span class="bg-panel text-white px-2 py-0.5">PRV_00</span>
                     <span class="text-archival-ink/60">[ WHO_MADE_THIS ]</span>
                 </div>
                 <h1 class="text-4xl lg:text-[3.25rem] font-black leading-[0.95] tracking-tighter mb-10 uppercase">AI Disclosure.</h1>
-                <p class="text-xl lg:text-2xl font-light leading-snug italic pull-serif border-l-4 border-brand-green pl-8 py-2 max-w-2xl">
+                <p class="axl-pull max-w-2xl">
                     All the thinking and synthesis is mine. Some of the words and some of the code are AI.
                 </p>
             </div>
@@ -127,7 +126,7 @@
                 <p class="axl-co">c/o AUX LABS LLC · "AUSTIN, TEXAS" · 30.2672° N, 97.7431° W</p>
                 <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
                 <p>auxlabs.co // Signal @nawab.12 // <a href="firewall.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Firewall</a> // <a href="field.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Field</a> // <a href="provenance.html" class="underline text-archival-ink hover:text-brand-green transition-colors">AI Disclosure</a> // <a href="record.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Record</a> // <a href="terms.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Terms</a></p>
-                <p>Site design, neubrutalism system and image production: Samantha Byrd.</p>
+                <p>Site design, neubrutalism system and image production: <a href="http://samanthabyrd.com/" class="underline text-archival-ink hover:text-brand-green transition-colors" rel="noopener">Samantha Byrd</a>.</p>
             </div>
             <div class="text-left lg:text-right">
                 <h2 class="text-3xl font-black tracking-tighter uppercase leading-none mb-2">The thinking <br> is mine.</h2>

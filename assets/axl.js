@@ -40,27 +40,8 @@
     window.addEventListener('wheel', lift, { passive: true });
     window.addEventListener('touchstart', lift, { passive: true });
 
-    var lines = el.querySelectorAll('.axl-boot-line');
-    Array.prototype.forEach.call(lines, function (line, i) {
-      timers.push(window.setTimeout(function () {
-        line.classList.add('is-on');
-      }, 70 + i * 95));
-    });
-
-    var bar = el.querySelector('.axl-boot-bar span');
-    if (bar) {
-      timers.push(window.setTimeout(function () {
-        bar.style.transition = 'width 720ms cubic-bezier(.3,.8,.3,1)';
-        bar.style.width = '100%';
-      }, 90));
-    }
-
-    var seal = el.querySelector('.axl-boot-seal');
-    if (seal) {
-      timers.push(window.setTimeout(function () { seal.classList.add('is-on'); }, 820));
-    }
-
-    timers.push(window.setTimeout(lift, 1180));
+    // The tile sequence is pure CSS (assets/site.css); lift when it lands.
+    timers.push(window.setTimeout(lift, 1650));
   })();
 
   /* ─── 2. RESEARCH GALLERY ──────────────────────────────────────────────── */
