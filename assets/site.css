@@ -71,15 +71,19 @@ html[data-theme="dark"] .cta-final .cta-btn:hover { background: rgb(var(--ink-rg
 footer .font-mono p { line-height: 2.1; }
 
 /* ─── IMAGES: whole, not cropped ───────────────────────────────────────── */
-.axl-card-img { aspect-ratio: auto; }
-.axl-card-img img { height: auto; object-fit: contain; transform: none !important; }
+.axl-card-img { aspect-ratio: 5 / 7; }   /* every file image is ~5:7; one shared ratio keeps the cards' text aligned */
+.axl-card-img img { height: 100%; object-fit: cover; transform: none !important; }
 .axl-figure { display: block; background: rgb(var(--panel-rgb)); }
 .axl-figure img { display: block; width: 100%; height: auto; }
 
 /* ─── RESEARCH CAROUSEL ────────────────────────────────────────────────── */
 .axl-car { position: relative; }
-.axl-car-track { display: grid; grid-auto-flow: column; grid-auto-columns: min(78vw, 300px); gap: 1.5rem;
-  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 2rem; padding: 2rem; scrollbar-width: thin; }
+.axl-car-track { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 1.5rem;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 2rem; padding: 1.5rem 2rem 2.25rem;
+  scrollbar-width: none; }
+.axl-car-track::-webkit-scrollbar { display: none; }
+@media (min-width: 640px)  { .axl-car-track { grid-auto-columns: calc((100% - 1.5rem) / 2); } }
+@media (min-width: 1100px) { .axl-car-track { grid-auto-columns: calc((100% - 3rem) / 3); } }
 .axl-car-card { scroll-snap-align: start; display: flex; flex-direction: column; border: 2px solid rgb(var(--ink-rgb));
   background: rgb(var(--surface-rgb)); box-shadow: 6px 6px 0 rgb(var(--ink-rgb)); }
 .axl-car-art { position: relative; aspect-ratio: 5 / 7; overflow: hidden; border-bottom: 2px solid rgb(var(--ink-rgb)); background: rgb(var(--panel-rgb)); }
