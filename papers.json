@@ -104,6 +104,15 @@
       "domains": [],
       "abstract": null,
       "url": "papers/axl-wp-09.html"
+    },
+    {
+      "series": "AXL-WP-10",
+      "title": "Borrowed Voices: Stigma, Preference Falsification, and the Human Data Problem in AI Alignment",
+      "status": "in_draft",
+      "flagship": false,
+      "domains": [],
+      "abstract": null,
+      "url": null
     }
   ],
   "_open_question": "AXL-WP-07 is absent from the series. Either it exists and was dropped from the index, or the series numbering skips it. Ruling needed before push — a gap in a numbered archive reads as a redaction, which is a claim we have not made.",
