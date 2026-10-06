@@ -130,3 +130,8 @@ footer .font-mono p { line-height: 2.1; }
   .axl-files > a { border-bottom: 0; }
   .axl-files > a:not(:last-child) { border-right: 1px solid rgb(var(--ink-rgb)); }
 }
+
+/* ─── FIELD PLAN (Research page): plate beside the text, short on phones ─ */
+.axl-plan-art { display: block; position: relative; overflow: hidden; min-height: 220px; background: rgb(var(--panel-rgb)); }
+.axl-plan-art .axl-car-ph, .axl-plan-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 768px) { .axl-plan-art { min-height: 320px; } }
