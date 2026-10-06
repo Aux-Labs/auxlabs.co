@@ -95,6 +95,15 @@
       "domains": [],
       "abstract": null,
       "url": null
+    },
+    {
+      "series": "AXL-WP-09",
+      "title": "The Crucible: Paying People to Attack Grant Proposals",
+      "status": "published",
+      "flagship": false,
+      "domains": [],
+      "abstract": null,
+      "url": "papers/axl-wp-09.html"
     }
   ],
   "_open_question": "AXL-WP-07 is absent from the series. Either it exists and was dropped from the index, or the series numbering skips it. Ruling needed before push — a gap in a numbered archive reads as a redaction, which is a claim we have not made.",

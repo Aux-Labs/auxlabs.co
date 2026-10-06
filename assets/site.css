@@ -121,3 +121,17 @@ footer .font-mono p { line-height: 2.1; }
 .axl-card-img--plate { position: relative; background: rgb(var(--panel-rgb)); }
 .axl-card-img--plate .axl-car-ph { position: absolute; inset: 0; }
 .axl-card-img--plate img { position: absolute; inset: 0; }
+
+/* ─── OPEN FILES: four across on desktop, two on tablet ────────────────── */
+.axl-files { display: grid; grid-template-columns: 1fr; }
+.axl-files > a { border-bottom: 1px solid rgb(var(--ink-rgb)); }
+@media (min-width: 768px) {
+  .axl-files { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .axl-files > a:nth-child(odd) { border-right: 1px solid rgb(var(--ink-rgb)); }
+  .axl-files > a:nth-child(n+3) { border-bottom: 0; }
+}
+@media (min-width: 1100px) {
+  .axl-files { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .axl-files > a { border-bottom: 0; border-right: 1px solid rgb(var(--ink-rgb)); }
+  .axl-files > a:last-child { border-right: 0; }
+}
