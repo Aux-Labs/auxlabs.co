@@ -175,3 +175,10 @@ footer .font-mono p { line-height: 2.1; }
 .axl-why-you > div { border-bottom: 1px solid rgb(var(--ink-rgb)); }
 @media (min-width: 768px) and (max-width: 1023px) { .axl-why-you > div:nth-child(odd) { border-right: 1px solid rgb(var(--ink-rgb)); } .axl-why-you > div:nth-last-child(-n+2) { border-bottom: 0; } }
 @media (min-width: 1024px) { .axl-why-you > div:not(:nth-child(3n)) { border-right: 1px solid rgb(var(--ink-rgb)); } .axl-why-you > div:nth-last-child(-n+3) { border-bottom: 0; } }
+
+/* ─── REDACTION (AXL-WP-04 public edition): a visible bar where method is withheld ─ */
+.axl-redact { margin: 1.25rem 0 2rem; padding: .9rem 1rem; background: repeating-linear-gradient(-45deg, rgb(var(--ink-rgb)) 0 10px, rgb(var(--ink-rgb) / .88) 10px 20px);
+  color: rgb(var(--paper-rgb)); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.axl-redact span { background: #00FF41; color: #000; font-weight: 700; padding: .1rem .4rem; margin-right: .5rem; }
+.axl-redact-note { border: 2px dashed rgb(var(--ink-rgb)); padding: 1rem 1.25rem; margin-bottom: 2rem; font-size: .9375rem; line-height: 1.6; }
+.axl-redact-note a { text-decoration: underline; }

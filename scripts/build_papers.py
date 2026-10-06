@@ -438,6 +438,8 @@ def render(path, outdir):
     body_html = md.convert(body_md)
     body_html = inject_pullquotes(body_html, fm.get("series", ""))
     title = str(fm.get("title", path.stem))
+    # Site-approved titles win over the canon front matter (Imran, 10/6: WP-02 and WP-05 subtitles).
+    title = TITLES.get(fm.get("series", ""), title)
     short = title.split(":")[0]
     abstract = " ".join(str(fm.get("abstract", "")).split())
     # Title before the colon keeps the heavy weight; the subtitle after it is lighter (.axl-sub).
@@ -467,6 +469,7 @@ def render(path, outdir):
     return fm, out
 
 THIRTY = pathlib.Path(__file__).with_name("thirty_seconds.json")
+TITLES = json.loads(pathlib.Path(__file__).with_name("titles.json").read_text(encoding="utf-8"))
 
 def thirty_seconds(series):
     """The 30-second box (why now / why you / why us) from scripts/thirty_seconds.json."""
