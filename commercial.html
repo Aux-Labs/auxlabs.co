@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +21,11 @@
     <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
     <script>
-        // Theme (light-first, ratified 8/25) + boot gate. Inline and first so neither
+        // Theme (dark-first, ruled 10/6) + boot gate. Inline and first so neither
         // can flash. The 2.6s failsafe lifts the curtain even if assets/axl.js never
         // loads: the site can never brick behind the loader.
         (function(){
-            try{ if(localStorage.getItem('axl-theme')==='dark'){ document.documentElement.setAttribute('data-theme','dark'); } }catch(e){}
+            try{ if(localStorage.getItem('axl-theme')==='light'){ document.documentElement.removeAttribute('data-theme'); } }catch(e){}
             try{
                 var seen = sessionStorage.getItem('axl-booted');
                 var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
