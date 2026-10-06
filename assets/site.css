@@ -116,3 +116,8 @@ footer .font-mono p { line-height: 2.1; }
 .gap-x-4 { column-gap: 1rem; } .gap-y-1 { row-gap: .25rem; }
 .mt-auto { margin-top: auto; } .mt-10 { margin-top: 2.5rem; } .pt-6 { padding-top: 1.5rem; } .pb-12 { padding-bottom: 3rem; }
 @media (min-width: 640px) { .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ─── OPEN FILE PLATE: designed stand-in when a file has no photo yet ──── */
+.axl-card-img--plate { position: relative; background: rgb(var(--panel-rgb)); }
+.axl-card-img--plate .axl-car-ph { position: absolute; inset: 0; }
+.axl-card-img--plate img { position: absolute; inset: 0; }
