@@ -9,6 +9,7 @@ Usage:  python3 scripts/build_papers.py <canon_dir> [--force-preview SERIES]
         --force-preview renders one paper regardless of its flag, into
         /tmp/paper-preview/ (never into the repo). For operator review only.
 """
+import json
 import sys, re, pathlib, html
 
 import yaml, markdown
@@ -40,6 +41,7 @@ TEMPLATE = """<!DOCTYPE html>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/tailwind.css">
+    <link rel="stylesheet" href="../assets/site.css">
     <link rel="stylesheet" href="../assets/paper.css">
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
@@ -77,7 +79,7 @@ TEMPLATE = """<!DOCTYPE html>
                     <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-3">ABSTRACT</div>
                     <p class="text-sm lg:text-base leading-relaxed text-archival-ink/80">{abstract}</p>
                 </div>
-                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 space-y-1">
+{thirty}<div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 space-y-1">
                     <p>KEYWORDS: {keywords}</p>
                     <p>CITE AS: HAFIZ, I. ({year}). {short_title}. AUX LABS WORKING PAPER {series}. AUXLABS.CO</p>
                     <p>CONTACT: <a class="underline text-archival-ink hover:text-brand-green" href="mailto:{contact}">{contact}</a></p>
@@ -443,6 +445,7 @@ def render(path, outdir):
     title_html = html.escape(head) + (f':<span class="axl-sub"> {html.escape(sub.strip())}</span>' if sub.strip() else "")
     words = len(re.sub(r"<[^>]+>", " ", body_html).split())
     page = TEMPLATE.format(
+        thirty=thirty_seconds(fm.get("series", "")),
         title_html=title_html,
         words=f"{words:,}",
         minutes=max(1, round(words / 230)),
@@ -462,6 +465,26 @@ def render(path, outdir):
     out = outdir / f"{slug}.html"
     out.write_text(page, encoding="utf-8")
     return fm, out
+
+THIRTY = pathlib.Path(__file__).with_name("thirty_seconds.json")
+
+def thirty_seconds(series):
+    """The 30-second box (why now / why you / why us) from scripts/thirty_seconds.json."""
+    try:
+        d = json.loads(THIRTY.read_text(encoding="utf-8")).get(series)
+    except FileNotFoundError:
+        d = None
+    if not d:
+        return ""
+    e = lambda t: html.escape(t, quote=False)
+    return ('<aside class="axl-30s" aria-label="The 30-second version">\n'
+            '                    <div class="axl-30s-h">The 30-second version</div>\n'
+            '                    <dl>\n'
+            f'                        <dt>Why now</dt><dd>{e(d["now"])}</dd>\n'
+            f'                        <dt>Why you</dt><dd>{e(d["you"])}</dd>\n'
+            f'                        <dt>Why us</dt><dd>{e(d["us"])}</dd>\n'
+            '                    </dl>\n'
+            '                </aside>\n                ')
 
 def main():
     canon = pathlib.Path(sys.argv[1])
