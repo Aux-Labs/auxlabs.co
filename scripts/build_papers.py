@@ -72,8 +72,7 @@ TEMPLATE = """<!DOCTYPE html>
                     <span class="border border-archival-ink px-3 py-1.5">WORKING PAPER · {version}</span>
                     <span class="border border-archival-ink px-3 py-1.5">AUX LABS LLC</span>
                     <span class="border border-archival-ink px-3 py-1.5">{words} WORDS · ~{minutes} MIN READ</span>
-                    <a href="../plain/{slug}.html" class="border border-archival-ink px-3 py-1.5 font-bold hover:bg-brand-green hover:text-black hover:border-brand-green transition-all">"PLAIN ENGLISH" VERSION -&gt;</a>
-                </div>
+{plain_chip}                </div>
                 <h1 class="text-3xl lg:text-[2.75rem] font-black leading-[1.02] tracking-tighter uppercase mb-8">{title_html}</h1>
                 <div class="border-l-4 border-brand-green pl-6 lg:pl-8 py-2 mb-8">
                     <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-3">ABSTRACT</div>
@@ -437,6 +436,7 @@ def render(path, outdir):
     md = markdown.Markdown(extensions=["tables", "footnotes", "sane_lists", "smarty"])
     body_html = md.convert(body_md)
     body_html = inject_pullquotes(body_html, fm.get("series", ""))
+    body_html = redact(body_html, fm.get("series", ""))
     title = str(fm.get("title", path.stem))
     # Site-approved titles win over the canon front matter (Imran, 10/6: WP-02 and WP-05 subtitles).
     title = TITLES.get(fm.get("series", ""), title)
@@ -448,6 +448,7 @@ def render(path, outdir):
     words = len(re.sub(r"<[^>]+>", " ", body_html).split())
     page = TEMPLATE.format(
         thirty=thirty_seconds(fm.get("series", "")),
+        plain_chip=plain_chip(fm.get("series", path.stem).lower()),
         title_html=title_html,
         words=f"{words:,}",
         minutes=max(1, round(words / 230)),
@@ -471,6 +472,13 @@ def render(path, outdir):
 THIRTY = pathlib.Path(__file__).with_name("thirty_seconds.json")
 TITLES = json.loads(pathlib.Path(__file__).with_name("titles.json").read_text(encoding="utf-8"))
 
+def plain_chip(slug):
+    """Link the plain-English companion only when that page exists."""
+    if not (REPO / "plain" / f"{slug}.html").exists():
+        return ""
+    return (f'                    <a href="../plain/{slug}.html" class="border border-archival-ink px-3 py-1.5 font-bold '
+            'hover:bg-brand-green hover:text-black hover:border-brand-green transition-all">"PLAIN ENGLISH" VERSION -&gt;</a>\n')
+
 def thirty_seconds(series):
     """The 30-second box (why now / why you / why us) from scripts/thirty_seconds.json."""
     try:
@@ -488,6 +496,41 @@ def thirty_seconds(series):
             f'                        <dt>Why us</dt><dd>{e(d["us"])}</dd>\n'
             '                    </dl>\n'
             '                </aside>\n                ')
+
+REDACTIONS = json.loads(pathlib.Path(__file__).with_name("redactions.json").read_text(encoding="utf-8"))
+_BLOCK = re.compile(r"<(p|h[1-6]|pre|hr|aside|ul|ol|table|blockquote|figure|div)\b[^>]*?(?:/>|>.*?</\1>)", re.S)
+
+def _block_text(h):
+    return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", h)).split())
+
+def redact(body_html, series):
+    """Swap withheld passages for a visible redaction bar (scripts/redactions.json).
+    Works on freshly rendered HTML and on an already-published page alike."""
+    rule = REDACTIONS.get(series)
+    if not rule:
+        return body_html
+    for blk in rule["blocks"]:
+        found = list(_BLOCK.finditer(body_html))
+        texts = [_block_text(m.group(0)) for m in found]
+        i = next((k for k, t in enumerate(texts) if t.startswith(blk["start"])), None)
+        if i is None:
+            if "axl-redact" in body_html and blk["label"] in body_html:
+                continue  # already applied
+            raise SystemExit(f"redaction start not found in {series}: {blk['start']!r}")
+        j = next((k for k in range(i + 1, len(texts)) if texts[k].startswith(blk["end"])), None)
+        if j is None:
+            raise SystemExit(f"redaction end not found in {series}: {blk['end']!r}")
+        if i > 0 and 'class="axl-pull"' in found[i - 1].group(0):
+            i -= 1  # a pull quote lifted from a withheld paragraph goes too
+        words = sum(len(t.split()) for t in texts[i:j] if t)
+        bar = (f'<div class="axl-redact" role="note"><span>Redacted</span> '
+               f'{html.escape(blk["label"])} · {words:,} words withheld</div>\n')
+        body_html = body_html[:found[i].start()] + bar + body_html[found[j].start():]
+    if "axl-redact-note" not in body_html:
+        mail = f"mailto:imran@auxlabs.co?subject={series}%20full%20text"
+        body_html = (f'<div class="axl-redact-note">{html.escape(rule["note"])} '
+                     f'<a href="{mail}">Request it</a>.</div>\n') + body_html
+    return body_html
 
 def main():
     canon = pathlib.Path(sys.argv[1])

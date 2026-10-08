@@ -1,0 +1,30 @@
+{
+  "_doc": "Public-edition redactions, applied by build_papers.py after rendering (Imran, 10/6: withhold how the Switchboard operates; NDA before mechanism internals). Each block removes the rendered elements from the one whose text starts with `start` up to, not including, the one whose text starts with `end`. The canon source stays complete.",
+  "AXL-WP-03": {
+    "note": "Public edition. The operating detail of the cascade and the Crankshaft (§2.1–2.4) is withheld as proprietary method; the stage names and section headings stay in place. Partners can request the full text under NDA.",
+    "blocks": [
+      {"start": "Steps 1 through 3 manufacture trust", "end": "The cascade is unidirectional", "label": "How each stage draws on the last"},
+      {"start": "Cylinder Fires against", "end": "2.3 Why the Metaphor Holds", "label": "Cylinder-to-stage map and firing order"},
+      {"start": "Three properties of internal combustion", "end": "2.4 Trust as the Crankshaft Journal", "label": "Engine mechanics"},
+      {"start": "In engineering terms, the journal", "end": "2.5 Case Vignette", "label": "Engine mechanics"}
+    ]
+  },
+  "AXL-WP-04": {
+    "note": "Public edition. Sections describing how the cascade and the Switchboard's four cylinders are operated are withheld as proprietary method. Their headings stay in place so the structure of the argument is visible. Partners can request the full text under NDA.",
+    "blocks": [
+      {"start": "Signal intake must be consensual", "end": "Legitimacy → Trust", "label": "Operating detail for this stage"},
+      {"start": "Legitimacy, once established", "end": "Trust → Sources", "label": "Operating detail for this stage"},
+      {"start": "When trust is established, people share", "end": "Sources → Truth", "label": "Operating detail for this stage"},
+      {"start": "Verified information", "end": "Truth → Art", "label": "Operating detail for this stage"},
+      {"start": "Facts alone do not move people", "end": "Art → Gravity", "label": "Operating detail for this stage"},
+      {"start": "When truth is made emotionally resonant", "end": "Gravity → Funding", "label": "Operating detail for this stage"},
+      {"start": "Narrative gravity attracts resources", "end": "Funding → Institutions", "label": "Operating detail for this stage"},
+      {"start": "Sustained funding allows the construction", "end": "Institutions → Policy Change", "label": "Operating detail for this stage"},
+      {"start": "When parallel institutions are visibly", "end": "The cascade is not automatic", "label": "Operating detail for this stage"},
+      {"start": "What I propose instead is a division of labor", "end": "Cylinder 2", "label": "Cylinder operations"},
+      {"start": "The art cylinder is the conversion layer", "end": "The Promethean frame", "label": "Cylinder operations"},
+      {"start": "Mutual aid is the costly signal", "end": "Cylinder 4", "label": "Cylinder operations"},
+      {"start": "The fourth cylinder is the feedback mechanism", "end": "The Switchboard publishes its own failures", "label": "Cylinder operations"}
+    ]
+  }
+}

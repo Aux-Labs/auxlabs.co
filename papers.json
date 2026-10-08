@@ -54,11 +54,12 @@
     {
       "series": "AXL-WP-04",
       "title": "The Pretend Era: A Grand Unified Theory of Collapse, Narrative Power, and the Machinery of Repair",
-      "status": "in_revision",
+      "status": "published",
       "flagship": true,
       "domains": [],
-      "abstract": null,
-      "url": null
+      "abstract": "The binding constraint on political, social, and institutional progress is intangible psychological infrastructure: trust, legitimacy, belonging, shared reality. The paper names the current period the Pretend Era (pluralistic ignorance at civilizational scale) and proposes a ten-step cascade for coordinated repair. Public edition: the operating detail of the cascade and the Switchboard's four cylinders is redacted.\n",
+      "url": "papers/axl-wp-04.html",
+      "edition": "public (redacted)"
     },
     {
       "series": "AXL-WP-05",
