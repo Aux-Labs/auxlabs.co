@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Dual-lineage convergence. Automation: fire, agriculture, the industrial revolution, computing. Communication: language, writing, the printing press, the internet. Both lines arrive at AI.">
+<rect width="100%" height="100%" fill="#F2F1ED"/>
+<style>.h{font:900 30px Inter,Arial,sans-serif;letter-spacing:-.5px}.n{font:700 24px Inter,Arial,sans-serif}.m{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.c{font:400 19px Inter,Arial,sans-serif}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker></defs>
+<text x="60" y="64" class="m" fill="#1A1A1A">FIG. 01 // DUAL-LINEAGE CONVERGENCE</text>
+<text x="320.0" y="122" text-anchor="middle" class="m" fill="#1A1A1A">AUTOMATION</text>
+<rect x="176" y="156" width="300" height="62" fill="#1A1A1A"/><rect x="170" y="150" width="300" height="62" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="320.0" y="189.0" text-anchor="middle" class="n" fill="#1A1A1A">Fire</text>
+<line x1="320.0" y1="216" x2="320.0" y2="244" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="176" y="260" width="300" height="62" fill="#1A1A1A"/><rect x="170" y="254" width="300" height="62" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="320.0" y="293.0" text-anchor="middle" class="n" fill="#1A1A1A">Agriculture</text>
+<line x1="320.0" y1="320" x2="320.0" y2="348" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="176" y="364" width="300" height="62" fill="#1A1A1A"/><rect x="170" y="358" width="300" height="62" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="320.0" y="397.0" text-anchor="middle" class="n" fill="#1A1A1A">Industrial Revolution</text>
+<line x1="320.0" y1="424" x2="320.0" y2="452" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="176" y="468" width="300" height="62" fill="#1A1A1A"/><rect x="170" y="462" width="300" height="62" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="320.0" y="501.0" text-anchor="middle" class="n" fill="#1A1A1A">Computing</text>
+<text x="880.0" y="122" text-anchor="middle" class="m" fill="#1A1A1A">COMMUNICATION</text>
+<rect x="736" y="156" width="300" height="62" fill="#1A1A1A"/><rect x="730" y="150" width="300" height="62" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="880.0" y="189.0" text-anchor="middle" class="n" fill="#1A1A1A">Language</text>
+<line x1="880.0" y1="216" x2="880.0" y2="244" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="736" y="260" width="300" height="62" fill="#1A1A1A"/><rect x="730" y="254" width="300" height="62" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="880.0" y="293.0" text-anchor="middle" class="n" fill="#1A1A1A">Writing</text>
+<line x1="880.0" y1="320" x2="880.0" y2="348" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="736" y="364" width="300" height="62" fill="#1A1A1A"/><rect x="730" y="358" width="300" height="62" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="880.0" y="397.0" text-anchor="middle" class="n" fill="#1A1A1A">Printing press</text>
+<line x1="880.0" y1="424" x2="880.0" y2="452" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="736" y="468" width="300" height="62" fill="#1A1A1A"/><rect x="730" y="462" width="300" height="62" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="880.0" y="501.0" text-anchor="middle" class="n" fill="#1A1A1A">Internet</text>
+<path d="M320.0 528 L320.0 554 L530.0 554 L530.0 572" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<path d="M880.0 528 L880.0 554 L670.0 554 L670.0 572" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="398.0" y="592" width="420" height="86" fill="#1A1A1A"/><rect x="390.0" y="584" width="420" height="86" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="600.0" y="639.0" text-anchor="middle" class="h" fill="#000">AI · BOTH AT ONCE</text>
+<text x="600.0" y="720" text-anchor="middle" class="c" fill="#1A1A1A">Every earlier technology sat mainly in one line. AI is native to both.</text>
+</svg>

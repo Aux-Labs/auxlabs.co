@@ -422,10 +422,10 @@ def render(path, outdir):
     def _fig(m):
         n, cap = m.group(1), m.group(2).strip()
         slug = fm.get("series", path.stem).lower()
-        asset = REPO / "papers" / "assets" / f"{slug}-figure{n}.png"
-        if asset.exists():
+        asset = next((a for a in (REPO / "papers" / "assets" / f"{slug}-figure{n}.{ext}" for ext in ("svg", "png")) if a.exists()), None)
+        if asset:
             import html as _h
-            return (f'<figure class="axl-figure"><img src="assets/{slug}-figure{n}.png" '
+            return (f'<figure class="axl-figure"><img src="assets/{asset.name}" '
                     f'alt="Figure {n}. {_h.escape(cap[:200])}" loading="lazy">'
                     f'<figcaption><span class="fig-label">FIG. {n:0>2}</span> {_h.escape(cap)}</figcaption></figure>')
         return f"*Figure {n}. {cap}*"

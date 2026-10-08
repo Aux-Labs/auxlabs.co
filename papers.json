@@ -91,11 +91,11 @@
     {
       "series": "AXL-WP-08",
       "title": "Cognitive Infrastructure for the AI Transition: Why the Hardest Problem in AI Is Not Technical",
-      "status": "in_revision",
+      "status": "published",
       "flagship": false,
       "domains": [],
-      "abstract": null,
-      "url": null
+      "abstract": "AI is the first technology native to both automation and communication. The essay argues that alignment faces an infrastructure problem as much as a specification problem, maps five post-Kantian positions onto today's alignment debate, sets out the trust gap between AI developers and their stakeholders, and offers three falsifiable predictions.\n",
+      "url": "papers/axl-wp-08.html"
     },
     {
       "series": "AXL-WP-09",
