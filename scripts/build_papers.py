@@ -425,8 +425,8 @@ def render(path, outdir):
         asset = next((a for a in (REPO / "papers" / "assets" / f"{slug}-figure{n}.{ext}" for ext in ("svg", "png")) if a.exists()), None)
         if asset:
             import html as _h
-            return (f'<figure class="axl-figure"><img src="assets/{asset.name}" '
-                    f'alt="Figure {n}. {_h.escape(cap[:200])}" loading="lazy">'
+            return (f'<figure class="axl-figure"><a class="axl-fig-zoom" href="assets/{asset.name}" target="_blank" rel="noopener" aria-label="Open figure {n} full size"><img src="assets/{asset.name}" '
+                    f'alt="Figure {n}. {_h.escape(cap[:200])}" loading="lazy"></a>'
                     f'<figcaption><span class="fig-label">FIG. {n:0>2}</span> {_h.escape(cap)}</figcaption></figure>')
         return f"*Figure {n}. {cap}*"
     body_md = re.sub(r"\*\*\[Figure (\d+) near here\.\*\*(.*?)\]", _fig, body_md, flags=re.S)

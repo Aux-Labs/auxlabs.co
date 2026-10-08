@@ -182,3 +182,11 @@ footer .font-mono p { line-height: 2.1; }
 .axl-redact span { background: #00FF41; color: #000; font-weight: 700; padding: .1rem .4rem; margin-right: .5rem; }
 .axl-redact-note { border: 2px dashed rgb(var(--ink-rgb)); padding: 1rem 1.25rem; margin-bottom: 2rem; font-size: .9375rem; line-height: 1.6; }
 .axl-redact-note a { text-decoration: underline; }
+
+/* ─── PAPER FIGURES ON PHONES: keep diagram type readable; scroll sideways, tap for full size ─ */
+.axl-fig-zoom { display: block; cursor: zoom-in; }
+@media (max-width: 700px) {
+  .paper-prose .axl-figure > .axl-fig-zoom { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .paper-prose .axl-figure img[src$=".svg"] { width: 720px; max-width: none; }
+  .paper-prose .axl-figure figcaption::before { content: "Swipe or tap to enlarge · "; }
+}

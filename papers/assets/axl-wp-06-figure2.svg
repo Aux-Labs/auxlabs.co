@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Tangible infrastructure scales by replication: one blueprint, a thousand identical bridges. Intangible infrastructure scales by cultivation: shared method and measurement, with each local instance growing its own cultural specifics.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 02 // REPLICATION AND CULTIVATION</text>
+<rect x="56" y="106" width="520" height="110" fill="#1A1A1A"/>
+<rect x="50" y="100" width="520" height="110" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="134" class="n" text-anchor="start" fill="#1A1A1A">Tangible: replicate</text>
+<text x="68" y="165" class="t" text-anchor="start" fill="#1A1A1A">One blueprint, a thousand identical bridges</text>
+<rect x="70" y="260" width="80" height="80" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="110" y="308" class="n" text-anchor="middle" fill="#1A1A1A">■</text>
+<rect x="168" y="260" width="80" height="80" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="208" y="308" class="n" text-anchor="middle" fill="#1A1A1A">■</text>
+<rect x="266" y="260" width="80" height="80" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="306" y="308" class="n" text-anchor="middle" fill="#1A1A1A">■</text>
+<rect x="364" y="260" width="80" height="80" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="404" y="308" class="n" text-anchor="middle" fill="#1A1A1A">■</text>
+<rect x="462" y="260" width="80" height="80" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="502" y="308" class="n" text-anchor="middle" fill="#1A1A1A">■</text>
+<rect x="636" y="106" width="520" height="110" fill="#1A1A1A"/>
+<rect x="630" y="100" width="520" height="110" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="648" y="134" class="n" text-anchor="start" fill="#1A1A1A">Intangible: cultivate</text>
+<text x="648" y="165" class="t" text-anchor="start" fill="#1A1A1A">Shared method and measurement, local growth</text>
+<rect x="650" y="280" width="80" height="60" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<rect x="748" y="248" width="80" height="92" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<rect x="846" y="266" width="80" height="74" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<rect x="944" y="236" width="80" height="104" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<rect x="1042" y="272" width="80" height="68" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="640" y1="360" x2="1140" y2="360" stroke="#1A1A1A" stroke-width="4"/>
+<text x="890" y="392" class="s" text-anchor="middle" fill="#1A1A1A">SHARED METHOD AND MEASUREMENT</text>
+<text x="50" y="470" class="t" text-anchor="start" fill="#1A1A1A">VICE tried to scale authenticity by replication and lost the emergence that made it valuable (§5.2).</text>
+</svg>

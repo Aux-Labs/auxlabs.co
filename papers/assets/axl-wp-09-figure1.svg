@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="A funder publishes a question and underwrites one round. Anyone may submit a proposal or attack one. The Room evaluates: a random expert panel answers what it thinks and what it expects the panel to say, and payment follows the surprisingly popular answer. The Board prices each surviving proposal with a bounded-loss market maker that resolves against a fresh panel and an audit. The Draw allocates by weighted lottery among proposals above the threshold, with probabilities published in advance.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 01 // THE CRUCIBLE: THREE ROOMS</text>
+<rect x="56" y="106" width="1100" height="90" fill="#1A1A1A"/>
+<rect x="50" y="100" width="1100" height="90" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="134" class="n" text-anchor="start" fill="#1A1A1A">A funder publishes a question and underwrites one round</text>
+<text x="68" y="165" class="t" text-anchor="start" fill="#1A1A1A">Anyone may submit a proposal. Anyone may attack one. Nobody bets.</text>
+<rect x="56" y="256" width="340" height="230" fill="#1A1A1A"/>
+<rect x="50" y="250" width="340" height="230" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="278" class="s" fill="#1A1A1A">THE ROOM · EVALUATION</text>
+<text x="68" y="310" class="n" text-anchor="start" fill="#1A1A1A">Random expert panel</text>
+<text x="68" y="341" class="t" text-anchor="start" fill="#1A1A1A">Two questions: what you think,</text>
+<text x="68" y="366" class="t" text-anchor="start" fill="#1A1A1A">and what you expect the panel to</text>
+<text x="68" y="391" class="t" text-anchor="start" fill="#1A1A1A">say. Paid for the surprisingly</text>
+<text x="68" y="416" class="t" text-anchor="start" fill="#1A1A1A">popular answer.</text>
+<path d="M220 196 L220 238" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="436" y="256" width="340" height="230" fill="#1A1A1A"/>
+<rect x="430" y="250" width="340" height="230" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="448" y="278" class="s" fill="#1A1A1A">THE BOARD · PRICING</text>
+<text x="448" y="310" class="n" text-anchor="start" fill="#1A1A1A">Bounded-loss market</text>
+<text x="448" y="341" class="t" text-anchor="start" fill="#1A1A1A">One price per surviving proposal:</text>
+<text x="448" y="366" class="t" text-anchor="start" fill="#1A1A1A">will a fresh panel, with an</text>
+<text x="448" y="391" class="t" text-anchor="start" fill="#1A1A1A">audit, judge it sound? Funder</text>
+<text x="448" y="416" class="t" text-anchor="start" fill="#1A1A1A">exposure fixed: b·ln(n).</text>
+<path d="M396 365 L420 365" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="816" y="256" width="340" height="230" fill="#1A1A1A"/>
+<rect x="810" y="250" width="340" height="230" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="828" y="278" class="s" fill="#1A1A1A">THE DRAW · ALLOCATION</text>
+<text x="828" y="310" class="n" text-anchor="start" fill="#1A1A1A">Weighted lottery</text>
+<text x="828" y="341" class="t" text-anchor="start" fill="#1A1A1A">Among everything above the</text>
+<text x="828" y="366" class="t" text-anchor="start" fill="#1A1A1A">threshold, with probabilities</text>
+<text x="828" y="391" class="t" text-anchor="start" fill="#1A1A1A">published in advance.</text>
+<path d="M776 365 L800 365" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<text x="50" y="550" class="t" text-anchor="start" fill="#1A1A1A">Because the Draw randomises among proposals review can&#x27;t separate, it is also an experiment.</text>
+<text x="50" y="578" class="t" text-anchor="start" fill="#1A1A1A">Funded and unfunded proposals can be compared, so the process can measure its own accuracy (§5).</text>
+</svg>

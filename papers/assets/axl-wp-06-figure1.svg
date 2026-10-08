@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" role="img" aria-label="Sutherland&#x27;s Eurostar example. An engineering fix costing 6 billion pounds shortens London to Paris by forty minutes. A psychological fix costing a fraction of that, better wifi and free champagne, would produce more passenger satisfaction.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 01 // TWO WAYS TO IMPROVE A TRAIN</text>
+<rect x="56" y="116" width="520" height="170" fill="#1A1A1A"/>
+<rect x="50" y="110" width="520" height="170" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="138" class="s" fill="#1A1A1A">OBJECTIVE</text>
+<text x="68" y="170" class="n" text-anchor="start" fill="#1A1A1A">The engineering fix</text>
+<text x="68" y="201" class="t" text-anchor="start" fill="#1A1A1A">Spend £6 billion to cut forty minutes from</text>
+<text x="68" y="226" class="t" text-anchor="start" fill="#1A1A1A">London–Paris. It solves the objective problem.</text>
+<rect x="636" y="116" width="520" height="170" fill="#1A1A1A"/>
+<rect x="630" y="110" width="520" height="170" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="648" y="138" class="s" fill="#1A1A1A">EXPERIENCED</text>
+<text x="648" y="170" class="n" text-anchor="start" fill="#1A1A1A">The psychological fix</text>
+<text x="648" y="201" class="t" text-anchor="start" fill="#1A1A1A">Spend a fraction of that on better WiFi and free</text>
+<text x="648" y="226" class="t" text-anchor="start" fill="#1A1A1A">champagne. It solves the problem people experience.</text>
+<text x="600" y="350" class="b" text-anchor="middle" fill="#1A1A1A">Same journey. More satisfaction from the cheaper fix.</text>
+<text x="600" y="390" class="t" text-anchor="middle" fill="#1A1A1A">Humans live in experience, not in engineering specifications (§I).</text>
+</svg>

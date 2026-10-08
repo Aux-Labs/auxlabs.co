@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-label="The ten cascade stages in order. Foundation capital enters upstream, funding Listening, Legitimacy and Trust and the ideation at Art. Brand and sponsor capital enters only at Funding, after Art has been independently ideated.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 03 // THE SPONSOR FIREWALL</text>
+<rect x="50" y="250" width="98" height="86" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="99.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">1</text>
+<text x="99.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">LISTENING</text>
+<rect x="156" y="250" width="98" height="86" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="205.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">2</text>
+<text x="205.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">LEGITIMACY</text>
+<rect x="262" y="250" width="98" height="86" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="311.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">3</text>
+<text x="311.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">TRUST</text>
+<rect x="368" y="250" width="98" height="86" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="417.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">4</text>
+<text x="417.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">SOURCES</text>
+<rect x="474" y="250" width="98" height="86" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="523.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">5</text>
+<text x="523.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">TRUTH</text>
+<rect x="580" y="250" width="98" height="86" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="629.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">6</text>
+<text x="629.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">ART</text>
+<rect x="686" y="250" width="98" height="86" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="735.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">7</text>
+<text x="735.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">GRAVITY</text>
+<rect x="792" y="250" width="98" height="86" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="841.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">8</text>
+<text x="841.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">FUNDING</text>
+<rect x="898" y="250" width="98" height="86" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="947.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">9</text>
+<text x="947.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">INSTITU-</text>
+<text x="947.0" y="328" class="s" text-anchor="middle" fill="#1A1A1A">TIONS</text>
+<rect x="1004" y="250" width="98" height="86" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="1053.0" y="280" class="s" text-anchor="middle" fill="#1A1A1A">10</text>
+<text x="1053.0" y="312" class="s" text-anchor="middle" fill="#1A1A1A">POLICY</text>
+<rect x="56" y="102" width="520" height="86" fill="#1A1A1A"/>
+<rect x="50" y="96" width="520" height="86" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="130" class="n" text-anchor="start" fill="#1A1A1A">Foundation capital</text>
+<text x="68" y="161" class="t" text-anchor="start" fill="#1A1A1A">Upstream: Steps 1–3 and the ideation at Step 6</text>
+<path d="M99.0 188 L99.0 238" fill="none" stroke="#0B6B2E" stroke-width="3" marker-end="url(#g)"/>
+<path d="M205.0 188 L205.0 238" fill="none" stroke="#0B6B2E" stroke-width="3" marker-end="url(#g)"/>
+<path d="M311.0 188 L311.0 238" fill="none" stroke="#0B6B2E" stroke-width="3" marker-end="url(#g)"/>
+<path d="M629.0 188 L629.0 238" fill="none" stroke="#0B6B2E" stroke-width="3" marker-end="url(#g)"/>
+<rect x="636" y="436" width="520" height="86" fill="#1A1A1A"/>
+<rect x="630" y="430" width="520" height="86" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="648" y="464" class="n" text-anchor="start" fill="#1A1A1A">Brand and sponsor capital</text>
+<text x="648" y="495" class="t" text-anchor="start" fill="#1A1A1A">Enters only at Step 8, after Art is set</text>
+<path d="M841.0 424 L841.0 348" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<line x1="788.0" y1="214" x2="788.0" y2="372" stroke="#1A1A1A" stroke-width="4" stroke-dasharray="4 6"/>
+<text x="788.0" y="206" class="s" text-anchor="middle" fill="#1A1A1A">FIREWALL</text>
+<text x="50" y="420" class="t" text-anchor="start" fill="#1A1A1A">Crossing the regimes produces each kind</text>
+<text x="50" y="446" class="t" text-anchor="start" fill="#1A1A1A">of capital&#x27;s characteristic failure (§6.4).</text>
+</svg>

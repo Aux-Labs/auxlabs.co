@@ -40,7 +40,7 @@
 
     <main id="main" class="relative">
         <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
-            <span>AXL-WP-09 · v2.0</span>
+            <span>AXL-WP-09 · v2.1</span>
             <span class="hidden sm:inline">STATUS: WORKING_PAPER</span>
             <span>AUX LABS RESEARCH</span>
         </div>
@@ -50,16 +50,16 @@
             <div class="max-w-4xl mx-auto relative">
                 <div class="flex flex-wrap items-center gap-3 mb-8 font-mono text-[10px] uppercase tracking-widest">
                     <span class="bg-panel text-white px-3 py-1.5 font-bold">AXL-WP-09</span>
-                    <span class="border border-archival-ink px-3 py-1.5">WORKING PAPER · v2.0</span>
+                    <span class="border border-archival-ink px-3 py-1.5">WORKING PAPER · v2.1</span>
                     <span class="border border-archival-ink px-3 py-1.5">AUX LABS LLC</span>
-                    <span class="border border-archival-ink px-3 py-1.5">2,795 WORDS · ~12 MIN READ</span>
+                    <span class="border border-archival-ink px-3 py-1.5">2,818 WORDS · ~12 MIN READ</span>
                 </div>
                 <h1 class="text-3xl lg:text-[2.75rem] font-black leading-[1.02] tracking-tighter uppercase mb-8">The Crucible:<span class="axl-sub"> Paying People to Attack Grant Proposals</span></h1>
                 <div class="border-l-4 border-brand-green pl-6 lg:pl-8 py-2 mb-8">
                     <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-3">ABSTRACT</div>
                     <p class="text-sm lg:text-base leading-relaxed text-archival-ink/80">Grantmakers sort applications using a signal that has stopped carrying information. Proposal polish was never a good measure of proposal quality (Australian researchers spent 550 working years on a single NHMRC round, and the time invested did not predict success), and generative models have now driven its cost to zero. The fallback, expert peer review, was already failing the same test: experienced NIH reviewers rescoring previously funded applications showed essentially no agreement with one another, and the authors of that study concluded the process is not built to tell good proposals from great ones. The common cause is that nothing in grant review pays anyone to find a flaw, and nobody ever learns whether a review was right. This paper describes the Crucible, a mechanism that pays experts to attack proposals, prices which ones survive, and allocates by weighted lottery among the survivors. Four funders (the Swiss National Science Foundation, the Volkswagen Foundation, the Austrian Science Fund and the Health Research Council of New Zealand) already allocate part of their budgets by lottery among applications peer review cannot separate. Each of them is running a randomised experiment and discarding the result. The argument of this paper is that the randomisation they adopted for fairness is also an identification strategy, and that adding a paid adversarial front end turns a fairness concession into the only grant process that can measure its own accuracy.</p>
                 </div>
-                <aside class="axl-30s" aria-label="The 30-second version">
+<aside class="axl-30s" aria-label="The 30-second version">
                     <div class="axl-30s-h">The 30-second version</div>
                     <dl>
                         <dt>Why now</dt><dd>AI made polished proposals free, so polish no longer tells a funder anything.</dd>
@@ -106,6 +106,8 @@
 <p><strong>The Board: pricing.</strong> A bounded-loss market maker prices one proposition per surviving proposal: <em>will a fresh independent panel, drawn later and paired with an audit, judge this sound?</em> Not &ldquo;was it adopted&rdquo;, because a single interested official can deliver an adoption, and a settlement condition one party can satisfy is not a settlement condition. A panel that has not been drawn yet cannot be captured.</p>
 <p>The funder underwrites this. For a logarithmic market scoring rule over <em>n</em> proposals with liquidity parameter <em>b</em>, worst-case exposure is <em>b</em> · ln(<em>n</em>): with nine proposals and a $50,000 ceiling, <em>b</em> ≈ $22,760. That number is fixed before the first submission and holds against any sequence of trades. It is a property of the cost function, not a budget someone has to be disciplined about.</p>
 <p><strong>The Draw: allocation.</strong> Funding goes by weighted lottery among everything above the threshold, probabilities published in advance.</p>
+<figure class="axl-figure"><a class="axl-fig-zoom" href="assets/axl-wp-09-figure1.svg" target="_blank" rel="noopener" aria-label="Open figure 1 full size"><img src="assets/axl-wp-09-figure1.svg" alt="Figure 1. The Crucible’s three rooms: evaluation by a random paid panel, pricing by a bounded-loss market, allocation by a published weighted lottery." loading="lazy"></a><figcaption><span class="fig-label">FIG. 01</span> The Crucible’s three rooms: evaluation by a random paid panel, pricing by a bounded-loss market, allocation by a published weighted lottery.</figcaption></figure>
+
 <p>This is sometimes read as the strange part. It is the part that already exists in the field, and §5 is about that.</p>
 <h3>What the funder buys</h3>
 <p>A ranked set of proposals in which every serious objection has already been raised in public, answered or conceded on the record, and priced. A paid, open adversarial process in place of three unpaid reviewers working alone. A hard ceiling on exposure known on day one. And, eventually, an error rate on its own judgments, which no grant process currently produces.</p>

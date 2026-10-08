@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="VICE timeline. Rise 1994 to 2014; capture 2014 to 2018 as TCV invested 250 million dollars in 2014, Disney 400 million from 2015 at a 4 billion valuation, and TPG 450 million in 2017 at the 5.7 billion peak; collapse 2018 to 2023, ending in a May 2023 bankruptcy sale for 225 million dollars, about 96 percent below peak.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 01 // RISE, CAPTURE, COLLAPSE</text>
+<rect x="80.0" y="110" width="717.2413793103449" height="54" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="438.62068965517244" y="145" class="s" text-anchor="middle" fill="#1A1A1A">RISE</text>
+<text x="80.0" y="192" class="s" text-anchor="start" fill="#1A1A1A">1994</text>
+<rect x="797.2413793103449" y="110" width="143.44827586206895" height="54" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="868.9655172413793" y="145" class="s" text-anchor="middle" fill="#1A1A1A">CAPTURE</text>
+<text x="797.2413793103449" y="192" class="s" text-anchor="middle" fill="#1A1A1A">2014</text>
+<rect x="940.6896551724138" y="110" width="179.31034482758616" height="54" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<text x="1030.344827586207" y="145" class="s" text-anchor="middle" fill="#F2F1ED">COLLAPSE</text>
+<text x="940.6896551724138" y="192" class="s" text-anchor="middle" fill="#1A1A1A">2018</text>
+<text x="1120.0" y="192" class="s" text-anchor="end" fill="#1A1A1A">2023</text>
+<line x1="761.3793103448276" y1="210" x2="761.3793103448276" y2="256" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="4 6"/>
+<circle cx="761.3793103448276" cy="243" r="6" fill="#1A1A1A"/>
+<text x="745.3793103448276" y="250" class="n" text-anchor="end" fill="#1A1A1A">2013 · $1.4B valuation</text>
+<line x1="797.2413793103449" y1="210" x2="797.2413793103449" y2="306" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="4 6"/>
+<circle cx="797.2413793103449" cy="293" r="6" fill="#1A1A1A"/>
+<text x="781.2413793103449" y="300" class="n" text-anchor="end" fill="#1A1A1A">2014 · TCV invests $250M</text>
+<line x1="833.1034482758621" y1="210" x2="833.1034482758621" y2="356" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="4 6"/>
+<circle cx="833.1034482758621" cy="343" r="6" fill="#1A1A1A"/>
+<text x="817.1034482758621" y="350" class="n" text-anchor="end" fill="#1A1A1A">2015 · Disney $400M, at a $4B valuation</text>
+<line x1="904.8275862068966" y1="210" x2="904.8275862068966" y2="406" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="4 6"/>
+<circle cx="904.8275862068966" cy="393" r="6" fill="#1A1A1A"/>
+<text x="888.8275862068966" y="400" class="n" text-anchor="end" fill="#1A1A1A">2017 · TPG $450M at the $5.7B peak</text>
+<line x1="1120.0" y1="210" x2="1120.0" y2="456" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="4 6"/>
+<circle cx="1120.0" cy="443" r="6" fill="#1A1A1A"/>
+<text x="1104.0" y="450" class="n" text-anchor="end" fill="#1A1A1A">May 2023 · bankruptcy sale, $225M: ~96% below peak</text>
+</svg>
