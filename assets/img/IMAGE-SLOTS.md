@@ -24,6 +24,20 @@ Michelin): a double exposure of a real photographic subject and a second image
 | `file-02-crucible.jpg` | 1:1 · 1600×1600 | Homepage, open file 02 | Same crucible concept, square crop | CLAUDE DESIGN | open |
 | `file-03-nectar.jpg` | 4:5 · 1600×2000, subject centred | Research, Field Plans band (cropped to fit) | The Nectar: honeycomb cells | CLAUDE DESIGN | open |
 
+**Second batch (after the first eight are approved): interlude plates inside the papers.** These go in
+`papers/assets/` (next to the paper pages, not in `assets/img/`); placement in the text is Claude Code's call.
+
+| Path | Shape · export size | Paper | Owner | Status |
+|---|---|---|---|---|
+| `papers/assets/axl-wp-01-plate.jpg` | 3:2 · 2000×1333 | Algorithmic Enclosure | CLAUDE DESIGN | later |
+| `papers/assets/axl-wp-03-plate.jpg` | 3:2 · 2000×1333 | Cognitive Value Protocol | CLAUDE DESIGN | later |
+| `papers/assets/axl-wp-04-plate.jpg` | 3:2 · 2000×1333 | The Pretend Era | CLAUDE DESIGN | later |
+| `papers/assets/axl-wp-05-plate.jpg` | 3:2 · 2000×1333 | Self-Esteem Operating System | CLAUDE DESIGN | later |
+| `papers/assets/axl-wp-07-plate.jpg` | 3:2 · 2000×1333 | Clearance Is Not Justice | CLAUDE DESIGN | later |
+
+Mechanism diagrams inside the papers (the FIG. style in AXL-WP-08) are drawn in code by Claude Code,
+not by Claude Design, because each one has to match the argument exactly and stay outside the redactions.
+
 Already done (Samantha): `commercial.jpg`, `cultural.jpg`, `file-01-courts.jpg`,
 `file-02-merge.jpg`, `case-04-michelin.jpg`, `principal.jpg`. `papers/axl-wp-02.jpg` and
 `papers/axl-wp-07.jpg` reuse the merge and courts plates.
