@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 490" role="img" aria-label="Recoverable burden equals A times B times C. Term A, lane-closure exposure, and Term C, the cost of each unit of throughput loss, are computable today. Term B, throughput loss per unit of non-compliance, does not exist; measuring it costs about 40,000 dollars and unlocks 1.2 to 8.3 billion dollars a year in recoverable loss.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 02 // ONE MISSING TERM</text>
+<rect x="56" y="116" width="320" height="210" fill="#1A1A1A"/>
+<rect x="50" y="110" width="320" height="210" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="138" class="s" fill="#1A1A1A">TERM A · ALREADY BUILT</text>
+<text x="68" y="170" class="n" text-anchor="start" fill="#1A1A1A">Lane-closure exposure</text>
+<text x="68" y="201" class="t" text-anchor="start" fill="#1A1A1A">Computable today: lane-closure</text>
+<text x="68" y="226" class="t" text-anchor="start" fill="#1A1A1A">permits plus probe data</text>
+<rect x="446" y="116" width="320" height="210" fill="#1A1A1A"/>
+<rect x="440" y="110" width="320" height="210" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="458" y="138" class="s" fill="#1A1A1A">TERM B · MISSING · ~$40,000</text>
+<text x="458" y="170" class="n" text-anchor="start" fill="#1A1A1A">Throughput loss per</text>
+<text x="458" y="197" class="n" text-anchor="start" fill="#1A1A1A">unit of non-compliance</text>
+<text x="458" y="228" class="t" text-anchor="start" fill="#1A1A1A">Does not exist. Needs an</text>
+<text x="458" y="253" class="t" text-anchor="start" fill="#1A1A1A">observed compliance</text>
+<text x="458" y="278" class="t" text-anchor="start" fill="#1A1A1A">distribution</text>
+<rect x="836" y="116" width="320" height="210" fill="#1A1A1A"/>
+<rect x="830" y="110" width="320" height="210" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="848" y="138" class="s" fill="#1A1A1A">TERM C · ALREADY BUILT</text>
+<text x="848" y="170" class="n" text-anchor="start" fill="#1A1A1A">Cost per unit of</text>
+<text x="848" y="197" class="n" text-anchor="start" fill="#1A1A1A">throughput loss</text>
+<text x="848" y="228" class="t" text-anchor="start" fill="#1A1A1A">Computable today: EPA MOVES;</text>
+<text x="848" y="253" class="t" text-anchor="start" fill="#1A1A1A">TTI $24.01/person-hr</text>
+<text x="406" y="228" class="k" text-anchor="middle" fill="#1A1A1A">×</text>
+<text x="796" y="228" class="k" text-anchor="middle" fill="#1A1A1A">×</text>
+<text x="600" y="400" class="b" text-anchor="middle" fill="#1A1A1A">A × B × C  =  $1.2B – $8.3B a year in recoverable loss, US</text>
+<text x="600" y="440" class="t" text-anchor="middle" fill="#1A1A1A">Measure B once and it plugs into every simulation model already in the literature.</text>
+</svg>

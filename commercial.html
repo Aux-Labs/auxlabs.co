@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +21,11 @@
     <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
     <script>
-        // Theme (light-first, ratified 8/25) + boot gate. Inline and first so neither
+        // Theme (dark-first, ruled 10/6) + boot gate. Inline and first so neither
         // can flash. The 2.6s failsafe lifts the curtain even if assets/axl.js never
         // loads: the site can never brick behind the loader.
         (function(){
-            try{ if(localStorage.getItem('axl-theme')==='dark'){ document.documentElement.setAttribute('data-theme','dark'); } }catch(e){}
+            try{ if(localStorage.getItem('axl-theme')==='light'){ document.documentElement.removeAttribute('data-theme'); } }catch(e){}
             try{
                 var seen = sessionStorage.getItem('axl-booted');
                 var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -40,6 +40,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="assets/site.css">
     <script src="assets/axl.js" defer></script>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
@@ -47,14 +48,13 @@
          a first visit this session, with JS on and motion allowed. The record below
          is already parsed and crawlable: a curtain, not a gate. -->
     <div id="axl-boot" aria-hidden="true">
-        <div class="axl-boot-inner">
-            <div class="axl-boot-line"><span>&gt; ESTABLISHING SIGNAL</span><span class="ok">OK</span></div>
-            <div class="axl-boot-line"><span>&gt; CERT 042</span><span class="ok">VERIFIED</span></div>
-            <div class="axl-boot-line"><span>&gt; FILE_ID 882-AUX-2026</span><span class="ok">OPEN</span></div>
-            <div class="axl-boot-line"><span>&gt; CLASSIFICATION</span><span class="ok">UNRESTRICTED</span></div>
-            <div class="axl-boot-rule"></div>
-            <div class="axl-boot-bar"><span></span></div>
-            <div class="axl-boot-seal">RECORDS_OPEN<span class="axl-boot-cursor">_</span></div>
+        <div class="axl-b-stage">
+            <div class="axl-b-grid">
+                <span class="axl-b-tile" style="--i:0"></span><span class="axl-b-tile" style="--i:1"></span><span class="axl-b-tile" style="--i:2"></span>
+                <span class="axl-b-tile" style="--i:3"></span><span class="axl-b-tile" style="--i:4"></span><span class="axl-b-tile" style="--i:5"></span>
+                <span class="axl-b-tile" style="--i:6"></span><span class="axl-b-tile" style="--i:7"></span><span class="axl-b-tile" style="--i:8"></span>
+            </div>
+            <div class="axl-b-mark">AUX <span>LABS</span></div>
             <p class="axl-boot-hint">Press any key to skip</p>
         </div>
     </div>
@@ -82,7 +82,7 @@
     <main class="relative">
 
         <!-- Header Status -->
-        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
+        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest uppercase axl-status">
             <span>INDEX_REF: AXL-COM-V4</span>
             <span class="hidden sm:inline">STATUS: ENGAGEMENTS_OPEN</span>
             <span>01_COMMERCIAL_OPERATIONS</span>
@@ -91,13 +91,12 @@
         <!-- Commercial Thesis -->
         <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-archival-ink">
             <div class="lg:col-span-8 p-8 lg:p-20 lg:border-r border-archival-ink bg-surface/20 relative overflow-hidden">
-            <span class="axl-wm" style="font-size:clamp(4.5rem,12vw,10rem); right:-1rem; bottom:-1.2rem;" aria-hidden="true">THE WORK</span>
                 <div class="mb-12 font-mono text-[11px] tracking-tighter flex items-center gap-4">
                     <span class="bg-panel text-white px-2 py-0.5">COM_01</span>
                     <span class="text-archival-ink/60">[ FOR_OPERATORS_&amp;_BRANDS ]</span>
                 </div>
                 <h1 class="text-4xl lg:text-[3.25rem] font-black leading-[0.95] tracking-tighter mb-10 uppercase max-w-4xl">
-                    You already have a research budget. <br> This is what it could be <span class="text-stroke">buying.</span>
+                    You already have a research budget. <br> This is what it could be <span class="axl-mark">buying.</span>
                 </h1>
                 <p class="text-base leading-relaxed text-archival-ink/80 max-w-2xl mb-8">
                     Aux Labs is a research firm. That's the line item, and it's deliberate: you don't need a new category in your budget to hire us, and we'd rather be judged against the research you're already buying than against a category nobody can price.
@@ -115,7 +114,7 @@
                     Marketing buys attention. We build mechanisms that earn legitimacy.
                 </p>
                 <p class="text-base leading-relaxed text-archival-ink/80 max-w-2xl mb-12">
-                    <span class="block mb-2 font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">[ THE_BRIDGE ]</span>Your CSR budget is a Pretend Era™ artifact: money spent performing values nobody inside the building quite believes in. We convert the performance into a mechanism — a structure that serves the company's actual interest and leaves a public good behind. <a href="#roster" class="underline hover:text-brand-green transition-colors">Here's who we've done it for.</a>
+                    <span class="block mb-2 font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">[ THE_BRIDGE ]</span>Your CSR budget is a Pretend Era™ artifact: money spent performing values nobody inside the building quite believes in. We convert the performance into a mechanism: a structure that serves the company's actual interest and leaves a public good behind. <a href="index.html#clients" class="underline hover:text-brand-green transition-colors">Here's who we've done it for.</a>
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm leading-relaxed text-archival-ink/70">
                     <div>
@@ -127,26 +126,11 @@
                 </div>
             </div>
             <div class="lg:col-span-4 flex flex-col">
-                <div class="flex-grow bg-panel relative overflow-hidden min-h-[300px]">
-                    <!-- PHOTO SLOT — drop an image at assets/img/commercial.jpg (blueprint/texture register). -->
-                    <span class="axl-photo axl-photo--raw"><img src="assets/img/commercial.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><span class="axl-photo-tint" aria-hidden="true"></span></span>
-                    <div class="absolute inset-0" aria-hidden="true" style="background:
-                        repeating-linear-gradient(0deg, rgba(0,255,65,0.06) 0 1px, transparent 1px 28px),
-                        repeating-linear-gradient(90deg, rgba(0,255,65,0.06) 0 1px, transparent 1px 28px),
-                        linear-gradient(200deg,#0c0d0c 0%,#151715 60%,#0a0b0a 100%);"></div>
-                    <div class="absolute inset-0 z-20 pointer-events-none opacity-40" style="background-image: radial-gradient(circle, #00FF41 0.7px, transparent 0.7px); background-size: 24px 24px;"></div>
-                    <div class="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-                        <div class="border border-brand-green/30 w-2/3 aspect-square flex items-center justify-center rotate-45">
-                            <div class="border border-brand-green/20 w-2/3 aspect-square flex items-center justify-center">
-                                <div class="w-2 h-2 bg-brand-green"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-6 left-6 z-30">
-                        <div class="bg-brand-green text-black font-mono text-[10px] px-2 py-1 uppercase font-bold">MECH_REF_042</div>
-                    </div>
+                <div class="axl-figure">
+                    <!-- PHOTO SLOT — assets/img/commercial.jpg, shown whole (no crop). -->
+                    <img src="assets/img/commercial.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()">
                 </div>
-                <div class="p-8 bg-surface/50 border-t border-archival-ink">
+                <div class="p-8 bg-surface/50 border-t border-archival-ink flex-grow">
                     <h3 class="font-black uppercase text-sm mb-4">Mechanism Checklist</h3>
                     <ul class="space-y-3 font-mono text-[10px] uppercase tracking-wider font-bold text-archival-ink">
                         <li class="flex items-center gap-3">
@@ -200,7 +184,7 @@
                 </div>
                 <h2 class="text-3xl lg:text-4xl font-black uppercase tracking-tighter leading-none mb-8">You, if:</h2>
                 <ul class="axl-fit space-y-6 text-base leading-relaxed text-white/80">
-                    <li>You privately know something your company does is causing harm, and you want to be less evil, but you can't see how without hurting the bottom line.</li>
+                    <li>You want your company to do more good, and you need a way to do it that also makes business sense.</li>
                     <li>You're tired of being sold serviced labor: another Instagram carousel and content calendar, whether or not that's the problem you actually need solved.</li>
                     <li>You'd collapse your CSR budget and your brand budget into one thing, if you could see it pay.</li>
                     <li>You want the uncomfortable true thing, in the first call.</li>
@@ -228,46 +212,33 @@
                 <h2 class="text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-none">Why a mechanism is <br> harder to leave.</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-                <div class="space-y-12">
                     <div class="border-l-2 border-archival-ink pl-8">
-                        <h4 class="font-black uppercase mb-4 text-lg">01. Defensible Loyalty</h4>
+                        <h4 class="font-mono font-bold uppercase tracking-widest text-sm mb-4">01_DEFENSIBLE_LOYALTY</h4>
                         <p class="text-sm leading-relaxed text-archival-ink/70">When your brand is the source of a public utility, switching away from you costs the public something.</p>
                     </div>
                     <div class="border-l-2 border-archival-ink pl-8">
-                        <h4 class="font-black uppercase mb-4 text-lg">02. Outcomes Over Messaging</h4>
-                        <p class="text-sm leading-relaxed text-archival-ink/70">Ten percent of people rate advertising practitioners' honesty as high or very high — that is FIG. 01 on the front page. Messaging is discounted on arrival. A mechanism puts the outcome first and lets the brand be found standing behind it.</p>
+                        <h4 class="font-mono font-bold uppercase tracking-widest text-sm mb-4">02_OUTCOMES_OVER_MESSAGING</h4>
+                        <p class="text-sm leading-relaxed text-archival-ink/70">Ten percent of people rate advertising practitioners' honesty as high or very high: that is FIG. 01 on the front page. Messaging is discounted on arrival. A mechanism puts the outcome first and lets the brand be found standing behind it.</p>
                     </div>
-                </div>
-                <div id="roster" class="bg-panel p-8 lg:p-12 text-brand-green font-mono">
-                    <div class="text-[10px] mb-8 opacity-40 uppercase">[ CLIENT_ROSTER ]</div>
-                    <div class="text-[10px] mb-3 text-white uppercase tracking-widest">The Auxiliary · 2020–2025</div>
-                    <p class="font-sans text-sm leading-relaxed text-white/80 normal-case mb-8">Center for Humane Technology · Lincoln Financial · Public Housing Authority of Albany, GA · Georgia Association of Housing and Redevelopment Authorities · Science Gallery Dublin · AdHoc FM / AdHoc Projects · Alterea · Audiofemme · GrooveGrade · Texas Eclipse Festival (PR) · Listen · Viva Creative · MadeInNetwork · UgoRound</p>
-                    <div class="text-[10px] mb-3 text-white uppercase tracking-widest">Our principal, at VICE and VIRTUE Worldwide · 2013–2020</div>
-                    <p class="font-sans text-sm leading-relaxed text-white/80 normal-case">Smirnoff · Google · Natural Light · Johnnie Walker · Lululemon · Under Armour · Michelin · Budweiser · Sephora · MGM Grand · Chipotle · Dove Men+Care · Suave · Hoegaarden · Cazadores Tequila · Estrella Jalisco · Popsicle · Indeed · Sydell Group · VICE (VICE on HBO · VICE News · VICELAND · Motherboard · Collectively)</p>
-                    <div class="mt-12 p-4 border border-brand-green/20 font-sans text-xs leading-relaxed opacity-80 normal-case">
-                        Predictions publish in advance, with their falsification conditions. Unverified numbers are labelled.
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- Final CTA -->
         <section class="p-8 lg:p-20 cta-final flex flex-col items-center text-center">
-            <h2 class="text-4xl lg:text-7xl font-black uppercase tracking-tighter leading-none mb-12">
+            <h2 class="text-4xl lg:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
                 Turn your budget <br> into a mechanism.
             </h2>
-            <a href="https://calendar.app.google/SdugNFkjtJqB4bpq8" class="cta-btn px-8 lg:px-12 py-6 font-mono text-sm tracking-[0.2em] uppercase transition-all">
-                [ BOOK_A_30-MINUTE_CALL ]
-            </a>
-            <p class="mt-8 font-mono text-[9px] uppercase tracking-widest opacity-60">
-                THIRTY MINUTES. AN HONEST READ ON YOUR PROBLEM, WHETHER OR NOT WE WORK TOGETHER.
+            <p class="axl-cta-body">
+                Bring us a system you run: a queue, a policy, a schedule, a brand, a public you need to reach. Whether it's struggling or already working, we'll show you where it's losing trust and value, and what a better mechanism could do. If we're not the right fit, we'll say so in the meeting.
             </p>
-            <p class="mt-4 font-mono text-[9px] uppercase tracking-widest">
-                <a href="terms.html" class="underline">HOW WE PRICE: THE TERMS &rarr;</a>
+            <a href="https://calendar.app.google/UsAZMk2CMLC5gCXP7" class="cta-btn px-8 lg:px-12 py-6 font-mono text-sm tracking-[0.2em] uppercase transition-all">
+                [ BOOK_A_MEETING ]
+            </a>
+            <p class="axl-cta-note">
+                <a href="terms.html" class="underline hover:text-archival-ink">HOW WE PRICE: THE TERMS &rarr;</a>
             </p>
         </section>
-
-        <div class="axl-stripe" aria-hidden="true"></div>
+       
         <!-- Footer -->
         <footer class="p-8 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 bg-archival-paper">
             <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/40">
@@ -275,10 +246,10 @@
                 <p class="axl-co">c/o AUX LABS LLC · "AUSTIN, TEXAS" · 30.2672° N, 97.7431° W</p>
                 <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
                 <p>auxlabs.co // Signal @nawab.12 // <a href="firewall.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Firewall</a> // <a href="field.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Field</a> // <a href="provenance.html" class="underline text-archival-ink hover:text-brand-green transition-colors">AI Disclosure</a> // <a href="record.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Record</a> // <a href="terms.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Terms</a></p>
-                <p>Site design, neubrutalism system and image production: Samantha Byrd.</p>
+                <p>Site design, neubrutalism system and image production: <a href="http://samanthabyrd.com/" class="underline text-archival-ink hover:text-brand-green transition-colors" rel="noopener">Samantha Byrd</a>.</p>
             </div>
             <div class="text-left lg:text-right">
-                <h2 class="text-4xl font-black tracking-tighter uppercase leading-none mb-2">RECORD_01.</h2>
+                <h2 class="text-4xl font-black tracking-tighter uppercase leading-none mb-2">01_COMMERCIAL.</h2>
                 <p class="font-mono text-[9px] text-brand-green bg-black px-2 py-0.5 inline-block uppercase">01_COMMERCIAL_FIN</p>
             </div>
         </footer>

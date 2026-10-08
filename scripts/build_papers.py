@@ -9,6 +9,7 @@ Usage:  python3 scripts/build_papers.py <canon_dir> [--force-preview SERIES]
         --force-preview renders one paper regardless of its flag, into
         /tmp/paper-preview/ (never into the repo). For operator review only.
 """
+import json
 import sys, re, pathlib, html
 
 import yaml, markdown
@@ -17,7 +18,7 @@ REPO = pathlib.Path(__file__).resolve().parent.parent
 OUT = REPO / "papers"
 
 TEMPLATE = """<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,11 +36,12 @@ TEMPLATE = """<!DOCTYPE html>
     <meta name="twitter:description" content="{meta_abstract}">
     <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
-    <script>(function(){{try{{if(localStorage.getItem('axl-theme')==='dark'){{document.documentElement.setAttribute('data-theme','dark');}}}}catch(e){{}}}})();</script>
+    <script>(function(){{try{{if(localStorage.getItem('axl-theme')==='light'){{document.documentElement.removeAttribute('data-theme');}}}}catch(e){{}}}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/tailwind.css">
+    <link rel="stylesheet" href="../assets/site.css">
     <link rel="stylesheet" href="../assets/paper.css">
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
@@ -64,20 +66,19 @@ TEMPLATE = """<!DOCTYPE html>
         <div class="axl-stripe axl-stripe--thin" aria-hidden="true"></div>
 
         <header class="p-8 lg:p-16 border-b border-archival-ink bg-surface/20 relative overflow-hidden">
-            <span class="axl-wm" style="font-size:clamp(5rem,13vw,10rem); right:-1rem; top:-1.5rem;" aria-hidden="true">RESEARCH</span>
             <div class="max-w-4xl mx-auto relative">
                 <div class="flex flex-wrap items-center gap-3 mb-8 font-mono text-[10px] uppercase tracking-widest">
                     <span class="bg-panel text-white px-3 py-1.5 font-bold">{series}</span>
                     <span class="border border-archival-ink px-3 py-1.5">WORKING PAPER · {version}</span>
                     <span class="border border-archival-ink px-3 py-1.5">AUX LABS LLC</span>
-                    <a href="../plain/{slug}.html" class="border border-archival-ink px-3 py-1.5 font-bold hover:bg-brand-green hover:text-black hover:border-brand-green transition-all">"PLAIN ENGLISH" VERSION -&gt;</a>
-                </div>
-                <h1 class="text-3xl lg:text-[2.75rem] font-black leading-[1.02] tracking-tighter uppercase mb-8">{title}</h1>
+                    <span class="border border-archival-ink px-3 py-1.5">{words} WORDS · ~{minutes} MIN READ</span>
+{plain_chip}                </div>
+                <h1 class="text-3xl lg:text-[2.75rem] font-black leading-[1.02] tracking-tighter uppercase mb-8">{title_html}</h1>
                 <div class="border-l-4 border-brand-green pl-6 lg:pl-8 py-2 mb-8">
                     <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-3">ABSTRACT</div>
                     <p class="text-sm lg:text-base leading-relaxed text-archival-ink/80">{abstract}</p>
                 </div>
-                <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 space-y-1">
+{thirty}<div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 space-y-1">
                     <p>KEYWORDS: {keywords}</p>
                     <p>CITE AS: HAFIZ, I. ({year}). {short_title}. AUX LABS WORKING PAPER {series}. AUXLABS.CO</p>
                     <p>CONTACT: <a class="underline text-archival-ink hover:text-brand-green" href="mailto:{contact}">{contact}</a></p>
@@ -421,11 +422,11 @@ def render(path, outdir):
     def _fig(m):
         n, cap = m.group(1), m.group(2).strip()
         slug = fm.get("series", path.stem).lower()
-        asset = REPO / "papers" / "assets" / f"{slug}-figure{n}.png"
-        if asset.exists():
+        asset = next((a for a in (REPO / "papers" / "assets" / f"{slug}-figure{n}.{ext}" for ext in ("svg", "png")) if a.exists()), None)
+        if asset:
             import html as _h
-            return (f'<figure class="axl-figure"><img src="assets/{slug}-figure{n}.png" '
-                    f'alt="Figure {n}. {_h.escape(cap[:200])}" loading="lazy">'
+            return (f'<figure class="axl-figure"><a class="axl-fig-zoom" href="assets/{asset.name}" target="_blank" rel="noopener" aria-label="Open figure {n} full size"><img src="assets/{asset.name}" '
+                    f'alt="Figure {n}. {_h.escape(cap[:200])}" loading="lazy"></a>'
                     f'<figcaption><span class="fig-label">FIG. {n:0>2}</span> {_h.escape(cap)}</figcaption></figure>')
         return f"*Figure {n}. {cap}*"
     body_md = re.sub(r"\*\*\[Figure (\d+) near here\.\*\*(.*?)\]", _fig, body_md, flags=re.S)
@@ -435,10 +436,22 @@ def render(path, outdir):
     md = markdown.Markdown(extensions=["tables", "footnotes", "sane_lists", "smarty"])
     body_html = md.convert(body_md)
     body_html = inject_pullquotes(body_html, fm.get("series", ""))
+    body_html = redact(body_html, fm.get("series", ""))
     title = str(fm.get("title", path.stem))
+    # Site-approved titles win over the canon front matter (Imran, 10/6: WP-02 and WP-05 subtitles).
+    title = TITLES.get(fm.get("series", ""), title)
     short = title.split(":")[0]
     abstract = " ".join(str(fm.get("abstract", "")).split())
+    # Title before the colon keeps the heavy weight; the subtitle after it is lighter (.axl-sub).
+    head, _, sub = title.partition(":")
+    title_html = html.escape(head) + (f':<span class="axl-sub"> {html.escape(sub.strip())}</span>' if sub.strip() else "")
+    words = len(re.sub(r"<[^>]+>", " ", body_html).split())
     page = TEMPLATE.format(
+        thirty=thirty_seconds(fm.get("series", "")),
+        plain_chip=plain_chip(fm.get("series", path.stem).lower()),
+        title_html=title_html,
+        words=f"{words:,}",
+        minutes=max(1, round(words / 230)),
         slug=fm.get("series", path.stem).lower(),
         series=fm.get("series", "AXL-WP"),
         version=fm.get("version", "v1.0"),
@@ -455,6 +468,69 @@ def render(path, outdir):
     out = outdir / f"{slug}.html"
     out.write_text(page, encoding="utf-8")
     return fm, out
+
+THIRTY = pathlib.Path(__file__).with_name("thirty_seconds.json")
+TITLES = json.loads(pathlib.Path(__file__).with_name("titles.json").read_text(encoding="utf-8"))
+
+def plain_chip(slug):
+    """Link the plain-English companion only when that page exists."""
+    if not (REPO / "plain" / f"{slug}.html").exists():
+        return ""
+    return (f'                    <a href="../plain/{slug}.html" class="border border-archival-ink px-3 py-1.5 font-bold '
+            'hover:bg-brand-green hover:text-black hover:border-brand-green transition-all">"PLAIN ENGLISH" VERSION -&gt;</a>\n')
+
+def thirty_seconds(series):
+    """The 30-second box (why now / why you / why us) from scripts/thirty_seconds.json."""
+    try:
+        d = json.loads(THIRTY.read_text(encoding="utf-8")).get(series)
+    except FileNotFoundError:
+        d = None
+    if not d:
+        return ""
+    e = lambda t: html.escape(t, quote=False)
+    return ('<aside class="axl-30s" aria-label="The 30-second version">\n'
+            '                    <div class="axl-30s-h">The 30-second version</div>\n'
+            '                    <dl>\n'
+            f'                        <dt>Why now</dt><dd>{e(d["now"])}</dd>\n'
+            f'                        <dt>Why you</dt><dd>{e(d["you"])}</dd>\n'
+            f'                        <dt>Why us</dt><dd>{e(d["us"])}</dd>\n'
+            '                    </dl>\n'
+            '                </aside>\n                ')
+
+REDACTIONS = json.loads(pathlib.Path(__file__).with_name("redactions.json").read_text(encoding="utf-8"))
+_BLOCK = re.compile(r"<(p|h[1-6]|pre|hr|aside|ul|ol|table|blockquote|figure|div)\b[^>]*?(?:/>|>.*?</\1>)", re.S)
+
+def _block_text(h):
+    return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", h)).split())
+
+def redact(body_html, series):
+    """Swap withheld passages for a visible redaction bar (scripts/redactions.json).
+    Works on freshly rendered HTML and on an already-published page alike."""
+    rule = REDACTIONS.get(series)
+    if not rule:
+        return body_html
+    for blk in rule["blocks"]:
+        found = list(_BLOCK.finditer(body_html))
+        texts = [_block_text(m.group(0)) for m in found]
+        i = next((k for k, t in enumerate(texts) if t.startswith(blk["start"])), None)
+        if i is None:
+            if "axl-redact" in body_html and blk["label"] in body_html:
+                continue  # already applied
+            raise SystemExit(f"redaction start not found in {series}: {blk['start']!r}")
+        j = next((k for k in range(i + 1, len(texts)) if texts[k].startswith(blk["end"])), None)
+        if j is None:
+            raise SystemExit(f"redaction end not found in {series}: {blk['end']!r}")
+        if i > 0 and 'class="axl-pull"' in found[i - 1].group(0):
+            i -= 1  # a pull quote lifted from a withheld paragraph goes too
+        words = sum(len(t.split()) for t in texts[i:j] if t)
+        bar = (f'<div class="axl-redact" role="note"><span>Redacted</span> '
+               f'{html.escape(blk["label"])} · {words:,} words withheld</div>\n')
+        body_html = body_html[:found[i].start()] + bar + body_html[found[j].start():]
+    if "axl-redact-note" not in body_html:
+        mail = f"mailto:imran@auxlabs.co?subject={series}%20full%20text"
+        body_html = (f'<div class="axl-redact-note">{html.escape(rule["note"])} '
+                     f'<a href="{mail}">Request it</a>.</div>\n') + body_html
+    return body_html
 
 def main():
     canon = pathlib.Path(sys.argv[1])

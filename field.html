@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +21,11 @@
     <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
     <script>
-        // Theme (light-first, ratified 8/25) + boot gate. Inline and first so neither
+        // Theme (dark-first, ruled 10/6) + boot gate. Inline and first so neither
         // can flash. The 2.6s failsafe lifts the curtain even if assets/axl.js never
         // loads: the site can never brick behind the loader.
         (function(){
-            try{ if(localStorage.getItem('axl-theme')==='dark'){ document.documentElement.setAttribute('data-theme','dark'); } }catch(e){}
+            try{ if(localStorage.getItem('axl-theme')==='light'){ document.documentElement.removeAttribute('data-theme'); } }catch(e){}
             try{
                 var seen = sessionStorage.getItem('axl-booted');
                 var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -40,6 +40,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="assets/site.css">
     <script src="assets/axl.js" defer></script>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
@@ -47,14 +48,13 @@
          a first visit this session, with JS on and motion allowed. The record below
          is already parsed and crawlable: a curtain, not a gate. -->
     <div id="axl-boot" aria-hidden="true">
-        <div class="axl-boot-inner">
-            <div class="axl-boot-line"><span>&gt; ESTABLISHING SIGNAL</span><span class="ok">OK</span></div>
-            <div class="axl-boot-line"><span>&gt; CERT 042</span><span class="ok">VERIFIED</span></div>
-            <div class="axl-boot-line"><span>&gt; FILE_ID 882-AUX-2026</span><span class="ok">OPEN</span></div>
-            <div class="axl-boot-line"><span>&gt; CLASSIFICATION</span><span class="ok">UNRESTRICTED</span></div>
-            <div class="axl-boot-rule"></div>
-            <div class="axl-boot-bar"><span></span></div>
-            <div class="axl-boot-seal">RECORDS_OPEN<span class="axl-boot-cursor">_</span></div>
+        <div class="axl-b-stage">
+            <div class="axl-b-grid">
+                <span class="axl-b-tile" style="--i:0"></span><span class="axl-b-tile" style="--i:1"></span><span class="axl-b-tile" style="--i:2"></span>
+                <span class="axl-b-tile" style="--i:3"></span><span class="axl-b-tile" style="--i:4"></span><span class="axl-b-tile" style="--i:5"></span>
+                <span class="axl-b-tile" style="--i:6"></span><span class="axl-b-tile" style="--i:7"></span><span class="axl-b-tile" style="--i:8"></span>
+            </div>
+            <div class="axl-b-mark">AUX <span>LABS</span></div>
             <p class="axl-boot-hint">Press any key to skip</p>
         </div>
     </div>
@@ -73,21 +73,20 @@
 
     
     <main id="main" class="relative">
-        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
+        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest uppercase axl-status">
             <span>FILE_REF: AXL-FLD-01</span>
             <span class="hidden sm:inline">STATUS: DRAFT_FOR_REVIEW</span>
             <span>00_THE_FIELD</span>
         </div>
 
         <section class="p-8 lg:p-16 border-b border-archival-ink bg-surface/20 relative overflow-hidden">
-            <span class="axl-wm" style="font-size:clamp(4.5rem,12vw,10rem); right:-1rem; top:-1rem;" aria-hidden="true">THE LANGUAGE</span>
             <div class="max-w-3xl">
                 <div class="mb-10 font-mono text-[11px] tracking-tighter flex items-center gap-4">
                     <span class="bg-panel text-white px-2 py-0.5">FLD_00</span>
                     <span class="text-archival-ink/60">[ THE_LEXICON ]</span>
                 </div>
                 <h1 class="text-4xl lg:text-[3.25rem] font-black leading-[0.95] tracking-tighter mb-10 uppercase">The Field.</h1>
-                <p class="text-xl lg:text-2xl font-light leading-snug italic pull-serif border-l-4 border-brand-green pl-8 py-2 max-w-2xl mb-8">
+                <p class="axl-pull max-w-2xl mb-8">
                     New problems get new names, or they stay invisible. This page defines ours and says where each came from.
                 </p>
                 <p class="text-base leading-relaxed text-archival-ink/80 max-w-2xl">
@@ -117,7 +116,7 @@
                         <span class="block mb-2 font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">[ LINEAGE ]</span>The field is a remix. Four debts, all real, assembled across a commercial and civic practice on the public record since 2008. <strong>mechanism design</strong>, the Nobel-line economics of Hurwicz, Maskin, and Myerson, supplies the rigor of rules and incentives; <strong>the design disciplines</strong> supply the build habit, prototypes over position papers; <strong>behavioral science and signaling theory</strong> supply the evidence about what people actually do, and what makes a signal costly enough to believe; <strong>commons governance</strong>, from Ostrom, supplies the institutional pattern for keeping a shared resource alive. The remix is the contribution.
                     </p>
                     <p class="text-base leading-relaxed text-archival-ink/80">
-                        <span class="block mb-2 font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">[ WHAT_CAME_OUT_OF_IT ]</span>Seven published working papers (<a href="research.html" class="underline hover:text-brand-green">the index</a>), a diagnosis (<a href="#term-pretend-era" class="underline hover:text-brand-green">The Pretend Era™</a>), a method (<a href="#term-cascade" class="underline hover:text-brand-green">The Trust-Repair Cascade™</a>), an institution in formation (<a href="#term-switchboard" class="underline hover:text-brand-green">The Switchboard™</a>), and a commercial practice (<a href="commercial.html" class="underline hover:text-brand-green">01_COMMERCIAL</a>) that funds the rest.
+                        <span class="block mb-2 font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">[ WHAT_CAME_OUT_OF_IT ]</span>Nine published working papers (<a href="research.html" class="underline hover:text-brand-green">the index</a>), a diagnosis (<a href="#term-pretend-era" class="underline hover:text-brand-green">The Pretend Era™</a>), a method (<a href="#term-cascade" class="underline hover:text-brand-green">The Trust-Repair Cascade™</a>), an institution in formation (<a href="#term-switchboard" class="underline hover:text-brand-green">The Switchboard™</a>), and a commercial practice (<a href="commercial.html" class="underline hover:text-brand-green">01_COMMERCIAL</a>) that funds the rest.
                     </p>
                 </div>
             </div>
@@ -131,7 +130,7 @@
             <div class="p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-4">
                     <h2 class="text-3xl font-black uppercase tracking-tighter leading-none mb-6">The Pretend<br>Era™</h2>
-                    <p class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">FLAGSHIP PAPER: AXL-WP-04 · IN REVISION, v2.0 FORTHCOMING</p>
+                    <p class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60">FLAGSHIP PAPER: <a href="papers/axl-wp-04.html" class="underline hover:text-brand-green">AXL-WP-04 · PUBLIC EDITION</a></p>
                 </div>
                 <div class="lg:col-span-8 space-y-6 max-w-3xl">
                     <p class="text-base leading-relaxed text-archival-ink/80">
@@ -193,7 +192,7 @@
                 <p class="axl-co">c/o AUX LABS LLC · "AUSTIN, TEXAS" · 30.2672° N, 97.7431° W</p>
                 <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
                 <p>auxlabs.co // Signal @nawab.12 // <a href="firewall.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Firewall</a> // <a href="field.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Field</a> // <a href="provenance.html" class="underline text-archival-ink hover:text-brand-green transition-colors">AI Disclosure</a> // <a href="record.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Record</a> // <a href="terms.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Terms</a></p>
-                <p>Site design, neubrutalism system and image production: Samantha Byrd.</p>
+                <p>Site design, neubrutalism system and image production: <a href="http://samanthabyrd.com/" class="underline text-archival-ink hover:text-brand-green transition-colors" rel="noopener">Samantha Byrd</a>.</p>
             </div>
             <div class="text-left lg:text-right">
                 <h2 class="text-3xl font-black tracking-tighter uppercase leading-none mb-2">Name it, <br> then fix it.</h2>

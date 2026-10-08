@@ -13,7 +13,7 @@ A disclosure first, because this site has a policy of saying how the work gets m
 
 The paper's core idea is that AI is a dual-lineage technology, and it helps to say that plainly. Every transformative technology in history has revolutionized one of two things: energy into work (the steam engine, electricity) or meaning between minds (writing, printing, broadcast). Each time even one of those lineages flipped, the result was decades of institutional chaos while societies grew the new muscles the technology demanded. The printing press helped ignite a century of religious war before it built the scientific journal. AI is the first technology in history that flips both lineages at once. The institutions we have were built for the previous paradigm, and they are failing on schedule.
 
-There's a line from an Afghan resistance fighter that the paper opens with: "They have the watches. But we have the time." Material superiority without patience loses. The AI industry has the watches, all of them, and it is behaving like an institution that believes compute is a substitute for time. Billions for alignment, red-teaming, interpretability, lobbying. Approximately nothing for the boring social question underneath all of it: why would the public, the journalists, the regulators, or even its own employees believe anything this industry says? Trust is treated as a communications problem. It's a load-bearing wall.
+The paper opens with an Afghan proverb: "They have the watches. But we have the time." Material superiority without patience loses. The AI industry has the watches, all of them, and it is behaving like an institution that believes compute is a substitute for time. Billions for alignment, red-teaming, interpretability, lobbying. Very little, by comparison, for the boring social question underneath all of it: why would the public, the journalists, the regulators, or even its own employees believe anything this industry says? Trust is treated as a communications problem. It's a load-bearing wall.
 
 The plainest sentence in the paper is the one I'd put on a billboard: policy without trust is dead on arrival. You can write the perfect AI regulation, and if no institution has the legitimacy to enforce it and no public believes the enforcement, you've written a very expensive press release.
 
@@ -21,7 +21,7 @@ What I want you to take from the plain version is just the reframe: the next tim
 
 ## Why this matters
 
-If the paper is right, the AI transition is won or lost in the trust layer, not the model weights. That would mean the most important AI work of the decade looks nothing like AI work, and almost nobody is funded to do it. Aux Labs is built on the bet that this gap is the opportunity.
+If the paper is right, the AI transition is won or lost in the trust layer. That would mean the most important AI work of the decade looks nothing like AI work, and almost nobody is funded to do it. Aux Labs is built on the bet that this gap is the opportunity.
 
 ## The predictions
 

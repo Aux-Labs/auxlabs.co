@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-label="One million viewers times 10 percent conversion times 1,200 dollars of avoided clinical cost gives 120 million dollars. Against 0.5 to 2 million dollars of production cost the raw ratio is 60 to 1 through 240 to 1. Discounted by 90 percent, the defensible floor is 6 to 1 through 24 to 1.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 01 // DOWNSTREAM CLINICAL EFFICIENCY, STEP BY STEP</text>
+<rect x="56" y="106" width="250" height="140" fill="#1A1A1A"/>
+<rect x="50" y="100" width="250" height="140" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="175" y="165" class="k" text-anchor="middle" fill="#1A1A1A">1,000,000</text>
+<text x="175" y="205" class="t" text-anchor="middle" fill="#1A1A1A">viewers</text>
+<rect x="336" y="106" width="250" height="140" fill="#1A1A1A"/>
+<rect x="330" y="100" width="250" height="140" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="455" y="165" class="k" text-anchor="middle" fill="#1A1A1A">× 10%</text>
+<text x="455" y="205" class="t" text-anchor="middle" fill="#1A1A1A">conversion</text>
+<rect x="616" y="106" width="250" height="140" fill="#1A1A1A"/>
+<rect x="610" y="100" width="250" height="140" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="735" y="165" class="k" text-anchor="middle" fill="#1A1A1A">× $1,200</text>
+<text x="735" y="205" class="t" text-anchor="middle" fill="#1A1A1A">avoided clinical cost</text>
+<text x="735" y="230" class="t" text-anchor="middle" fill="#1A1A1A">each</text>
+<rect x="896" y="106" width="250" height="140" fill="#1A1A1A"/>
+<rect x="890" y="100" width="250" height="140" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="1015" y="165" class="k" text-anchor="middle" fill="#1A1A1A">= $120M</text>
+<text x="1015" y="205" class="t" text-anchor="middle" fill="#1A1A1A">avoided clinical load</text>
+<rect x="56" y="306" width="520" height="150" fill="#1A1A1A"/>
+<rect x="50" y="300" width="520" height="150" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="70" y="340" class="s" text-anchor="start" fill="#1A1A1A">AGAINST $0.5M – $2M PRODUCTION COST</text>
+<text x="70" y="400" class="k" text-anchor="start" fill="#1A1A1A">60:1 – 240:1 raw</text>
+<path d="M580 375 L620 375" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="636" y="306" width="520" height="150" fill="#1A1A1A"/>
+<rect x="630" y="300" width="520" height="150" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="650" y="340" class="s" text-anchor="start" fill="#1A1A1A">AFTER A 90% DISCOUNT</text>
+<text x="650" y="400" class="k" text-anchor="start" fill="#1A1A1A">6:1 – 24:1 floor</text>
+<text x="50" y="510" class="t" text-anchor="start" fill="#1A1A1A">The discount covers attribution, decay, partial uptake and the chance an artifact never reaches a million viewers (§4.3).</text>
+</svg>

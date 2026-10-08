@@ -54,11 +54,12 @@
     {
       "series": "AXL-WP-04",
       "title": "The Pretend Era: A Grand Unified Theory of Collapse, Narrative Power, and the Machinery of Repair",
-      "status": "in_revision",
+      "status": "published",
       "flagship": true,
       "domains": [],
-      "abstract": null,
-      "url": null
+      "abstract": "The binding constraint on political, social, and institutional progress is intangible psychological infrastructure: trust, legitimacy, belonging, shared reality. The paper names the current period the Pretend Era (pluralistic ignorance at civilizational scale) and proposes a ten-step cascade for coordinated repair. Public edition: the operating detail of the cascade and the Switchboard's four cylinders is redacted.\n",
+      "url": "papers/axl-wp-04.html",
+      "edition": "public (redacted)"
     },
     {
       "series": "AXL-WP-05",
@@ -90,7 +91,25 @@
     {
       "series": "AXL-WP-08",
       "title": "Cognitive Infrastructure for the AI Transition: Why the Hardest Problem in AI Is Not Technical",
-      "status": "in_revision",
+      "status": "published",
+      "flagship": false,
+      "domains": [],
+      "abstract": "AI is the first technology native to both automation and communication. The essay argues that alignment faces an infrastructure problem as much as a specification problem, maps five post-Kantian positions onto today's alignment debate, sets out the trust gap between AI developers and their stakeholders, and offers three falsifiable predictions.\n",
+      "url": "papers/axl-wp-08.html"
+    },
+    {
+      "series": "AXL-WP-09",
+      "title": "The Crucible: Paying People to Attack Grant Proposals",
+      "status": "published",
+      "flagship": false,
+      "domains": [],
+      "abstract": null,
+      "url": "papers/axl-wp-09.html"
+    },
+    {
+      "series": "AXL-WP-10",
+      "title": "Borrowed Voices: Stigma, Preference Falsification, and the Human Data Problem in AI Alignment",
+      "status": "in_draft",
       "flagship": false,
       "domains": [],
       "abstract": null,

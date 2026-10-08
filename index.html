@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +21,11 @@
     <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
     <script>
-        // Theme (light-first, ratified 8/25) + boot gate. Inline and first so neither
+        // Theme (dark-first, ruled 10/6) + boot gate. Inline and first so neither
         // can flash. The 2.6s failsafe lifts the curtain even if assets/axl.js never
         // loads: the site can never brick behind the loader.
         (function(){
-            try{ if(localStorage.getItem('axl-theme')==='dark'){ document.documentElement.setAttribute('data-theme','dark'); } }catch(e){}
+            try{ if(localStorage.getItem('axl-theme')==='light'){ document.documentElement.removeAttribute('data-theme'); } }catch(e){}
             try{
                 var seen = sessionStorage.getItem('axl-booted');
                 var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -40,6 +40,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="assets/site.css">
     <script src="assets/axl.js" defer></script>
     <style>
         /* Client strip, calmer: label on its own line, lighter weight, muted separators. */
@@ -59,14 +60,13 @@
          a first visit this session, with JS on and motion allowed. The record below
          is already parsed and crawlable: a curtain, not a gate. -->
     <div id="axl-boot" aria-hidden="true">
-        <div class="axl-boot-inner">
-            <div class="axl-boot-line"><span>&gt; ESTABLISHING SIGNAL</span><span class="ok">OK</span></div>
-            <div class="axl-boot-line"><span>&gt; CERT 042</span><span class="ok">VERIFIED</span></div>
-            <div class="axl-boot-line"><span>&gt; FILE_ID 882-AUX-2026</span><span class="ok">OPEN</span></div>
-            <div class="axl-boot-line"><span>&gt; CLASSIFICATION</span><span class="ok">UNRESTRICTED</span></div>
-            <div class="axl-boot-rule"></div>
-            <div class="axl-boot-bar"><span></span></div>
-            <div class="axl-boot-seal">RECORDS_OPEN<span class="axl-boot-cursor">_</span></div>
+        <div class="axl-b-stage">
+            <div class="axl-b-grid">
+                <span class="axl-b-tile" style="--i:0"></span><span class="axl-b-tile" style="--i:1"></span><span class="axl-b-tile" style="--i:2"></span>
+                <span class="axl-b-tile" style="--i:3"></span><span class="axl-b-tile" style="--i:4"></span><span class="axl-b-tile" style="--i:5"></span>
+                <span class="axl-b-tile" style="--i:6"></span><span class="axl-b-tile" style="--i:7"></span><span class="axl-b-tile" style="--i:8"></span>
+            </div>
+            <div class="axl-b-mark">AUX <span>LABS</span></div>
             <p class="axl-boot-hint">Press any key to skip</p>
         </div>
     </div>
@@ -96,7 +96,7 @@
     <main id="main" class="relative">
 
         <!-- Top Status Ticker -->
-        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
+        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest uppercase axl-status">
             <span>FILE_ID: 882-AUX-2026</span>
             <span class="hidden sm:inline animate-pulse">● RECORDS_OPEN</span>
             <span>BEHAVIORAL_INFRASTRUCTURE</span>
@@ -105,7 +105,6 @@
         <!-- Hero -->
         <section class="border-b border-archival-ink">
             <div class="p-8 lg:p-16 relative overflow-hidden bg-surface/20">
-            <span class="axl-wm" style="font-size:clamp(4.5rem,12vw,10rem); right:-1rem; bottom:-1.2rem;" aria-hidden="true">FRONT DOOR</span>
 
                 <div class="mb-10 font-mono text-[11px] tracking-tighter flex items-center gap-4">
                     <span class="bg-panel text-white px-2 py-0.5">RECORD_01</span>
@@ -118,7 +117,7 @@
 
                 <div class="max-w-2xl space-y-8">
                     <p class="text-lg lg:text-xl font-light leading-snug tracking-tight border-l-4 border-brand-green pl-8 py-2">
-                        <span id="axl-sub">Aux Labs is a think-and-do tank. We find the hidden behavior that's costing a company, a city or a court money and trust, then build the rule, default or incentive that fixes it.</span>
+                        <span id="axl-sub">Research, creative and policy usually come from three different firms. Aux Labs is a think-and-do tank that takes a problem from the research to the finished fix, under one roof.</span>
                     </p>
 
                     <p class="font-mono text-[10px] uppercase tracking-widest text-archival-ink/60">
@@ -126,8 +125,8 @@
                     </p>
 
                     <div class="flex flex-wrap items-center gap-4 pt-2">
-                        <a href="https://calendar.app.google/SdugNFkjtJqB4bpq8" class="bg-panel text-white px-8 lg:px-10 py-5 font-mono text-xs tracking-widest uppercase hover:bg-brand-green hover:text-black transition-all">
-                            [ BOOK_A_30-MINUTE_CALL ]
+                        <a href="https://calendar.app.google/UsAZMk2CMLC5gCXP7" class="axl-btn-green px-8 lg:px-10 py-5 font-mono text-xs tracking-widest uppercase transition-all">
+                            [ BOOK_A_MEETING ]
                         </a>
                         <span class="font-mono text-[10px] uppercase tracking-widest text-archival-ink/60">Bring a problem. You'll get our honest read on it, whether or not we work together.</span>
                     </div>
@@ -136,8 +135,158 @@
 
         </section>
 
-        <!-- CLIENTS — directly under the hero -->
-        <section class="axl-roster border-b border-archival-ink px-8 lg:px-16 py-6 bg-surface/40">
+        <!-- 01 // OPEN FILES — three concrete problems, each with a door -->
+        <section id="proof" class="border-b border-archival-ink">
+            <div class="px-8 py-6 border-b border-archival-ink bg-surface/30">
+                <div class="flex flex-wrap items-center gap-4 mb-2">
+                    <span class="font-mono text-[9px] text-white bg-panel px-2 py-1 uppercase">§ 01.00 // OPEN FILES</span>
+                    <h2 class="text-2xl lg:text-3xl font-black uppercase tracking-tighter leading-none">Three problems we are working on right now.</h2>
+                </div>
+                <p class="text-sm leading-snug text-archival-ink/70 max-w-2xl">Each file becomes a measurement, then a mechanism, and, when it earns it, a company.</p>
+            </div>
+            <div class="axl-files">
+                <a href="papers/axl-wp-02.html" class="p-8 block hover:bg-brand-green hover:text-black transition-all group">
+                    <span class="axl-card-img"><img src="assets/img/file-02-merge.jpg" alt="Pedestrians crossing a striped road, overlaid with text messages" loading="lazy" onerror="this.parentNode.remove()"></span>
+                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 group-hover:text-black/60 uppercase">FILE_01 // THE MERGE</div>
+                    <h3 class="text-lg font-black uppercase tracking-tighter leading-tight mb-3">A $40,000 measurement, sitting on top of billions.</h3>
+                    <p class="text-sm leading-snug text-archival-ink/80 group-hover:text-black/80">The zipper merge fails for one unmeasured behavioral reason. Measuring it unlocks a bracketed $1.2B–$8.3B in annually recoverable loss. Nobody has measured it.</p>
+                    <span class="font-mono text-[10px] uppercase tracking-widest font-bold block mt-4">READ_AXL-WP-02 -&gt;</span>
+                </a>
+                <a href="papers/axl-wp-09.html" class="p-8 block hover:bg-brand-green hover:text-black transition-all group">
+                    <span class="axl-card-img axl-card-img--plate">
+                        <span class="axl-car-ph" aria-hidden="true"><i>Published</i><b>AXL<br>WP-09</b></span>
+                        <!-- IMAGE SLOT — square 1:1 at assets/img/file-02-crucible.jpg replaces the plate. See assets/img/IMAGE-SLOTS.md. -->
+                        <img src="assets/img/file-02-crucible.jpg" alt="" loading="lazy" onerror="this.remove()">
+                    </span>
+                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 group-hover:text-black/60 uppercase">FILE_02 // THE FUNDERS</div>
+                    <h3 class="text-lg font-black uppercase tracking-tighter leading-tight mb-3">Anyone can write a convincing proposal now.</h3>
+                    <p class="text-sm leading-snug text-archival-ink/80 group-hover:text-black/80">AI made polished grant proposals free, and peer review couldn't tell good from great even before that. We designed a system that pays experts to attack proposals, so funders can finally measure whether their picks were right.</p>
+                    <span class="font-mono text-[10px] uppercase tracking-widest font-bold block mt-4">READ_AXL-WP-09 -&gt;</span>
+                </a>
+                <a href="papers/axl-wp-07.html" class="p-8 block hover:bg-brand-green hover:text-black transition-all group">
+                    <span class="axl-card-img"><img src="assets/img/file-01-courts.jpg" alt="Lady Justice statue, green duotone" loading="lazy" onerror="this.parentNode.remove()"></span>
+                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 group-hover:text-black/60 uppercase">FILE_03 // THE COURTS</div>
+                    <h3 class="text-lg font-black uppercase tracking-tighter leading-tight mb-3">AI-written filings are flooding the courts.</h3>
+                    <p class="text-sm leading-snug text-archival-ink/80 group-hover:text-black/80">Courts grade themselves on how fast they clear cases, so the flood doesn't show up in their numbers. We built the measurement that catches what clearance rates miss.</p>
+                    <span class="font-mono text-[10px] uppercase tracking-widest font-bold block mt-4">READ_AXL-WP-07 -&gt;</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 02 // THE FIELD — the teaser -->
+        <section class="p-8 lg:p-16 border-b border-archival-ink">
+            <div class="max-w-3xl">
+                <div class="font-mono text-[9px] mb-6 text-white bg-panel inline-block px-2 py-1 uppercase">§ 02.00 // THE FIELD</div>
+                <h2 class="text-3xl lg:text-4xl font-black uppercase tracking-tighter leading-none mb-6">Behavioral infrastructure.</h2>
+                <p class="text-base lg:text-lg leading-relaxed text-archival-ink/80 mb-6">
+                    Roads and power grids are infrastructure everyone can see. Trust, legitimacy and the sense that honesty pays are infrastructure too, and almost nobody maintains them. That is the field we work in: we measure where that layer is failing, then build the rules, defaults and incentives that repair it.
+                </p>
+                <p class="font-mono text-[10px] uppercase tracking-widest"><a href="field.html" class="underline hover:text-brand-green">What the field is, and where it comes from: The Field -&gt;</a></p>
+            </div>
+        </section>
+
+        <!-- 03 // THE DIAGNOSIS — chart and Sutherland sit with it -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-archival-ink">
+            <div class="lg:col-span-7 p-8 lg:p-16 lg:border-r border-archival-ink">
+                <div class="max-w-3xl">
+                <div class="font-mono text-[9px] mb-6 text-white bg-panel inline-block px-2 py-1 uppercase">§ 03.00 // THE DIAGNOSIS</div>
+                <p class="text-lg lg:text-xl font-light leading-snug mb-4">
+                    Most people privately stopped believing the official story years ago. Each assumes everyone else still believes, so everyone keeps performing.
+                </p>
+                <p class="text-base leading-relaxed text-archival-ink/80">
+                    You cannot message your way out of that. Mechanisms can: rules, defaults, and incentives that make the honest move the easy move. We build them. <a href="research.html" class="underline hover:text-brand-green">The full argument is in the research.</a>
+                </p>
+            </div>
+                <div class="max-w-3xl border-t border-archival-ink" style="margin-top:2.5rem;padding-top:2rem">
+                <p class="axl-pull mb-4">
+                    &ldquo;The next revolution will be psychological, not technological.&rdquo;
+                </p>
+                <p class="font-mono text-[10px] uppercase tracking-widest text-archival-ink/60 mb-2">
+                    — RORY SUTHERLAND, VICE CHAIRMAN, OGILVY UK · TEDxAMSTERDAM, 2012
+                </p>
+                <p class="font-mono text-[11px] uppercase tracking-widest font-bold text-archival-ink">
+                    AUX LABS IS OUR ANSWER.
+                </p>
+            </div>
+            </div>
+            <!-- FIG.01 — five verified trust series (Pew / Gallup / GSS) + 2023 loneliness marker -->
+            <div id="trust" class="lg:col-span-5 relative bg-panel overflow-hidden  p-6 lg:p-8 flex flex-col justify-between">
+                <div class="font-mono text-[9px] text-brand-green tracking-widest uppercase mb-4 flex items-center justify-between gap-3"><span>FIG. 01 // HOW MUCH AMERICANS TRUST, 1958–2026</span></div>
+                <svg viewBox="0 0 580 400" role="img" class="w-full h-auto"
+                     aria-label="Five line series on a zero-to-one-hundred percent scale, 1958 to 2026: American trust in the federal government falls from 77 percent to 17, trust in mass media from 72 percent to 28, trust in each other from 46 percent to 34, confidence in big business from a 34 percent peak to 17, and belief in advertisers' honesty holds near the floor, 11 to 10 percent. A marker at 2023 notes the Surgeon General declaring an epidemic of loneliness.">
+                    <g stroke="rgba(255,255,255,0.18)" stroke-width="1">
+                        <line x1="40" y1="36" x2="470" y2="36"/><line x1="40" y1="100" x2="470" y2="100"/>
+                        <line x1="40" y1="164" x2="470" y2="164"/><line x1="40" y1="228" x2="470" y2="228"/>
+                        <line x1="40" y1="292" x2="470" y2="292"/><line x1="40" y1="356" x2="470" y2="356"/>
+                    </g>
+                    <g font-family="'JetBrains Mono',monospace" font-size="13" fill="rgba(255,255,255,0.8)">
+                        <text x="34" y="40" text-anchor="end">100%</text><text x="34" y="104" text-anchor="end">80%</text>
+                        <text x="34" y="168" text-anchor="end">60%</text><text x="34" y="232" text-anchor="end">40%</text>
+                        <text x="34" y="296" text-anchor="end">20%</text><text x="34" y="360" text-anchor="end">0%</text>
+                        <text x="40" y="378">1958</text><text x="240" y="378" text-anchor="middle">SURVEY YEAR</text>
+                        <text x="470" y="378" text-anchor="end">2026</text>
+                    </g>
+                    <text x="8" y="16" font-family="'JetBrains Mono',monospace" font-size="12" fill="rgba(255,255,255,0.7)" letter-spacing="1">% OF U.S. ADULTS WHO TRUST</text>
+                    <!-- 2023: Surgeon General declares an epidemic of loneliness -->
+                    <line x1="451" y1="36" x2="451" y2="356" stroke="rgba(255,255,255,0.22)" stroke-width="1" stroke-dasharray="2 4"/>
+                    <text x="446" y="60" font-family="'JetBrains Mono',monospace" font-size="11" fill="rgba(255,255,255,0.75)" text-anchor="end">2023 · LONELINESS</text>
+                    <text x="446" y="71" font-family="'JetBrains Mono',monospace" font-size="11" fill="rgba(255,255,255,0.75)" text-anchor="end">DECLARED AN EPIDEMIC</text>
+                    <!-- GOVT (Pew) -->
+                    <polyline points="40,122.4 77.9,109.6 179.1,276 274,285.6 318.2,180 400.4,311.2 470,301.6"
+                              fill="none" stroke="#00FF41" stroke-width="3.5" stroke-linejoin="round"/>
+                    <!-- PRESS (Gallup) -->
+                    <polyline points="128.5,138.4 153.8,125.6 292.9,186.4 337.2,215.2 413.1,253.6 438.4,228 463.7,256.8 470,266.4"
+                              fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="1 4" stroke-linecap="round"/>
+                    <!-- EACH OTHER (GSS) -->
+                    <polyline points="128.5,208.8 425.7,247.2 470,247.2"
+                              fill="none" stroke="#FFB000" stroke-width="3" stroke-dasharray="6 4"/>
+                    <!-- BIG BUSINESS (Gallup) -->
+                    <polyline points="134.9,272.8 147.5,247.2 457.4,304.8 470,301.6"
+                              fill="none" stroke="#4DA6FF" stroke-width="3" stroke-dasharray="9 3"/>
+                    <!-- ADVERTISING (Gallup honesty/ethics) — never left the floor -->
+                    <polyline points="153.8,320.8 463.7,324"
+                              fill="none" stroke="#9BA19B" stroke-width="3" stroke-dasharray="3 3"/>
+                    <!-- endpoint markers -->
+                    <circle cx="470" cy="266.4" r="3.5" fill="rgba(255,255,255,0.85)"/>
+                    <circle cx="470" cy="247.2" r="3.5" fill="#FFB000"/>
+                    <circle cx="463.7" cy="324" r="3.5" fill="#9BA19B"/>
+                    <circle cx="470" cy="301.6" r="4.5" fill="#00FF41"/>
+                    <circle cx="470" cy="301.6" r="2" fill="#4DA6FF"/>
+                    <g font-family="'JetBrains Mono',monospace" font-size="12" font-weight="bold">
+                        <text x="478" y="250" fill="#FFB000">US 34%</text>
+                        <text x="478" y="270" fill="#FFFFFF">PRESS 28%</text>
+                        <text x="478" y="298" fill="#00FF41">GOVT 17%</text>
+                        <text x="478" y="312" fill="#4DA6FF">BIZ 17%</text>
+                        <text x="478" y="332" fill="#9BA19B">ADS 10%</text>
+                    </g>
+                    <!-- peak callouts: each sits in clear space beside its point, so no line runs through the type -->
+                    <g font-family="'JetBrains Mono',monospace" font-size="12" font-weight="bold" fill="#FFFFFF">
+                        <text x="86" y="96" fill="#00FF41">77% · 1964</text>
+                        <text x="164" y="114">72% · 1976</text>
+                        <text x="120" y="214" text-anchor="end" fill="#FFB000">46% · 1972</text>
+                        <text x="126" y="284" text-anchor="end" fill="#4DA6FF">26% · 1973</text>
+                        <text x="160" y="344" fill="#9BA19B">11% · 1976</text>
+                    </g>
+                </svg>
+                <div class="mt-6 space-y-4">
+                    <p class="text-sm leading-relaxed text-white/90">Share of U.S. adults who say they trust:</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-white/90">
+                        <li class="flex items-center gap-3"><span style="display:inline-block;width:1.5rem;height:4px;background:#00FF41"></span>The federal government (Pew)</li>
+                        <li class="flex items-center gap-3"><span style="display:inline-block;width:1.5rem;height:4px;background:#FFFFFF"></span>The press (Gallup)</li>
+                        <li class="flex items-center gap-3"><span style="display:inline-block;width:1.5rem;height:4px;background:#FFB000"></span>Each other (GSS)</li>
+                        <li class="flex items-center gap-3"><span style="display:inline-block;width:1.5rem;height:4px;background:#4DA6FF"></span>Big business (Gallup)</li>
+                        <li class="flex items-center gap-3"><span style="display:inline-block;width:1.5rem;height:4px;background:#9BA19B"></span>Advertisers' honesty (Gallup)</li>
+                    </ul>
+                    <p class="font-mono text-[9px] uppercase tracking-widest text-white/70 leading-relaxed">
+                        SOURCES: <a href="https://www.pewresearch.org/politics/2025/12/04/public-trust-in-government-1958-2025/" class="text-brand-green underline hover:text-white transition-colors">PEW</a> · <a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (MEDIA)</a> · <a href="https://www.pewresearch.org/2025/05/08/americans-trust-in-one-another/" class="text-brand-green underline hover:text-white transition-colors">GSS VIA PEW</a> · <a href="https://news.gallup.com/poll/270296/americans-dislike-big-business.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (BUSINESS)</a> · <a href="https://news.gallup.com/poll/1654/honesty-ethics-professions.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (ADVERTISING)</a> · <a href="https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf" class="text-brand-green underline hover:text-white transition-colors">SURGEON GENERAL (2023)</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 // PAST CLIENTS -->
+        <section id="clients" class="axl-roster border-b border-archival-ink px-8 lg:px-16 py-10 bg-surface/40">
+            <div class="font-mono text-[9px] mb-6 text-white bg-panel inline-block px-2 py-1 uppercase">§ 04.00 // WHO WE'VE WORKED WITH</div>
             <div class="axl-roster-row">
                 <span class="axl-roster-k">VICE + VIRTUE · 2013–2020</span>
                 <span class="axl-roster-i">Johnnie Walker</span>
@@ -156,6 +305,9 @@
                 <span class="axl-roster-i">Popsicle</span>
                 <span class="axl-roster-i">Dove Men+Care</span>
                 <span class="axl-roster-i">Suave</span>
+                <span class="axl-roster-i">Estrella Jalisco</span>
+                <span class="axl-roster-i">Indeed</span>
+                <span class="axl-roster-i">Sydell Group</span>
                 <span class="axl-roster-i">VICE on HBO</span>
                 <span class="axl-roster-i">VICE News</span>
                 <span class="axl-roster-i">VICELAND</span>
@@ -167,158 +319,56 @@
                 <span class="axl-roster-i">Center for Humane Technology</span>
                 <span class="axl-roster-i">Lincoln Financial</span>
                 <span class="axl-roster-i">Public Housing Authority of Albany, GA</span>
+                <span class="axl-roster-i">Georgia Association of Housing and Redevelopment Authorities</span>
                 <span class="axl-roster-i">Science Gallery Dublin</span>
                 <span class="axl-roster-i">AdHoc FM / AdHoc Projects</span>
+                <span class="axl-roster-i">Alterea</span>
                 <span class="axl-roster-i">Audiofemme</span>
                 <span class="axl-roster-i">GrooveGrade</span>
                 <span class="axl-roster-i">Texas Eclipse Festival (PR)</span>
+                <span class="axl-roster-i">Listen</span>
+                <span class="axl-roster-i">Viva Creative</span>
+                <span class="axl-roster-i">MadeInNetwork</span>
+                <span class="axl-roster-i">UgoRound</span>
             </div>
             <div class="axl-roster-note text-[9px] font-mono uppercase tracking-widest text-archival-ink/50">
-                Clients of our principal. VICE and VIRTUE Worldwide work is agency work, credited as such. <a href="commercial.html#roster" class="underline hover:text-brand-green">Full roster -&gt;</a>
+                Clients of our principal. VICE and VIRTUE Worldwide work is agency work, credited as such.
             </div>
         </section>
 
-        <!-- 01 // OPEN FILES — three concrete problems, each with a door -->
-        <section id="proof" class="border-b border-archival-ink">
-            <div class="px-8 py-6 border-b border-archival-ink bg-surface/30">
-                <div class="flex flex-wrap items-center gap-4 mb-2">
-                    <span class="font-mono text-[9px] text-white bg-panel px-2 py-1 uppercase">§ 01.00 // OPEN FILES</span>
-                    <h2 class="text-2xl lg:text-3xl font-black uppercase tracking-tighter leading-none">Three problems we are working on right now.</h2>
-                </div>
-                <p class="text-sm leading-snug text-archival-ink/70 max-w-2xl">Each file becomes a measurement, then a mechanism, and, when it earns it, a company.</p>
+        <!-- 05 // DOORS — who shows up here -->
+        <section class="border-b border-archival-ink">
+            <div class="px-8 py-4 border-b border-archival-ink bg-surface/30 font-mono text-[10px] font-bold tracking-widest uppercase">
+                § 05.00 // Pick your door.
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3">
-                <a href="papers/axl-wp-07.html" class="p-8 md:border-r border-b md:border-b-0 border-archival-ink block hover:bg-brand-green hover:text-black transition-all group">
-                    <span class="axl-card-img"><img src="assets/img/file-01-courts.jpg" alt="Lady Justice statue, green duotone" loading="lazy" onerror="this.parentNode.remove()"></span>
-                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 group-hover:text-black/60 uppercase">FILE_01 // THE COURTS</div>
-                    <h3 class="text-lg font-black uppercase tracking-tighter leading-tight mb-3">AI-written filings are flooding the courts.</h3>
-                    <p class="text-sm leading-snug text-archival-ink/80 group-hover:text-black/80">Courts grade themselves on how fast they clear cases, so the flood doesn't show up in their numbers. We built the measurement that catches what clearance rates miss.</p>
-                    <span class="font-mono text-[10px] uppercase tracking-widest font-bold block mt-4">READ_AXL-WP-07 -&gt;</span>
+                <a href="commercial.html" class="p-8 md:border-r border-b md:border-b-0 border-archival-ink font-mono text-xs uppercase tracking-wider hover:bg-brand-green hover:text-black transition-all">
+                    You run a system or a brand -&gt; <span class="font-black">01_COMMERCIAL</span>
                 </a>
-                <a href="papers/axl-wp-02.html" class="p-8 md:border-r border-b md:border-b-0 border-archival-ink block hover:bg-brand-green hover:text-black transition-all group">
-                    <span class="axl-card-img"><img src="assets/img/file-02-merge.jpg" alt="Pedestrians crossing a striped road, overlaid with text messages" loading="lazy" onerror="this.parentNode.remove()"></span>
-                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 group-hover:text-black/60 uppercase">FILE_02 // THE MERGE</div>
-                    <h3 class="text-lg font-black uppercase tracking-tighter leading-tight mb-3">A $40,000 measurement, sitting on top of billions.</h3>
-                    <p class="text-sm leading-snug text-archival-ink/80 group-hover:text-black/80">The zipper merge fails for one unmeasured behavioral reason. Measuring it unlocks a bracketed $1.2B–$8.3B in annually recoverable loss. Nobody has measured it.</p>
-                    <span class="font-mono text-[10px] uppercase tracking-widest font-bold block mt-4">READ_AXL-WP-02 -&gt;</span>
+                <a href="research.html" class="p-8 md:border-r border-b md:border-b-0 border-archival-ink font-mono text-xs uppercase tracking-wider hover:bg-brand-green hover:text-black transition-all">
+                    You fund or evaluate research -&gt; <span class="font-black">02_RESEARCH</span>
                 </a>
-                <a href="plain/a-room-built-in-the-hallway.html" class="p-8 border-b md:border-b-0 border-archival-ink block hover:bg-brand-green hover:text-black transition-all group">
-                    <span class="axl-card-img"><img src="assets/img/file-03-brands.jpg" alt="Tire treads and a plated dish, green duotone" loading="lazy" onerror="this.parentNode.remove()"></span>
-                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 group-hover:text-black/60 uppercase">FILE_03 // THE BRANDS</div>
-                    <h3 class="text-lg font-black uppercase tracking-tighter leading-tight mb-3">Marketing money that leaves something behind.</h3>
-                    <p class="text-sm leading-snug text-archival-ink/80 group-hover:text-black/80">Michelin's own interest put a food-program vehicle on the road, and it outlived the campaign that paid for it. We design brand spend to do that on purpose.</p>
-                    <span class="font-mono text-[10px] uppercase tracking-widest font-bold block mt-4">READ_A_ROOM_BUILT_IN_THE_HALLWAY -&gt;</span>
+                <a href="why-us.html" class="p-8 font-mono text-xs uppercase tracking-wider hover:bg-brand-green hover:text-black transition-all">
+                    Why us, and not a research agency -&gt; <span class="font-black">03_WHY_US</span>
                 </a>
             </div>
         </section>
 
-        <!-- CREDIBILITY — one line; the name opens the Record -->
-        <section class="border-b border-archival-ink px-8 lg:px-16 py-5 bg-panel text-white">
-            <p class="font-mono text-[10px] uppercase tracking-widest leading-relaxed text-white/80">
-                <span class="text-brand-green">PRINCIPAL:</span> <a href="record.html" class="underline text-white hover:text-brand-green">Imran Hafiz</a> · Seven years at VICE and VIRTUE, 2013 to 2020 · Youngest recipient of the City of Phoenix's MLK Living the Dream award
+        <section class="p-8 lg:p-20 cta-final flex flex-col items-center text-center">
+            <div class="font-mono text-[9px] mb-8 border border-current inline-block px-2 py-1 uppercase opacity-70">§ 06.00 // ONE ASK</div>
+            <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter leading-none mb-8">
+                Bring us the problem.
+            </h2>
+            <p class="axl-cta-body">
+                Bring us a system you run: a queue, a policy, a schedule, a brand, a public you need to reach. Whether it's struggling or already working, we'll show you where it's losing trust and value, and what a better mechanism could do. If we're not the right fit, we'll say so in the meeting.
             </p>
+            <a href="https://calendar.app.google/UsAZMk2CMLC5gCXP7" class="cta-btn px-8 lg:px-12 py-6 font-mono text-sm tracking-[0.2em] uppercase transition-all">
+                [ BOOK_A_MEETING ]
+            </a>
         </section>
-
-        <!-- 02 // THE DIAGNOSIS — after the proof; chart and Sutherland sit with it -->
-        <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-archival-ink">
-            <div class="lg:col-span-7 p-8 lg:p-16 lg:border-r border-archival-ink">
-                <div class="max-w-3xl">
-                <div class="font-mono text-[9px] mb-6 text-white bg-panel inline-block px-2 py-1 uppercase">§ 02.00 // THE DIAGNOSIS</div>
-                <p class="text-lg lg:text-xl font-light leading-snug mb-4">
-                    Most people privately stopped believing the official story years ago. Each assumes everyone else still believes, so everyone keeps performing.
-                </p>
-                <p class="text-base leading-relaxed text-archival-ink/80">
-                    You cannot message your way out of that. Mechanisms can: rules, defaults, and incentives that make the honest move the easy move. We build them. <a href="research.html" class="underline hover:text-brand-green">The full argument is in the research.</a>
-                </p>
-            </div>
-                <div class="max-w-3xl border-t border-archival-ink" style="margin-top:2.5rem;padding-top:2rem">
-                <p class="text-lg lg:text-xl font-light italic leading-snug mb-4">
-                    "The next revolution will be psychological, not technological."
-                </p>
-                <p class="font-mono text-[10px] uppercase tracking-widest text-archival-ink/60 mb-2">
-                    — RORY SUTHERLAND, VICE CHAIRMAN, OGILVY UK · TEDxAMSTERDAM, 2012
-                </p>
-                <p class="font-mono text-[11px] uppercase tracking-widest font-bold text-archival-ink">
-                    AUX LABS IS OUR ANSWER.
-                </p>
-            </div>
-            </div>
-            <!-- FIG.01 — five verified trust series (Pew / Gallup / GSS) + 2023 loneliness marker -->
-            <div class="lg:col-span-5 relative bg-panel overflow-hidden  p-6 lg:p-8 flex flex-col justify-between">
-                <div class="font-mono text-[9px] text-brand-green tracking-widest uppercase mb-4 flex items-center justify-between gap-3"><span>FIG. 01 // THE PRETEND ERA, MEASURED</span><span class="axl-q" style="font-size:12px;color:rgba(255,255,255,.6);letter-spacing:0">EVIDENCE</span></div>
-                <svg viewBox="0 0 560 400" role="img" class="w-full h-auto"
-                     aria-label="Five line series on a zero-to-one-hundred percent scale, 1958 to 2026: American trust in the federal government falls from 77 percent to 17, trust in mass media from 72 percent to 28, trust in each other from 46 percent to 34, confidence in big business from a 34 percent peak to 17, and belief in advertisers' honesty holds near the floor, 11 to 10 percent. A marker at 2023 notes the Surgeon General declaring an epidemic of loneliness.">
-                    <g stroke="rgba(255,255,255,0.10)" stroke-width="1">
-                        <line x1="40" y1="36" x2="470" y2="36"/><line x1="40" y1="100" x2="470" y2="100"/>
-                        <line x1="40" y1="164" x2="470" y2="164"/><line x1="40" y1="228" x2="470" y2="228"/>
-                        <line x1="40" y1="292" x2="470" y2="292"/><line x1="40" y1="356" x2="470" y2="356"/>
-                    </g>
-                    <g font-family="'JetBrains Mono',monospace" font-size="11" fill="rgba(255,255,255,0.55)">
-                        <text x="34" y="40" text-anchor="end">100%</text><text x="34" y="104" text-anchor="end">80%</text>
-                        <text x="34" y="168" text-anchor="end">60%</text><text x="34" y="232" text-anchor="end">40%</text>
-                        <text x="34" y="296" text-anchor="end">20%</text><text x="34" y="360" text-anchor="end">0%</text>
-                        <text x="40" y="378">1958</text><text x="240" y="378" text-anchor="middle">SURVEY YEAR</text>
-                        <text x="470" y="378" text-anchor="end">2026</text>
-                    </g>
-                    <text x="14" y="196" font-family="'JetBrains Mono',monospace" font-size="9" fill="rgba(255,255,255,0.45)" transform="rotate(-90 14 196)" text-anchor="middle">% OF U.S. ADULTS WHO TRUST</text>
-                    <!-- 2023: Surgeon General declares an epidemic of loneliness -->
-                    <line x1="451" y1="36" x2="451" y2="356" stroke="rgba(255,255,255,0.22)" stroke-width="1" stroke-dasharray="2 4"/>
-                    <text x="446" y="60" font-family="'JetBrains Mono',monospace" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="end">2023 · LONELINESS</text>
-                    <text x="446" y="71" font-family="'JetBrains Mono',monospace" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="end">DECLARED AN EPIDEMIC</text>
-                    <!-- GOVT (Pew) -->
-                    <polyline points="40,122.4 77.9,109.6 179.1,276 274,285.6 318.2,180 400.4,311.2 470,301.6"
-                              fill="none" stroke="#00FF41" stroke-width="2.5" stroke-linejoin="round"/>
-                    <!-- PRESS (Gallup) -->
-                    <polyline points="128.5,138.4 153.8,125.6 292.9,186.4 337.2,215.2 413.1,253.6 438.4,228 463.7,256.8 470,266.4"
-                              fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-dasharray="1 3" stroke-linecap="round"/>
-                    <!-- EACH OTHER (GSS) -->
-                    <polyline points="128.5,208.8 425.7,247.2 470,247.2"
-                              fill="none" stroke="#FFB000" stroke-width="2" stroke-dasharray="6 4"/>
-                    <!-- BIG BUSINESS (Gallup) -->
-                    <polyline points="134.9,272.8 147.5,247.2 457.4,304.8 470,301.6"
-                              fill="none" stroke="#4DA6FF" stroke-width="2" stroke-dasharray="9 3"/>
-                    <!-- ADVERTISING (Gallup honesty/ethics) — never left the floor -->
-                    <polyline points="153.8,320.8 463.7,324"
-                              fill="none" stroke="#9BA19B" stroke-width="2" stroke-dasharray="3 3"/>
-                    <!-- endpoint markers -->
-                    <circle cx="470" cy="266.4" r="3.5" fill="rgba(255,255,255,0.85)"/>
-                    <circle cx="470" cy="247.2" r="3.5" fill="#FFB000"/>
-                    <circle cx="463.7" cy="324" r="3.5" fill="#9BA19B"/>
-                    <circle cx="470" cy="301.6" r="4.5" fill="#00FF41"/>
-                    <circle cx="470" cy="301.6" r="2" fill="#4DA6FF"/>
-                    <g font-family="'JetBrains Mono',monospace" font-size="10" font-weight="bold">
-                        <text x="478" y="250" fill="#FFB000">US 34%</text>
-                        <text x="478" y="270" fill="rgba(255,255,255,0.85)">PRESS 28%</text>
-                        <text x="478" y="298" fill="#00FF41">GOVT 17%</text>
-                        <text x="478" y="312" fill="#4DA6FF">BIZ 17%</text>
-                        <text x="478" y="332" fill="#9BA19B">ADS 10%</text>
-                    </g>
-                    <g font-family="'JetBrains Mono',monospace" font-size="10" fill="rgba(255,255,255,0.6)">
-                        <text x="86" y="104">77% · 1964</text>
-                        <text x="162" y="120">72% · 1976</text>
-                        <text x="136" y="202">46% · 1972</text>
-                        <text x="60" y="266" fill="#4DA6FF" fill-opacity="0.85">26% · 1973</text>
-                        <text x="120" y="342" fill="#9BA19B" fill-opacity="0.9">11% · 1976</text>
-                    </g>
-                </svg>
-                <div class="mt-4 space-y-2">
-                    <p class="font-mono text-[9px] uppercase tracking-widest text-white/60 leading-relaxed">
-                        Y: % OF U.S. ADULTS. X: SURVEY YEAR, 1958–2026. SELECTED VERIFIED READINGS.
-                        <span class="text-brand-green">GOVT</span> = TRUST WASHINGTON TO DO WHAT IS RIGHT "JUST ABOUT ALWAYS / MOST OF THE TIME" (PEW) ·
-                        <span class="text-white">PRESS</span> = "GREAT DEAL / FAIR AMOUNT" OF TRUST IN MASS MEDIA (GALLUP) ·
-                        <span style="color:#FFB000">US</span> = AGREE "MOST PEOPLE CAN BE TRUSTED" (GSS) ·
-                        <span style="color:#4DA6FF">BIZ</span> = "GREAT DEAL / QUITE A LOT" OF CONFIDENCE IN BIG BUSINESS (GALLUP) ·
-                        <span style="color:#9BA19B">ADS</span> = RATE ADVERTISING PRACTITIONERS' HONESTY "HIGH / VERY HIGH" (GALLUP).
-                    </p>
-                    <p class="font-mono text-[9px] uppercase tracking-widest text-white/60 leading-relaxed">
-                        SOURCES: <a href="https://www.pewresearch.org/politics/2025/12/04/public-trust-in-government-1958-2025/" class="text-brand-green underline hover:text-white transition-colors">PEW (GOVERNMENT)</a> · <a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (MEDIA)</a> · <a href="https://www.pewresearch.org/2025/05/08/americans-trust-in-one-another/" class="text-brand-green underline hover:text-white transition-colors">GSS VIA PEW (EACH OTHER)</a> · <a href="https://news.gallup.com/poll/270296/americans-dislike-big-business.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (BIG BUSINESS)</a> · <a href="https://news.gallup.com/poll/1654/honesty-ethics-professions.aspx" class="text-brand-green underline hover:text-white transition-colors">GALLUP (ADVERTISING)</a> · <a href="https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf" class="text-brand-green underline hover:text-white transition-colors">U.S. SURGEON GENERAL (LONELINESS, 2023)</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="p-8 lg:p-14 border-b border-archival-ink bg-panel text-white">
-            <div class="font-mono text-[9px] mb-8 text-brand-green border border-brand-green inline-block px-2 py-1 uppercase">§ 03.00 // PRINCIPAL</div>
+       
+        <section class="p-8 lg:p-14 border-t border-b border-archival-ink bg-panel text-white">
+            <div class="font-mono text-[9px] mb-8 text-brand-green border border-brand-green inline-block px-2 py-1 uppercase">§ 07.00 // PRINCIPAL</div>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                 <div class="lg:col-span-3 axl-principal">
                     <!-- PHOTO SLOT — drop a portrait at assets/img/principal.jpg and it replaces the plate below. -->
@@ -340,71 +390,34 @@
                 </div>
                 <div class="lg:col-span-9 space-y-6 max-w-3xl">
                     <p class="text-sm lg:text-base leading-relaxed text-white/80">
-                        At fifteen, Imran Hafiz co-wrote <em>The American Muslim Teenager's Handbook</em> with his mother and sister, the first book written by and for American Muslim youth, after 9/11 made him a target at school. In 2008 he became the youngest recipient of the City of Phoenix's MLK Living the Dream award, presented by the governor.
+                        Imran Hafiz spent seven years making culture for brands, and making it do something. At VIRTUE Worldwide, VICE's creative agency, he concepted and produced the Michelin program that put a new food van on the road for the Grand Central Food Program, briefed and starred in Natural Light's $1 million college debt relief campaign, and launched Lululemon's first men's line with the story of Ibn Ali Miller. He finished as publisher of VIRTUE Intelligence.
                     </p>
                     <p class="text-sm lg:text-base leading-relaxed text-white/80">
-                        Duke, public policy. Then seven years at VICE and VIRTUE, 2013 to 2020, from the team that sent Dennis Rodman to North Korea to Publisher of VIRTUE Intelligence. In March 2020 he left to start The Auxiliary as a civic response to the pandemic: COVID misinformation hackathons, public-health work with public housing in Georgia, and the peer-reviewed Jin-Hafiz Disinformation Index.
+                        Then he did the research. In 2020 he started The Auxiliary as a civic response to the pandemic: COVID misinformation hackathons, public-health work with public housing in Georgia, and the peer-reviewed Jin-Hafiz Disinformation Index.
+                    </p>
+                    <p class="text-sm lg:text-base leading-relaxed text-white/80">
+                        It started earlier. At fifteen, after 9/11 made him a target at school, he co-wrote <em>The American Muslim Teenager's Handbook</em> with his mother and sister, the first book by and for American Muslim youth. He studied public policy at Duke.
+                    </p>
+                    <p class="text-base lg:text-lg font-bold leading-relaxed text-white">
+                        Aux Labs puts both halves under one roof, so the people who find the answer are the people who make it land.
                     </p>
                     <p class="font-mono text-[10px] uppercase tracking-widest"><a href="record.html" class="underline text-brand-green hover:text-white">Everything, dated and sourced: the full record -&gt;</a></p>
                 </div>
             </div>
         </section>
 
-        <!-- 04 // DOORS — who shows up here -->
-        <section class="border-b border-archival-ink">
-            <div class="px-8 py-4 border-b border-archival-ink bg-surface/30 font-mono text-[10px] font-bold tracking-widest uppercase">
-                § 04.00 // Pick your door.
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3">
-                <a href="commercial.html" class="p-8 md:border-r border-b md:border-b-0 border-archival-ink font-mono text-xs uppercase tracking-wider hover:bg-brand-green hover:text-black transition-all">
-                    You run a system or a brand -&gt; <span class="font-black">01_COMMERCIAL</span>
-                </a>
-                <a href="research.html" class="p-8 md:border-r border-b md:border-b-0 border-archival-ink font-mono text-xs uppercase tracking-wider hover:bg-brand-green hover:text-black transition-all">
-                    You fund or evaluate research -&gt; <span class="font-black">02_RESEARCH</span>
-                </a>
-                <a href="why-us.html" class="p-8 font-mono text-xs uppercase tracking-wider hover:bg-brand-green hover:text-black transition-all">
-                    Why us, and not a research agency -&gt; <span class="font-black">03_WHY_US</span>
-                </a>
-            </div>
-        </section>
-
-        <section class="p-8 lg:p-20 cta-final flex flex-col items-center text-center">
-            <div class="font-mono text-[9px] mb-8 border border-current inline-block px-2 py-1 uppercase opacity-70">§ 05.00 // ONE ASK</div>
-            <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter leading-none mb-8">
-                <span class="axl-q">Bring us the problem.</span>
-            </h2>
-            <p class="text-sm lg:text-base leading-relaxed max-w-2xl mb-12 opacity-80">
-                Thirty minutes. Bring the system that's bleeding: a queue, a policy, a schedule, a public that's stopped believing you. We'll tell you where the trust is leaking, what it's costing you, and whether a mechanism can fix it. If we can't help, we'll say so on the call.
-            </p>
-            <a href="https://calendar.app.google/SdugNFkjtJqB4bpq8" class="cta-btn px-8 lg:px-12 py-6 font-mono text-sm tracking-[0.2em] uppercase transition-all">
-                [ BOOK_A_30-MINUTE_CALL ]
-            </a>
-        </section>
-        <div class="axl-stripe" aria-hidden="true"></div>
         <footer class="p-8 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 bg-archival-paper">
             <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/40">
                 <p>© 2026 AUX LABS LLC // AUSTIN, TX // ALL RIGHTS RESERVED</p>
                 <p class="axl-co">c/o AUX LABS LLC · "AUSTIN, TEXAS" · 30.2672° N, 97.7431° W</p>
                 <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
                 <p>auxlabs.co // Signal @nawab.12 // <a href="firewall.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Firewall</a> // <a href="field.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Field</a> // <a href="provenance.html" class="underline text-archival-ink hover:text-brand-green transition-colors">AI Disclosure</a> // <a href="record.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Record</a> // <a href="terms.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Terms</a></p>
-                <p>Site design, neubrutalism system and image production: Samantha Byrd. Portrait: Lara Hafiz.</p>
+                <p>Site design, neubrutalism system and image production: <a href="http://samanthabyrd.com/" class="underline text-archival-ink hover:text-brand-green transition-colors" rel="noopener">Samantha Byrd</a>. Portrait: Lara Hafiz.</p>
             </div>
 
             <div class="flex flex-col items-start lg:items-end">
-                <div class="flex gap-4 mb-4">
-                    <div class="w-12 h-16 border border-archival-ink flex flex-col items-center justify-center font-mono text-[8px] text-archival-ink/40">
-                        <span>CERT</span>
-                        <div class="w-6 h-[1px] bg-archival-ink/20 my-1"></div>
-                        <span>042</span>
-                    </div>
-                    <div class="w-12 h-16 border border-archival-ink bg-panel text-brand-green flex flex-col items-center justify-center font-mono text-[8px]">
-                        <span>AUX</span>
-                        <div class="w-6 h-[1px] bg-brand-green/20 my-1"></div>
-                        <span>R&amp;D</span>
-                    </div>
-                </div>
                 <div class="text-left lg:text-right">
-                    <h2 class="text-4xl font-black tracking-tighter uppercase leading-none mb-2">End of <br> Record.</h2>
+                    <h2 class="text-4xl font-black tracking-tighter uppercase leading-none mb-2">END_OF_RECORD.</h2>
                     <p class="font-mono text-[9px] text-brand-green bg-black px-2 py-0.5 inline-block uppercase">imran@auxlabs.co</p>
                 </div>
             </div>

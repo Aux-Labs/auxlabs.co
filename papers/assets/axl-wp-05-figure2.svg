@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-label="A clinical feedback loop. A patient who cannot tolerate reality meets a therapist trained to put the patient&#x27;s subjective experience first. Empathic attunement confirms the self-concept instead of introducing reality-testing, and the dysfunction is reinforced.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 02 // THE VALIDATION TRAP</text>
+<path d="M673.0 263.0 L777.0 367.0" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<path d="M777.0 513.0 L673.0 617.0" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<path d="M527.0 617.0 L423.0 513.0" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<path d="M423.0 367.00000000000006 L527.0 263.0" fill="none" stroke="#1A1A1A" stroke-width="3" marker-end="url(#a)"/>
+<rect x="446.0" y="137.0" width="320" height="118" fill="#1A1A1A"/>
+<rect x="440.0" y="131.0" width="320" height="118" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="458.0" y="165.0" class="n" text-anchor="start" fill="#1A1A1A">Patient</text>
+<text x="458.0" y="196.0" class="t" text-anchor="start" fill="#1A1A1A">Cannot yet tolerate an</text>
+<text x="458.0" y="221.0" class="t" text-anchor="start" fill="#1A1A1A">unwelcome reality</text>
+<rect x="696.0" y="387.0" width="320" height="118" fill="#1A1A1A"/>
+<rect x="690.0" y="381.0" width="320" height="118" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="708.0" y="415.0" class="n" text-anchor="start" fill="#1A1A1A">Therapist</text>
+<text x="708.0" y="446.0" class="t" text-anchor="start" fill="#1A1A1A">Trained to put subjective</text>
+<text x="708.0" y="471.0" class="t" text-anchor="start" fill="#1A1A1A">experience first</text>
+<rect x="446.0" y="637.0" width="320" height="118" fill="#1A1A1A"/>
+<rect x="440.0" y="631.0" width="320" height="118" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="458.0" y="665.0" class="n" text-anchor="start" fill="#1A1A1A">Attunement</text>
+<text x="458.0" y="696.0" class="t" text-anchor="start" fill="#1A1A1A">Confirms the self-concept</text>
+<rect x="196.0" y="387.00000000000006" width="320" height="118" fill="#1A1A1A"/>
+<rect x="190.0" y="381.00000000000006" width="320" height="118" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="208.0" y="415.00000000000006" class="n" text-anchor="start" fill="#1A1A1A">Reinforcement</text>
+<text x="208.0" y="446.00000000000006" class="t" text-anchor="start" fill="#1A1A1A">Reality-testing never arrives</text>
+<text x="600" y="820" class="t" text-anchor="middle" fill="#1A1A1A">The way out is calibration: validation delivered with enough safety that reality can be taken in (§5.3).</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Ostrom&#x27;s eight design principles for long-enduring commons. The paper documents violations of principles 1 to 4 at VICE; principles 5 to 8 are not assessed.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 02 // OSTROM&#x27;S EIGHT PRINCIPLES, APPLIED TO VICE</text>
+<rect x="56" y="106" width="700" height="116" fill="#1A1A1A"/>
+<rect x="50" y="100" width="700" height="116" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="128" class="s" fill="#1A1A1A">VIOLATED · DOCUMENTED</text>
+<text x="68" y="160" class="n" text-anchor="start" fill="#1A1A1A">1 · Clearly defined boundaries</text>
+<text x="68" y="191" class="t" text-anchor="start" fill="#1A1A1A">Freelancers and interns did commons work with none of its protections</text>
+<rect x="56" y="240" width="700" height="116" fill="#1A1A1A"/>
+<rect x="50" y="234" width="700" height="116" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="262" class="s" fill="#1A1A1A">VIOLATED · DOCUMENTED</text>
+<text x="68" y="294" class="n" text-anchor="start" fill="#1A1A1A">2 · Rules fit local conditions</text>
+<text x="68" y="325" class="t" text-anchor="start" fill="#1A1A1A">Zine-era rules never updated for ~3,000 staff and a $5.7B valuation</text>
+<rect x="56" y="374" width="700" height="116" fill="#1A1A1A"/>
+<rect x="50" y="368" width="700" height="116" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="396" class="s" fill="#1A1A1A">VIOLATED · DOCUMENTED</text>
+<text x="68" y="428" class="n" text-anchor="start" fill="#1A1A1A">3 · Collective-choice arrangements</text>
+<text x="68" y="459" class="t" text-anchor="start" fill="#1A1A1A">One founder made the rules; unions arrived in the capture phase</text>
+<rect x="56" y="508" width="700" height="116" fill="#1A1A1A"/>
+<rect x="50" y="502" width="700" height="116" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="530" class="s" fill="#1A1A1A">VIOLATED · DOCUMENTED</text>
+<text x="68" y="562" class="n" text-anchor="start" fill="#1A1A1A">4 · Monitors accountable to the community</text>
+<text x="68" y="593" class="t" text-anchor="start" fill="#1A1A1A">No internal monitor; a New York Times investigation surfaced it</text>
+<rect x="800" y="100" width="350" height="518" fill="#F2F1ED" stroke="#1A1A1A" stroke-width="3" stroke-dasharray="7 6"/>
+<text x="825" y="140" class="s" text-anchor="start" fill="#1A1A1A">NOT ASSESSED IN THIS PAPER</text>
+<text x="825" y="210" class="n" text-anchor="start" fill="#6B6B66">5 · Graduated sanctions</text>
+<text x="825" y="310" class="n" text-anchor="start" fill="#6B6B66">6 · Conflict resolution</text>
+<text x="825" y="410" class="n" text-anchor="start" fill="#6B6B66">7 · Right to organise</text>
+<text x="825" y="510" class="n" text-anchor="start" fill="#6B6B66">8 · Nested enterprises</text>
+<text x="50" y="670" class="t" text-anchor="start" fill="#1A1A1A">Four of eight principles fail on the public record, and each maps onto a failure mode in §IV.</text>
+</svg>

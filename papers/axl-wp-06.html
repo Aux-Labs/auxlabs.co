@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +17,12 @@
     <meta name="twitter:description" content="Following Sutherland&#x27;s proposition that the next revolution in human development is psychological rather than technological, the paper argues the conditions preventing that revolution are architecturally produced by the California self-esteem pipeline; that AI is simultaneously the most powerful acc">
     <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
-    <script>(function(){try{if(localStorage.getItem('axl-theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+    <script>(function(){try{if(localStorage.getItem('axl-theme')==='light'){document.documentElement.removeAttribute('data-theme');}}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/tailwind.css">
+    <link rel="stylesheet" href="../assets/site.css">
     <link rel="stylesheet" href="../assets/paper.css">
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
@@ -39,26 +40,34 @@
 
     <main id="main" class="relative">
         <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest flex justify-between uppercase">
-            <span>AXL-WP-06 · v1.0</span>
+            <span>AXL-WP-06 · v1.1</span>
             <span class="hidden sm:inline">STATUS: WORKING_PAPER</span>
             <span>AUX LABS RESEARCH</span>
         </div>
         <div class="axl-stripe axl-stripe--thin" aria-hidden="true"></div>
 
         <header class="p-8 lg:p-16 border-b border-archival-ink bg-surface/20 relative overflow-hidden">
-            <span class="axl-wm" style="font-size:clamp(5rem,13vw,10rem); right:-1rem; top:-1.5rem;" aria-hidden="true">RESEARCH</span>
             <div class="max-w-4xl mx-auto relative">
                 <div class="flex flex-wrap items-center gap-3 mb-8 font-mono text-[10px] uppercase tracking-widest">
                     <span class="bg-panel text-white px-3 py-1.5 font-bold">AXL-WP-06</span>
-                    <span class="border border-archival-ink px-3 py-1.5">WORKING PAPER · v1.0</span>
+                    <span class="border border-archival-ink px-3 py-1.5">WORKING PAPER · v1.1</span>
                     <span class="border border-archival-ink px-3 py-1.5">AUX LABS LLC</span>
+                    <span class="border border-archival-ink px-3 py-1.5">5,190 WORDS · ~23 MIN READ</span>
                     <a href="../plain/axl-wp-06.html" class="border border-archival-ink px-3 py-1.5 font-bold hover:bg-brand-green hover:text-black hover:border-brand-green transition-all">"PLAIN ENGLISH" VERSION -&gt;</a>
                 </div>
-                <h1 class="text-3xl lg:text-[2.75rem] font-black leading-[1.02] tracking-tighter uppercase mb-8">The Psychological Revolution: Why the Next Great Leap in Human Development Will Be Psychological, Not Technological</h1>
+                <h1 class="text-3xl lg:text-[2.75rem] font-black leading-[1.02] tracking-tighter uppercase mb-8">The Psychological Revolution:<span class="axl-sub"> Why the Next Great Leap in Human Development Will Be Psychological, Not Technological</span></h1>
                 <div class="border-l-4 border-brand-green pl-6 lg:pl-8 py-2 mb-8">
                     <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-3">ABSTRACT</div>
                     <p class="text-sm lg:text-base leading-relaxed text-archival-ink/80">Following Sutherland&#x27;s proposition that the next revolution in human development is psychological rather than technological, the paper argues the conditions preventing that revolution are architecturally produced by the California self-esteem pipeline; that AI is simultaneously the most powerful accelerant of those conditions and the most powerful instrument for reversing them; and that the Switchboard protocol — four cylinders, a cascade, graduated sovereignty, and a behavioral-proxy measurement method — is the operational architecture for building the missing intangible infrastructure.</p>
                 </div>
+<aside class="axl-30s" aria-label="The 30-second version">
+                    <div class="axl-30s-h">The 30-second version</div>
+                    <dl>
+                        <dt>Why now</dt><dd>Hardware is running into physical limits. The cheapest gains left are psychological, and AI can deliver them at scale.</dd>
+                        <dt>Why you</dt><dd>If you lead a nonprofit, a newsroom, an arts group or a public agency, the psychology brands use to sell can work for your mission.</dd>
+                        <dt>Why us</dt><dd>We come from the brand side, and we built the method for pointing those tools at public problems.</dd>
+                    </dl>
+                </aside>
                 <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 space-y-1">
                     <p>KEYWORDS: PSYCHOLOGICAL REVOLUTION, CHOICE ARCHITECTURE, SEOS, INTANGIBLE INFRASTRUCTURE, BEHAVIORAL PROXIES, AI CALIBRATION, GRADUATED SOVEREIGNTY</p>
                     <p>CITE AS: HAFIZ, I. (2026). The Psychological Revolution. AUX LABS WORKING PAPER AXL-WP-06. AUXLABS.CO</p>
@@ -72,6 +81,7 @@
 <h2>I. SUTHERLAND’S QUESTION</h2>
 <p>Rory Sutherland, the behavioral economist who has spent three decades demonstrating that psychology trumps logic in human decision-making, poses a question that should haunt every technologist, policymaker, and funder on earth: What if the next great revolution in human development isn’t technological at all? What if it’s psychological? [1]</p>
 <p>The proposition sounds counterintuitive in an era dominated by AI, quantum computing, and biotechnology. But Sutherland’s evidence is persuasive. Small changes in framing, context, and choice architecture routinely produce larger behavioral effects than massive investments in infrastructure or technology. The Eurostar example he cites is emblematic: spending £6 billion to shorten the London-to-Paris journey by forty minutes would have produced less passenger satisfaction than spending a fraction of that on better WiFi and free champagne. The engineering solution addresses the objective problem. The psychological solution addresses the experienced one. And humans live in experience, not in engineering specifications.</p>
+<figure class="axl-figure"><a aria-label="Open figure 1 full size" class="axl-fig-zoom" href="assets/axl-wp-06-figure1.svg" rel="noopener" target="_blank"><img alt="Figure 1. Two ways to improve a train: Sutherland’s Eurostar example." loading="lazy" src="assets/axl-wp-06-figure1.svg"/></a><figcaption><span class="fig-label">FIG. 01</span> Two ways to improve a train: Sutherland’s Eurostar example.</figcaption></figure>
 <p>This paper argues that Sutherland is correct, and that the psychological revolution he anticipates is both more urgent and more achievable than the current institutional landscape recognizes. It further argues that the conditions preventing this revolution were produced by a specific cultural-psychological pipeline originating in California in the 1960s—a pipeline that has systematically degraded humanity’s capacity for the one psychological skill the revolution requires: the ability to encounter reality without collapse.</p>
 <p>And it argues that artificial intelligence is simultaneously the most powerful tool for enabling this revolution and the most dangerous accelerant of the forces preventing it—depending entirely on whether AI systems are designed for epistemic calibration or for the sycophantic validation that their current business models incentivize.</p>
 <p>The technology exists to connect every human being to every other human being and to every piece of verified knowledge</p>
@@ -114,6 +124,7 @@
 <p>The problem is that intangible infrastructure cannot be built through the methods used for tangible infrastructure. You cannot construct trust the way you construct a highway. Trust is generated through repeated, honest, dignified contact over time—through institutions that listen, tell the truth, make that truth emotionally resonant, and demonstrate through action that they deserve continued engagement. This is the Trust-Repair Cascade, the ten-stage sequence the Switchboard executes: Listening → Legitimacy → Trust → Sources → Truth → Art → Gravity → Funding → Institutions → Policy Change.</p>
 <h3>5.2 Why Intangibles Don’t Scale Like Tangibles</h3>
 <p>Tangible infrastructure scales through replication: build one bridge, build a thousand bridges with the same blueprints. Intangible infrastructure scales through cultivation: you cannot replicate trust, but you can create the conditions under which trust grows. This is Ostrom’s insight applied to cultural production. The commons is a condition to be maintained.</p>
+<figure class="axl-figure"><a aria-label="Open figure 2 full size" class="axl-fig-zoom" href="assets/axl-wp-06-figure2.svg" rel="noopener" target="_blank"><img alt="Figure 2. Replication and cultivation: tangible infrastructure copies a blueprint; intangible infrastructure grows locally on shared method and measurement." loading="lazy" src="assets/axl-wp-06-figure2.svg"/></a><figcaption><span class="fig-label">FIG. 02</span> Replication and cultivation: tangible infrastructure copies a blueprint; intangible infrastructure grows locally on shared method and measurement.</figcaption></figure>
 <p>This is also why VICE failed. VICE tried to scale cultural authenticity through industrial replication—hiring more people, opening more offices, producing more content—and discovered that the cultural credibility that made VICE valuable was an emergent property of a specific community in a specific context. When you industrialize the production, you lose the emergence. The Switchboard’s Graduated Sovereignty model addresses this directly: instead of replicating a central model, you cultivate local models that share methodology and measurement but generate their own cultural specificity.</p>
 <h3>5.3 The Time Problem</h3>
 <p>Intangible infrastructure requires time. Trust is not a deliverable. It is a relationship that develops through consistent behavior over months and years. This creates a fundamental tension with institutional funding cycles, which demand measurable outcomes on 12- 18 month timelines. The tension is real and cannot be dissolved—only managed, through the behavioral proxy method described in Section VII.</p>
@@ -149,7 +160,7 @@
 <p>This is a fundable proposition if framed correctly. It is also an honest one. The alternative—promising specific social outcomes from cultural interventions on 12-month timelines—is the Pretend Era approach to social change: performing accountability rather than building it.</p>
 <h2>VIII. THE SWITCHBOARD PROTOCOL</h2>
 <h3>8.1 The Mechanism</h3>
-<p>The Switchboard executes a ten-stage trust cascade coordinated by four productive cylinders firing in offset combustion. The stage sequence, the cylinder-to-stage mapping, and the coordination function are specified in full in <em>The Cognitive Value Protocol</em> (Hafiz, AXL-WP-03, §2) and are not restated here. What matters for this paper is the claim that follows from it: the psychological transition described above requires all four production modes operating in sequence, and interventions that engage only one of them fail in the manner documented in §7.</p>
+<p>The Switchboard executes a ten-stage trust cascade coordinated by four productive cylinders firing in offset combustion. The stage sequence is set out in <em>The Cognitive Value Protocol</em> (Hafiz, AXL-WP-03, §2). The cylinder-to-stage mapping and the coordination function are proprietary method, available to partners under NDA, and are not restated here. What matters for this paper is the claim that follows from it: the psychological transition described above requires all four production modes operating in sequence, and interventions that engage only one of them fail in the manner documented in §7.</p>
 <p>The operationalization, weighting, and integration algorithms by which index outputs adjust cylinder timing are proprietary methodology of Aux Labs, available to academic and institutional partners under licence.</p>
 <h3>8.3 Graduated Sovereignty</h3>
 <p>Tier 1 (Seed): Central methodology, measurement, funding. 90-day pilot.</p>

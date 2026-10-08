@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="The composite index adds three dimensions, preference honesty, integration velocity and coalition breadth, and subtracts a fourth, the capture index. Weights are proprietary.">
+<rect width="100%" height="100%" fill="#F2F1ED"/><style>.l{font:700 15px "JetBrains Mono",Courier,monospace;letter-spacing:2px}.s{font:700 13px "JetBrains Mono",Courier,monospace;letter-spacing:1.5px}.n{font:700 22px Inter,Arial,sans-serif}.b{font:900 26px Inter,Arial,sans-serif;letter-spacing:-.5px}.t{font:400 18px Inter,Arial,sans-serif}.k{font:900 40px Inter,Arial,sans-serif;letter-spacing:-1px}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A1A1A"/></marker><marker id="g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B6B2E"/></marker></defs>
+<text x="50" y="56" class="l" text-anchor="start" fill="#1A1A1A">FIG. 02 // THE HAFIZ SOCIETAL REPAIR INDEX</text>
+<rect x="56" y="116" width="250" height="210" fill="#1A1A1A"/>
+<rect x="50" y="110" width="250" height="210" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="68" y="138" class="s" fill="#1A1A1A">+ DIMENSION 1</text>
+<text x="68" y="170" class="n" text-anchor="start" fill="#1A1A1A">Preference</text>
+<text x="68" y="197" class="n" text-anchor="start" fill="#1A1A1A">honesty</text>
+<text x="68" y="228" class="t" text-anchor="start" fill="#1A1A1A">Gap between private and</text>
+<text x="68" y="253" class="t" text-anchor="start" fill="#1A1A1A">public preference</text>
+<rect x="336" y="116" width="250" height="210" fill="#1A1A1A"/>
+<rect x="330" y="110" width="250" height="210" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="348" y="138" class="s" fill="#1A1A1A">+ DIMENSION 2</text>
+<text x="348" y="170" class="n" text-anchor="start" fill="#1A1A1A">Integration</text>
+<text x="348" y="197" class="n" text-anchor="start" fill="#1A1A1A">velocity</text>
+<text x="348" y="228" class="t" text-anchor="start" fill="#1A1A1A">Lag from art and</text>
+<text x="348" y="253" class="t" text-anchor="start" fill="#1A1A1A">journalism to clinic</text>
+<text x="348" y="278" class="t" text-anchor="start" fill="#1A1A1A">and institution</text>
+<rect x="616" y="116" width="250" height="210" fill="#1A1A1A"/>
+<rect x="610" y="110" width="250" height="210" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="628" y="138" class="s" fill="#1A1A1A">+ DIMENSION 3</text>
+<text x="628" y="170" class="n" text-anchor="start" fill="#1A1A1A">Coalition breadth</text>
+<text x="628" y="201" class="t" text-anchor="start" fill="#1A1A1A">How widely the</text>
+<text x="628" y="226" class="t" text-anchor="start" fill="#1A1A1A">vocabulary has spread</text>
+<rect x="896" y="116" width="250" height="210" fill="#1A1A1A"/>
+<rect x="890" y="110" width="250" height="210" fill="#00FF41" stroke="#1A1A1A" stroke-width="3"/>
+<text x="908" y="138" class="s" fill="#1A1A1A">− DIMENSION 4</text>
+<text x="908" y="170" class="n" text-anchor="start" fill="#1A1A1A">Capture index</text>
+<text x="908" y="201" class="t" text-anchor="start" fill="#1A1A1A">Sponsor identity</text>
+<text x="908" y="226" class="t" text-anchor="start" fill="#1A1A1A">predicting topic</text>
+<text x="600" y="400" class="b" text-anchor="middle" fill="#1A1A1A">HSRI = w₁·PH + w₂·IV + w₃·CB − w₄·CI</text>
+<text x="600" y="444" class="t" text-anchor="middle" fill="#1A1A1A">Capture subtracts from repair. The weights are proprietary; the structure is public (§5.8).</text>
+</svg>
