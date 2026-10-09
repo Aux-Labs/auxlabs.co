@@ -13,8 +13,8 @@ Michelin): a double exposure of a real photographic subject and a second image
 
 | Path | Shape · export size | Where it shows | Concept | Owner | Status |
 |---|---|---|---|---|---|
-| `papers/axl-wp-01.jpg` | 5:7 · 1500×2100 | Research carousel | A crowd behind a fence line: a cultural commons being enclosed | CLAUDE DESIGN (reassigned from Samantha 2026-10-09) | done |
-| `papers/axl-wp-03.jpg` | 5:7 · 1500×2100 | Research carousel | Newspaper press and type, mended along gold seams: journalism as the repair of trust | CLAUDE DESIGN (reassigned from Samantha 2026-10-09) | done |
+| `papers/axl-wp-01.jpg` | 5:7 · 1500×2100 | Research carousel | A crowd-surfer behind a chain-link fence: a cultural commons fenced in | CLAUDE DESIGN (reassigned from Samantha 2026-10-09) | done |
+| `papers/axl-wp-03.jpg` | 5:7 · 1500×2100 | Research carousel | A reader behind an 1890 front page mended along kintsugi seams: journalism as the repair of trust | CLAUDE DESIGN (reassigned from Samantha 2026-10-09) | done |
 | `papers/axl-wp-04.jpg` | 5:7 · 1500×2100 | Research carousel | The Pretend Era: performance over a failing structure | CLAUDE DESIGN | done |
 | `papers/axl-wp-05.jpg` | 5:7 · 1500×2100 | Research carousel | Self-Esteem Operating System: Big Sur cliffs | CLAUDE DESIGN | done |
 | `papers/axl-wp-06.jpg` | 5:7 · 1500×2100 | Research carousel | Psychological Revolution: perception over engineering | CLAUDE DESIGN | done |

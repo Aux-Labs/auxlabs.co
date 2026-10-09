@@ -57,8 +57,11 @@
   function label() {
     var per = Math.max(1, Math.round(vw / step));
     var first = Math.round(wrap(target, total) / step) % N;
-    var a = first + 1, z = (first + per - 1) % N + 1;
-    status.textContent = 'Papers ' + a + (per > 1 ? '–' + z : '') + ' of ' + N;
+    var shown = [];
+    for (var k = 0; k < per; k++) shown.push((first + k) % N + 1);
+    // A run that wraps past the last paper reads "9, 10, 1", not "9–1".
+    var wraps = shown[shown.length - 1] < shown[0];
+    status.textContent = 'Papers ' + (per === 1 ? shown[0] : wraps ? shown.join(', ') : shown[0] + '–' + shown[shown.length - 1]) + ' of ' + N;
   }
 
   /* ── input ────────────────────────────────────────────────────────────── */
@@ -130,7 +133,9 @@
   }
   track.addEventListener('pointerup', endDrag);
   track.addEventListener('pointercancel', endDrag);
-  track.addEventListener('lostpointercapture', endDrag);
+  // Only the track's own capture ending counts: on touch, the card under the finger
+  // drops its implicit capture when the track takes over, and that event bubbles here.
+  track.addEventListener('lostpointercapture', function (e) { if (e.target === track) endDrag(e); });
   // A drag is not a click: swallow the click that ends one.
   track.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
   track.addEventListener('dragstart', function (e) { e.preventDefault(); });
@@ -177,7 +182,8 @@
       'out vec4 o;\n' +
       'float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }\n' +
       'void main(){\n' +
-      '  vec2 uv = (vUv - 0.5) * uCover / 1.10 + 0.5;\n' +     // 10% headroom for the parallax
+      '  vec2 s = uCover / 1.10;\n' +                          // 10% headroom for the parallax
+      '  vec2 uv = (1.0 - s) * vec2(0.5, 0.4) + vUv * s;\n' +  // crop anchor: centre, a little high (CSS: 50% 40%)
       '  uv.x += uPar * 0.045;\n' +
       '  vec3 c = texture(uTex, uv).rgb * vShade;\n' +
       '  c += (h(gl_FragCoord.xy) - 0.5) * (0.025 + 0.05 * abs(uFlex));\n' +   // paper grain
