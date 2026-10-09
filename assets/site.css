@@ -102,6 +102,18 @@ footer .font-mono p { line-height: 2.1; }
 .axl-car-btn:hover { background: #00FF41; color: #000; }
 .axl-car-btn:disabled { opacity: .35; cursor: default; box-shadow: none; }
 
+/* Live mode (assets/axl-carousel.js): the script moves the cards, so the native
+   scroller is switched off. Vertical swipes still scroll the page. */
+.axl-car--live .axl-car-track { position: relative; overflow: hidden; scroll-snap-type: none; touch-action: pan-y;
+  cursor: grab; user-select: none; -webkit-user-select: none; }
+.axl-car--live.is-dragging .axl-car-track { cursor: grabbing; }
+.axl-car--live .axl-car-card { will-change: transform; }
+.axl-car-gl { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+/* Once WebGL has a cover, it draws it; the <img> stays in the DOM for its alt text. */
+.axl-car-art.is-gl img { opacity: 0; }
+.axl-car-art.is-gl .axl-car-ph > * { visibility: hidden; }
+.axl-car-btn[hidden] { display: none; }
+
 @media (prefers-reduced-motion: reduce) {
   .axl-b-grid, .axl-b-tile, .axl-b-mark { animation: none !important; }
   .axl-car-track { scroll-behavior: auto; }

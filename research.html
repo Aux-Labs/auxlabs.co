@@ -191,6 +191,7 @@
                         <div class="axl-car-nav">
                             <button type="button" class="axl-car-btn" data-dir="-1" aria-label="Previous papers">&lt;-</button>
                             <button type="button" class="axl-car-btn" data-dir="1" aria-label="Next papers">-&gt;</button>
+                            <button type="button" class="axl-car-btn axl-car-pause" aria-pressed="false" aria-label="Pause the drift" hidden>||</button>
                         </div>
                     </div>
                     <div class="axl-car-track" tabindex="0">
@@ -334,41 +335,7 @@
                         </article>
                     </div>
                 </div>
-                <script>
-                (function(){
-                  var track=document.querySelector('.axl-car-track'); if(!track) return;
-                  var btns=[].slice.call(document.querySelectorAll('.axl-car-btn'));
-                  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                  function step(){ var c=track.querySelector('.axl-car-card'); return c? c.getBoundingClientRect().width+24 : 300; }
-                  function sync(){ var max=track.scrollWidth-track.clientWidth-2;
-                    btns[0].disabled=track.scrollLeft<=2; btns[1].disabled=track.scrollLeft>=max; }
-                  btns.forEach(function(b){ b.addEventListener('click',function(){
-                    track.scrollBy({left: step()*Number(b.dataset.dir), behavior: reduce?'auto':'smooth'}); }); });
-                  track.addEventListener('keydown',function(e){
-                    if(e.key==='ArrowRight'){e.preventDefault(); btns[1].click();}
-                    if(e.key==='ArrowLeft'){e.preventDefault(); btns[0].click();} });
-                  var st=document.getElementById('axl-car-status'), cards=track.querySelectorAll('.axl-car-card');
-                  function label(){ var w=step(), first=Math.round(track.scrollLeft/w)+1, per=Math.max(1,Math.round(track.clientWidth/w)); var last=Math.min(cards.length, first+per-1); st.textContent='Papers '+first+(last>first?'–'+last:'')+' of '+cards.length; }
-                  track.addEventListener('scroll',function(){sync();label();},{passive:true}); window.addEventListener('resize',function(){sync();label();}); sync(); label();
-                  // Slow drift, one card every 4.5s, so a visitor sees there is more. It pauses while
-                  // the pointer or focus is on the carousel and stops for good once someone drives it.
-                  if(reduce) return;
-                  var held=false, done=false;
-                  function stop(){ done=true; }
-                  track.addEventListener('pointerdown',stop); track.addEventListener('wheel',stop,{passive:true});
-                  track.addEventListener('touchstart',stop,{passive:true}); track.addEventListener('keydown',stop);
-                  btns.forEach(function(b){ b.addEventListener('pointerdown',stop); });
-                  var car=track.parentNode;
-                  car.addEventListener('mouseenter',function(){held=true;}); car.addEventListener('mouseleave',function(){held=false;});
-                  car.addEventListener('focusin',function(){held=true;}); car.addEventListener('focusout',function(){held=false;});
-                  setInterval(function(){
-                    if(done||held||document.hidden) return;
-                    var r=track.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) return;
-                    var max=track.scrollWidth-track.clientWidth-2;
-                    track.scrollTo({left: track.scrollLeft>=max ? 0 : track.scrollLeft+step(), behavior:'smooth'});
-                  },4500);
-                })();
-                </script>
+                <script src="assets/axl-carousel.js" defer></script>
             </div>
         </section>
 
