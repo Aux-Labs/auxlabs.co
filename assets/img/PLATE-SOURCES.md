@@ -36,7 +36,7 @@ Every plate is built only from public-domain or CC0 images on Wikimedia Commons,
 - Handwritten letter, 1865: [Letter from Mollie Grimes to Edwin Brown, November 23, 1865 - DPLA - 03e784f0b4447525dd72da8e7bdd4a21 (page 2).jpg](https://commons.wikimedia.org/wiki/File:Letter_from_Mollie_Grimes_to_Edwin_Brown,_November_23,_1865_-_DPLA_-_03e784f0b4447525dd72da8e7bdd4a21_(page_2).jpg) — Public domain; Grimes, Mollie
 
 ## `axl-wp-01.jpg`
-- Concert crowd from behind (subject): [Put your hands in the air (Unsplash).jpg](https://commons.wikimedia.org/wiki/File:Put_your_hands_in_the_air_(Unsplash).jpg) — CC0; Arkady Lifshits
+- Crowd-surfer carried over a concert crowd (subject): [Crowdsurfing man (Unsplash).jpg](https://commons.wikimedia.org/wiki/File:Crowdsurfing_man_(Unsplash).jpg) — CC0; lifesimply.rocks
 - Chain-link fence (second exposure): [Chainlink fence Fence Barrier.jpg](https://commons.wikimedia.org/wiki/File:Chainlink_fence_Fence_Barrier.jpg) — CC0; unknown author (via Pikwizard)
 
 ## `axl-wp-03.jpg`
@@ -71,6 +71,6 @@ Every plate is built only from public-domain or CC0 images on Wikimedia Commons,
 
 **Note on `axl-wp-08`:** the circuit-board crop was chosen to avoid manufacturer logos; only component reference numbers are visible.
 
-**Note on `axl-wp-01`:** the fence photo is marked CC0 on Commons, but it came by way of a stock-aggregator site and its author is unknown, so its provenance is thinner than the rest. The crowd is unidentifiable silhouettes seen from behind.
+**Note on `axl-wp-01`:** the fence photo is marked CC0 on Commons, but it came by way of a stock-aggregator site and its author is unknown, so its provenance is thinner than the rest. In the crowd photo, the surfer is seen from behind with his face turned away, and the crowd is mostly raised hands, so no one can be identified.
 
 **Note on `axl-wp-03`:** the newspaper in the source photo is a recent, copyrighted German paper. Its whole printed face was replaced with the public-domain 1890 *Seligman Sunbeam*, so none of the modern page survives. The reader's face is hidden behind the sheet.
