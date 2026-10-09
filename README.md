@@ -20,7 +20,7 @@ Static site for Aux Labs LLC. Design system: Neu Brutalism (archival cyber-bruta
 - **Client names as text, never logos.** Legally load-bearing.
 - **Dark toggle** is a real token swap (`--paper-rgb / --ink-rgb / --surface-rgb / --panel-rgb` in each page's `<style>`), light-first by ruling.
 - **Stylesheet**: `assets/tailwind.css` is compiled, and a fresh build from `src/input.css` does not reproduce it byte-for-byte. Use utilities that already exist in the compiled file; put anything new in a page-local `<style>` block (see `terms.html`).
-- **Photo slots**: AI-generated imagery was removed. Search `PHOTO SLOT` comments for where owned photography drops in (use class `archival-duotone` treatment where noted).
+- **Photo slots**: no AI-generated imagery, ever. Plates are owned photography (Samantha) or composites of public-domain/CC0 photographs, each source listed in `assets/img/PLATE-SOURCES.md` and credited at `provenance.html#images`. Who makes which slot: `assets/img/IMAGE-SLOTS.md`. Search `PHOTO SLOT` comments for where owned photography drops in (use class `archival-duotone` treatment where noted).
 
 ## Deploy
 
