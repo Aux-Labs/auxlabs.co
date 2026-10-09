@@ -430,6 +430,14 @@ def render(path, outdir):
                     f'<figcaption><span class="fig-label">FIG. {n:0>2}</span> {_h.escape(cap)}</figcaption></figure>')
         return f"*Figure {n}. {cap}*"
     body_md = re.sub(r"\*\*\[Figure (\d+) near here\.\*\*(.*?)\]", _fig, body_md, flags=re.S)
+    # interlude plate: **[Plate near here.]** -> one decorative full-width image, if the file exists
+    def _plate(m):
+        slug = fm.get("series", path.stem).lower()
+        if (REPO / "papers" / "assets" / f"{slug}-plate.jpg").exists():
+            return (f'<figure class="axl-plate" aria-hidden="true"><img src="assets/{slug}-plate.jpg" '
+                    f'alt="" loading="lazy" width="2000" height="1333"></figure>')
+        return ""
+    body_md = re.sub(r"\*\*\[Plate near here\.\]\*\*", _plate, body_md)
     body_md = re.sub(r"\\([$%&#_])", r"\1", body_md)  # pandoc-escaped symbols
     body_md = re.sub(r"(\w)- (?=[a-z])", r"\1-", body_md)  # rejoin words hyphen-split at line wraps
     # (unwrap above rejoins hard-wrapped lines so **emphasis** renders)
