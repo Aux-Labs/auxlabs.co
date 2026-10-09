@@ -35,6 +35,15 @@ Every plate is built only from public-domain or CC0 images on Wikimedia Commons,
 - Handwriting sample: [The Quimby Manuscripts - P. P. Q. handwriting sample.jpg](https://commons.wikimedia.org/wiki/File:The_Quimby_Manuscripts_-_P._P._Q._handwriting_sample.jpg) — Public domain; P. P. Quimby
 - Handwritten letter, 1865: [Letter from Mollie Grimes to Edwin Brown, November 23, 1865 - DPLA - 03e784f0b4447525dd72da8e7bdd4a21 (page 2).jpg](https://commons.wikimedia.org/wiki/File:Letter_from_Mollie_Grimes_to_Edwin_Brown,_November_23,_1865_-_DPLA_-_03e784f0b4447525dd72da8e7bdd4a21_(page_2).jpg) — Public domain; Grimes, Mollie
 
+## `axl-wp-01.jpg`
+- Concert crowd from behind (subject): [Put your hands in the air (Unsplash).jpg](https://commons.wikimedia.org/wiki/File:Put_your_hands_in_the_air_(Unsplash).jpg) — CC0; Arkady Lifshits
+- Chain-link fence (second exposure): [Chainlink fence Fence Barrier.jpg](https://commons.wikimedia.org/wiki/File:Chainlink_fence_Fence_Barrier.jpg) — CC0; unknown author (via Pikwizard)
+
+## `axl-wp-03.jpg`
+- Reader behind an open newspaper (subject): [Person reading a newspaper (Unsplash).jpg](https://commons.wikimedia.org/wiki/File:Person_reading_a_newspaper_(Unsplash).jpg) — CC0; Roman Kraft
+- 1890 front page, set into the sheet in place of the photographed paper: [Seligman Sunbeam, Nov. 1 1890.jpg](https://commons.wikimedia.org/wiki/File:Seligman_Sunbeam,_Nov._1_1890.jpg) — Public domain; Fanschon Mitchell et al.
+- Mended seams, traced from the lacquer repairs on a glass bowl: [Glass Bowl, Kofun period, 6th century, perhaps from the tomb of Emperor Ankan, Habikino-shi, Osaka - Tokyo National Museum - DSC06402.JPG](https://commons.wikimedia.org/wiki/File:Glass_Bowl,_Kofun_period,_6th_century,_perhaps_from_the_tomb_of_Emperor_Ankan,_Habikino-shi,_Osaka_-_Tokyo_National_Museum_-_DSC06402.JPG) — CC0; Daderot
+
 ## `file-03-nectar.jpg`
 - Straw hive with comb (subject): [CombsInHiveLHist.JPG](https://commons.wikimedia.org/wiki/File:CombsInHiveLHist.JPG) — CC0; Simon Speed
 - Engraving of honeycomb (second exposure): [Creation by Evolution (1928) p190 comb of bee hive.png](https://commons.wikimedia.org/wiki/File:Creation_by_Evolution_(1928)_p190_comb_of_bee_hive.png) — Public domain; Arthur Shipley
@@ -61,3 +70,7 @@ Every plate is built only from public-domain or CC0 images on Wikimedia Commons,
 **Note on `axl-wp-09` / `file-02-crucible`:** the photograph of the statue is CC0, but the statue itself is a public artwork in China whose sculptor may hold a separate copyright. Low risk for editorial use; swap for the public-domain crucible-tongs photo if you want zero exposure.
 
 **Note on `axl-wp-08`:** the circuit-board crop was chosen to avoid manufacturer logos; only component reference numbers are visible.
+
+**Note on `axl-wp-01`:** the fence photo is marked CC0 on Commons, but it came by way of a stock-aggregator site and its author is unknown, so its provenance is thinner than the rest. The crowd is unidentifiable silhouettes seen from behind.
+
+**Note on `axl-wp-03`:** the newspaper in the source photo is a recent, copyrighted German paper. Its whole printed face was replaced with the public-domain 1890 *Seligman Sunbeam*, so none of the modern page survives. The reader's face is hidden behind the sheet.
