@@ -146,6 +146,9 @@ footer .font-mono p { line-height: 2.1; }
 .text-archival-ink\/85 { color: rgb(var(--ink-rgb) / .85); }
 .hover\:text-archival-ink:hover { color: rgb(var(--ink-rgb)); }
 .gap-x-4 { column-gap: 1rem; } .gap-y-1 { row-gap: .25rem; }
+.px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+.text-\[12px\] { font-size: 12px; }
+.tracking-normal { letter-spacing: 0; }
 .mt-auto { margin-top: auto; } .mt-10 { margin-top: 2.5rem; } .pt-6 { padding-top: 1.5rem; } .pb-12 { padding-bottom: 3rem; }
 @media (min-width: 640px) { .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1024px) { .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -233,3 +236,49 @@ footer .font-mono p { line-height: 2.1; }
 .axl-credits summary { cursor: pointer; }
 .axl-credits ul ul { list-style: none; padding-left: 0; }
 .axl-credits a { word-break: break-word; }
+
+/* ─── 04_BOOK: the booking tab in every nav (Lara's review, 10/9) ─────────
+   Black with green type and an arrow, so it reads as an action, not as the
+   active section tab (which is solid green). On phones it drops to its own
+   full-width bar under the three section tabs. */
+.axl-nav-book { background: #000; color: #00FF41; font-weight: 700; }
+.axl-nav-book::after { content: ' ->'; }
+.axl-nav-book:hover { background: #00FF41; color: #000; }
+@media (max-width: 639px) {
+  .axl-navlinks > .axl-nav-book { grid-column: 1 / -1; justify-content: center; border-right: 0; border-top: 1px solid rgb(var(--ink-rgb)); }
+}
+
+/* ─── FAQ: the long version of Why Us, one question per accordion ──────── */
+.axl-faq { border-bottom: 1px solid rgb(var(--ink-rgb)); }
+.axl-faq:last-child { border-bottom: 0; }
+.axl-faq > summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem;
+  padding: 1.5rem 2rem; font-family: 'Inter', sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -.03em;
+  font-size: 1.25rem; line-height: 1.15; }
+@media (min-width: 1024px) { .axl-faq > summary { font-size: 1.6rem; padding: 1.75rem 4rem; } }
+.axl-faq > summary::-webkit-details-marker { display: none; }
+.axl-faq > summary::after { content: '+'; font-family: 'JetBrains Mono', monospace; font-weight: 700; flex: none; }
+.axl-faq[open] > summary::after { content: '\2212'; }
+.axl-faq > summary:hover, .axl-faq > summary:focus-visible { background: #00FF41; color: #000; outline: none; }
+.axl-faq-body { padding: 0 2rem 2.5rem; }
+@media (min-width: 1024px) { .axl-faq-body { padding: 0 4rem 3rem; } }
+.axl-faq-body--flush { padding: 0; border-top: 1px solid rgb(var(--ink-rgb)); }
+
+/* ─── Paper sign-off: one quiet line at the end of every paper ──────────── */
+.axl-paper-cta { padding: 2.5rem 1.5rem 3rem; border-top: 1px solid rgb(var(--ink-rgb) / .2); }
+.axl-paper-cta p { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: rgb(var(--ink-rgb) / .8); line-height: 1.9; }
+.axl-paper-cta a { color: rgb(var(--ink-rgb)); text-decoration: underline; font-weight: 700; }
+.axl-paper-cta a:hover { color: #00FF41; }
+
+/* ─── PHONE READABILITY (Lara's review, 10/9) ──────────────────────────────
+   The mono captions were 8–10px and often 40–60% opacity: hard to read on a
+   phone in either theme. On phones, set a floor of 11px and lift the faded
+   text to 75%. Desktop keeps the original look. */
+@media (max-width: 639px) {
+  .text-\[8px\], .text-\[9px\] { font-size: 11px; }
+  .text-\[10px\] { font-size: 12px; }
+  .axl-navlinks > a { font-size: 11px; }
+  /* The green status strips are texture, not reading text: keep them on one line. */
+  .bg-panel.text-brand-green.font-mono.text-\[9px\] { font-size: 10px; letter-spacing: .06em; white-space: nowrap; overflow: hidden; }
+  .text-archival-ink\/40, .text-archival-ink\/50, .text-archival-ink\/60 { color: rgb(var(--ink-rgb) / .75); }
+  .text-white\/40, .text-white\/50, .text-white\/60 { color: rgb(255 255 255 / .78); }
+}
