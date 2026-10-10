@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUX LABS | FAQ</title>
+    <meta name="description" content="The long version of why Aux Labs: what working with us gets you, where it has already worked, why now, and where you fit.">
+    <link rel="canonical" href="https://auxlabs.co/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aux Labs">
+    <meta property="og:url" content="https://auxlabs.co/faq.html">
+    <meta property="og:title" content="AUX LABS | FAQ">
+    <meta property="og:description" content="The long version of why Aux Labs: what working with us gets you, where it has already worked, why now, and where you fit.">
+    <meta property="og:image" content="https://auxlabs.co/assets/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Aux Labs. Behavioral infrastructure.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AUX LABS | FAQ">
+    <meta name="twitter:description" content="The long version of why Aux Labs: what working with us gets you, where it has already worked, why now, and where you fit.">
+    <meta name="twitter:image" content="https://auxlabs.co/assets/og.png">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='bold' fill='%2300FF41' text-anchor='middle'%3EAX%3C/text%3E%3C/svg%3E">
+    <script>
+        // Theme (dark-first, ruled 10/6) + boot gate. Inline and first so neither
+        // can flash. The 2.6s failsafe lifts the curtain even if assets/axl.js never
+        // loads: the site can never brick behind the loader.
+        (function(){
+            try{ if(localStorage.getItem('axl-theme')==='light'){ document.documentElement.removeAttribute('data-theme'); } }catch(e){}
+            try{
+                var seen = sessionStorage.getItem('axl-booted');
+                var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                if(!seen && !calm){
+                    document.documentElement.className += ' axl-booting';
+                    setTimeout(function(){ document.documentElement.classList.remove('axl-booting'); }, 2600);
+                }
+            }catch(e){}
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="assets/site.css">
+    <script src="assets/axl.js" defer></script>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-brand-green selection:text-black">
+    <!-- Boot sequence. Display:none by default; the head script rules it in only on
+         a first visit this session, with JS on and motion allowed. The record below
+         is already parsed and crawlable: a curtain, not a gate. -->
+    <div id="axl-boot" aria-hidden="true">
+        <div class="axl-b-stage">
+            <div class="axl-b-grid">
+                <span class="axl-b-tile" style="--i:0"></span><span class="axl-b-tile" style="--i:1"></span><span class="axl-b-tile" style="--i:2"></span>
+                <span class="axl-b-tile" style="--i:3"></span><span class="axl-b-tile" style="--i:4"></span><span class="axl-b-tile" style="--i:5"></span>
+                <span class="axl-b-tile" style="--i:6"></span><span class="axl-b-tile" style="--i:7"></span><span class="axl-b-tile" style="--i:8"></span>
+            </div>
+            <div class="axl-b-mark">AUX <span>LABS</span></div>
+            <p class="axl-boot-hint">Press any key to skip</p>
+        </div>
+    </div>
+
+    <div class="fixed inset-0 pointer-events-none border-[12px] border-archival-ink/5 z-[100]"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-[90] bg-archival-paper/80 backdrop-blur-md border-b border-archival-ink flex flex-wrap items-stretch uppercase font-mono text-[10px] tracking-[0.15em] lg:tracking-[0.25em]">
+        <a href="index.html" class="order-1 flex-grow lg:flex-grow-0 flex items-center px-4 lg:px-8 py-4 lg:border-r border-archival-ink font-black text-base lg:text-lg tracking-tighter">
+            AUX LABS LLC
+        </a>
+        <div class="axl-navlinks order-3 lg:order-2 w-full lg:w-auto flex-grow flex flex-wrap border-t lg:border-t-0 border-archival-ink">
+            <a href="commercial.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">01_COMMERCIAL</a>
+            <a href="research.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">02_RESEARCH</a>
+            <a href="why-us.html" class="flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink hover:bg-brand-green hover:text-black transition-all">03_WHY_US</a>
+            <a href="https://calendar.app.google/UsAZMk2CMLC5gCXP7" class="axl-nav-book flex items-center px-4 lg:px-10 py-4 border-r border-archival-ink transition-all">04_BOOK</a>
+        </div>
+        <div class="axl-ver items-center px-8 text-archival-ink/60">
+            [ CLASSIFICATION: UNRESTRICTED // VER: 8.1.0 ]
+        </div>
+        <button onclick="axlToggleTheme()" aria-label="Toggle light/dark" class="order-2 lg:order-4 ml-auto lg:ml-0 flex items-center px-4 lg:px-6 border-l border-archival-ink hover:bg-brand-green hover:text-black transition-all font-bold">
+            [ ◐ ]
+        </button>
+    </nav>
+
+    <main class="relative">
+
+        <!-- Header Status -->
+        <div class="px-4 lg:px-8 py-3 bg-panel text-brand-green font-mono text-[9px] tracking-widest uppercase axl-status">
+            <span>INDEX_REF: AXL-FAQ-01</span>
+            <span class="hidden sm:inline">STATUS: ENGAGEMENTS_OPEN</span>
+            <span>FAQ</span>
+        </div>
+
+        <!-- The long version of Why Us, moved here 10/10 so Why Us fits in two scrolls (Lara's review). Copy unchanged. -->
+        <section class="p-8 lg:p-16 border-b border-archival-ink bg-surface/20">
+            <div class="mb-10 font-mono text-[11px] tracking-tighter flex items-center gap-4">
+                <span class="bg-panel text-white px-2 py-0.5">FAQ</span>
+                <span class="text-archival-ink/60">[ FOR_THE_SERIOUS_READER ]</span>
+            </div>
+            <h1 class="text-4xl lg:text-[3.25rem] font-black leading-[0.95] tracking-tighter mb-6 uppercase">The long version.</h1>
+            <p class="text-base leading-relaxed text-archival-ink/80 max-w-xl">The short version is on <a href="why-us.html" class="underline hover:text-brand-green">Why Us</a>. Open any question for the detail.</p>
+        </section>
+
+        <section class="border-b border-archival-ink">
+            <details class="axl-faq" id="what-you-get">
+                <summary>What does working with you get me?</summary>
+                <div class="axl-faq-body axl-faq-body--flush">
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="p-8 md:border-r border-b md:border-b-0 border-archival-ink">
+                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 uppercase">01 // RIGOR</div>
+                    <h3 class="text-xl font-black uppercase tracking-tighter leading-tight mb-4">Untapped cognitive value.</h3>
+                    <p class="text-sm leading-relaxed text-archival-ink/80 mb-6">Reality is experienced inside people's heads. That is why, as Rory Sutherland argues, a psychological fix is often far cheaper than an engineering one, and why so much value goes uncounted. We use social science, behavioral economics and design to find that value and put it to work.</p>
+                    <div class="pt-2">
+                        <span class="block font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-2">[ EXAMPLE · LIVE WORK FROM AUX LABS ]</span>
+                        <p class="text-sm leading-relaxed text-archival-ink/80">The Merge Gap. A $40,000 measurement sitting on top of $1.2B–$8.3B a year in recoverable loss. Nobody has measured it. <a href="papers/axl-wp-02.html" class="underline hover:text-brand-green">AXL-WP-02 -&gt;</a></p>
+                    </div>
+                </div>
+                <div class="p-8 md:border-r border-b md:border-b-0 border-archival-ink">
+                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 uppercase">02 // MISCHIEF</div>
+                    <h3 class="text-xl font-black uppercase tracking-tighter leading-tight mb-4">An artifact people can't stop talking about.</h3>
+                    <p class="text-sm leading-relaxed text-archival-ink/80 mb-6">We use the data and the findings to make a cultural artifact sensational enough to move the needle. The medium follows the audience: a documentary, a TikTok, a game, a graphic novel, whatever will actually land with the people who need to see it.</p>
+                    <div class="pt-2">
+                        <span class="block font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-2">[ EXAMPLE · PRIOR WORK OF OUR PRINCIPAL ]</span>
+                        <p class="text-sm leading-relaxed text-archival-ink/80">Disinfo, Live. Immersive theater teaching disinformation recognition through live gameplay.</p>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 uppercase">03 // FOLLOW-THROUGH</div>
+                    <h3 class="text-xl font-black uppercase tracking-tighter leading-tight mb-4">Funding, then policy.</h3>
+                    <p class="text-sm leading-relaxed text-archival-ink/80 mb-6">We find new ways to fund the work and grow it, so brands can get involved without compromising the mission or watering it down. Then we seed the whole package into the legislative and political systems, so it leads to durable change.</p>
+                    <div class="pt-2">
+                        <span class="block font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-2">[ EXAMPLE · DELIVERED AT VIRTUE WORLDWIDE ]</span>
+                        <p class="text-sm leading-relaxed text-archival-ink/80">Michelin funded a new vehicle for the Grand Central Food Program, confirmed by the program in 2026. The story: <a href="plain/a-room-built-in-the-hallway.html" class="underline hover:text-brand-green">A Room Built in the Hallway -&gt;</a> How the money is kept away from the finding: <a href="firewall.html" class="underline hover:text-brand-green">the firewall -&gt;</a></p>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </details>
+            <details class="axl-faq" id="already-happened">
+                <summary>Where has this already worked?</summary>
+                <div class="axl-faq-body">
+            <div class="max-w-3xl">
+                <div class="font-mono text-[9px] mb-6 text-white bg-panel inline-block px-2 py-1 uppercase">§ 03.00 // IT HAS ALREADY HAPPENED</div>
+                <h2 class="text-2xl lg:text-3xl font-black uppercase tracking-tighter leading-tight mb-8">The trust-repair cascade is an emergent property.</h2>
+                <p class="axl-pull mb-4">
+                    &ldquo;I don't think the trust-repair cascade is something I invented. It's an emergent property of the world, and I don't think anyone else has tracked it yet.&rdquo;
+                </p>
+                <p class="font-mono text-[10px] uppercase tracking-widest text-archival-ink/60 mb-10">
+                    — IMRAN HAFIZ, PRINCIPAL, AUX LABS
+                </p>
+                <p class="text-base leading-relaxed text-archival-ink/80 mb-12">
+                    Study the patterns of history and trust is built, spent, lost and replenished in the same ways. People who follow the whole cycle, from listening through to lasting policy, tend to go from no resources and no attention to a problem solved for good. We built Aux Labs around that pattern. Three places it has already happened:
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <div>
+                    <span class="block font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-3">[ 1987 · AIDS ACTIVISM ]</span>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">Nobody was paying attention to AIDS research. ACT UP borrowed techniques from art and advertising, like the SILENCE=DEATH poster, and the AIDS Memorial Quilt put the dead on the National Mall. Attention became empathy, then funding, then federal policy.</p>
+                </div>
+                <div>
+                    <span class="block font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-3">[ 2019 · SPARK JOY ]</span>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">"Does it spark joy?" could well have been a research paper nobody read. It made it onto a Netflix show, and that's the reason everyday people know what it means now.</p>
+                </div>
+                <div>
+                    <span class="block font-mono text-[9px] uppercase tracking-widest text-archival-ink/60 mb-3">[ YKK · ZIPPERS ]</span>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">YKK brought the whole line in house, down to the machines that make its zippers, so its people coordinate instead of competing against each other for margin. It is on the zipper in your jacket. We think the same move is now possible for the work of communication.</p>
+                </div>
+            </div>
+                </div>
+            </details>
+            <details class="axl-faq" id="cognitive-firepower">
+                <summary>How are you different from an agency?</summary>
+                <div class="axl-faq-body">
+            <div class="max-w-3xl space-y-6 text-base lg:text-lg leading-relaxed text-archival-ink/85">
+                <div class="font-mono text-[9px] text-white bg-panel inline-block px-2 py-1 uppercase">§ 04.00 // COGNITIVE FIREPOWER</div>
+                <p>There are a lot of companies out there trying to sell you serviced labor. An Instagram carousel and a content calendar, because they have designers they need to put to work, whether or not that is the problem you actually need solved.</p>
+                <p class="font-bold">What we provide is cognitive firepower: great thinking that can be translated into any medium, and that plugs into the relationships and partners you already have.</p>
+            </div>
+                </div>
+            </details>
+            <details class="axl-faq" id="why-now">
+                <summary>Why now?</summary>
+                <div class="axl-faq-body axl-faq-body--flush">
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="p-8 md:border-r border-b md:border-b-0 border-archival-ink">
+                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 uppercase">01 // CONTENT IS FREE</div>
+                    <h3 class="text-xl font-black uppercase tracking-tighter leading-tight mb-4">Polish stopped meaning anything.</h3>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">AI can write the report, the campaign, the grant proposal and the policy memo in an afternoon. When everyone can look finished, looking finished stops telling anyone what's true or what works.</p>
+                </div>
+                <div class="p-8 md:border-r border-b md:border-b-0 border-archival-ink">
+                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 uppercase">02 // TRUST IS LOW</div>
+                    <h3 class="text-xl font-black uppercase tracking-tighter leading-tight mb-4">Messaging doesn't land.</h3>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">Seventeen percent of Americans trust the federal government. Twenty-eight percent trust the press. <a href="index.html#trust" class="underline hover:text-brand-green">The chart is on our homepage.</a> A better message sent into that silence still goes unheard. Changing what people do takes a better mechanism.</p>
+                </div>
+                <div class="p-8">
+                    <div class="font-mono text-[9px] mb-4 text-archival-ink/50 uppercase">03 // ONE ROOF IS POSSIBLE</div>
+                    <h3 class="text-xl font-black uppercase tracking-tighter leading-tight mb-4">You don't need three firms.</h3>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">Research, creative and policy used to take three firms and three budgets. With AI, a small senior team can run all three as one project. That's the YKK move, applied to communication, and it's what we built Aux Labs to do.</p>
+                </div>
+            </div>
+                </div>
+            </details>
+            <details class="axl-faq" id="why-you">
+                <summary>Where do I fit?</summary>
+                <div class="axl-faq-body axl-faq-body--flush">
+                <p class="text-sm leading-snug text-archival-ink/70 max-w-2xl">Each of these groups has something the others need. We put them in the same room.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 axl-why-you">
+                <div class="p-8">
+                    <div class="font-mono text-[9px] mb-3 text-archival-ink/50 uppercase">IF YOU'RE A BRAND OR A COMPANY</div>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">You have a problem that ads haven't fixed. We find the behavior underneath it, build the fix, make the work that carries it, and give you a number you can take to your board. <a href="commercial.html" class="underline hover:text-brand-green">How we work with companies -&gt;</a></p>
+                </div>
+                <div class="p-8">
+                    <div class="font-mono text-[9px] mb-3 text-archival-ink/50 uppercase">IF YOU'RE A NONPROFIT</div>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">You know the problem better than anyone, and you can't afford three firms. We bring the research, the creative and the policy path as one engagement, and help you find the money for it.</p>
+                </div>
+                <div class="p-8">
+                    <div class="font-mono text-[9px] mb-3 text-archival-ink/50 uppercase">IF YOU GIVE GRANTS</div>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">You want to know your money moved something. Every project states its predictions up front and publishes the result, and <a href="firewall.html" class="underline hover:text-brand-green">a published firewall</a> keeps funders away from the findings.</p>
+                </div>
+                <div class="p-8">
+                    <div class="font-mono text-[9px] mb-3 text-archival-ink/50 uppercase">IF YOU'RE AN ACADEMIC</div>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">Your best idea is sitting in a journal. We give it a real-world test and turn it into something people outside your field talk about. <a href="research.html" class="underline hover:text-brand-green">The research -&gt;</a></p>
+                </div>
+                <div class="p-8">
+                    <div class="font-mono text-[9px] mb-3 text-archival-ink/50 uppercase">IF YOU MAKE CULTURE</div>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">You want your work to change something. We bring the research that gives it a target and the funding that lets you make it properly.</p>
+                </div>
+                <div class="p-8">
+                    <div class="font-mono text-[9px] mb-3 text-archival-ink/50 uppercase">IF YOU'RE A JOURNALIST</div>
+                    <p class="text-sm leading-relaxed text-archival-ink/80">You need data you can check and sources who disclose. Our data is open, <a href="firewall.html" class="underline hover:text-brand-green">the firewall is written down</a>, and conflicts are disclosed before you ask.</p>
+                </div>
+            </div>
+                </div>
+            </details>
+        </section>
+
+        <section class="p-8 lg:p-20 cta-final flex flex-col items-center text-center">
+            <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter leading-none mb-8">Bring us the problem.</h2>
+            <a href="https://calendar.app.google/UsAZMk2CMLC5gCXP7" class="cta-btn px-8 lg:px-12 py-6 font-mono text-sm tracking-[0.2em] uppercase transition-all">[ BOOK_A_MEETING ]</a>
+            <p class="axl-cta-note">Or write to <a href="mailto:imran@auxlabs.co" class="underline">imran@auxlabs.co</a></p>
+        </section>
+       
+        <!-- Footer -->
+        <footer class="p-8 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 bg-archival-paper">
+            <div class="font-mono text-[9px] uppercase tracking-widest text-archival-ink/40">
+                <p>© 2026 AUX LABS LLC // ALL RIGHTS RESERVED</p>
+                <p class="axl-co">c/o AUX LABS LLC · "AUSTIN, TEXAS" · 30.2672° N, 97.7431° W</p>
+                <p>CONTACT: <a href="mailto:imran@auxlabs.co" class="text-archival-ink hover:text-brand-green underline transition-colors">imran@auxlabs.co</a></p>
+                <p>auxlabs.co // Signal @nawab.12 // <a href="firewall.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Firewall</a> // <a href="field.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Field</a> // <a href="provenance.html" class="underline text-archival-ink hover:text-brand-green transition-colors">AI Disclosure</a> // <a href="record.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Record</a> // <a href="terms.html" class="underline text-archival-ink hover:text-brand-green transition-colors">The Terms</a> // <a href="faq.html" class="underline text-archival-ink hover:text-brand-green transition-colors">FAQ</a></p>
+                <p>Site design, neubrutalism system and image production: <a href="http://samanthabyrd.com/" class="underline text-archival-ink hover:text-brand-green transition-colors" rel="noopener">Samantha Byrd</a>.</p>
+            </div>
+            <div class="text-left lg:text-right">
+                <h2 class="text-4xl font-black tracking-tighter uppercase leading-none mb-2">FAQ.</h2>
+                <p class="font-mono text-[9px] text-brand-green bg-black px-2 py-0.5 inline-block uppercase">FAQ_FIN</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        function axlToggleTheme(){
+            var h = document.documentElement;
+            var toDark = h.getAttribute('data-theme') !== 'dark';
+            if (toDark) { h.setAttribute('data-theme','dark'); } else { h.removeAttribute('data-theme'); }
+            try { localStorage.setItem('axl-theme', toDark ? 'dark' : 'light'); } catch(e) {}
+        }
+    </script>
+</body>
+</html>
